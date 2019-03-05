@@ -15,9 +15,9 @@ class HelloController {
 
     @GetMapping("/user")
     fun user(): String {
-        val user = User("LaMicheTutu", "Matthieu", "password")
+        val user = User("mattcitron2", "Matthieu", "password")
         UserService.save(user)
-        return "user saved"
+        return UserService.findAll().toString()
     }
 
 }

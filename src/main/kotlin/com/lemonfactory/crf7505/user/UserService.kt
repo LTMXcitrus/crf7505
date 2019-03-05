@@ -13,7 +13,9 @@ object UserService {
     }
 
     fun findAll(): List<User> {
-        return ofy().load().type(User::class.java).list()
+        return ObjectifyService.run {
+            ofy().load().type(User::class.java).list()
+        }
     }
 
     fun findUser(username: String): User? {
