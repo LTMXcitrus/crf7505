@@ -7,6 +7,9 @@ See Tutorial here: https://cloud.google.com/community/tutorials/kotlin-springboo
 3) install Java app engine:
 ``$gcloud components install app-engine-java``
 
-4) ``mvn clean appengine:run`` to run app locally
-
-5) ``mvn clean appengine:deploy`` to deploy app
+### To run app locally
+- ``gcloud auth application-default login``
+- ``mvn clean appengine:run``
+ 
+### To deploy app to GAE
+- ``mvn clean appengine:deploy`` to deploy app
