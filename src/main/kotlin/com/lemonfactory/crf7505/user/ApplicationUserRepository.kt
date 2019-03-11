@@ -4,25 +4,27 @@ import com.googlecode.objectify.Key
 import com.googlecode.objectify.ObjectifyService
 import com.googlecode.objectify.ObjectifyService.ofy
 
-object UserService {
+class ApplicationUserRepository {
 
-    fun save(user: User) {
+    fun save(user: ApplicationUser) {
         ObjectifyService.run {
             ofy().save().entity(user).now()
         }
     }
 
-    fun findAll(): List<User> {
+    fun findAll(): List<ApplicationUser> {
         return ObjectifyService.run {
-            ofy().load().type(User::class.java).list()
+            ofy().load().type(ApplicationUser::class.java).list()
         }
     }
 
-    fun findUser(username: String): User? {
-        return ofy().load().type(User::class.java).filter("username", username).first().now()
+    fun findByUsername(username: String): ApplicationUser? {
+        return ObjectifyService.run {
+            ofy().load().type(ApplicationUser::class.java).id(username).now()
+        }
     }
 
-    fun deleteUser(userKey: Key<User>) {
+    fun deleteUser(userKey: Key<ApplicationUser>) {
         ObjectifyService.run {
             ofy().delete().key(userKey)
         }
