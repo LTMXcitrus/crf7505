@@ -23,4 +23,4 @@
 /nbdist/
 /.nb-gradle/
 /build/
-/core/src/main/resources/prod.security.properties
+/src/main/resources/prod.security.properties
