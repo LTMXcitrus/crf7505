@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505
 
 import com.googlecode.objectify.ObjectifyService
-import com.lemonfactory.crf7505.user.ApplicationUser
-import com.lemonfactory.crf7505.user.ApplicationUserRepository
+import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUser
+import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUserRepository
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer

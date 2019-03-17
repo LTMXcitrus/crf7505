@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.controllers
 
-import com.lemonfactory.crf7505.user.ApplicationUser
-import com.lemonfactory.crf7505.user.ApplicationUserRepository
+import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUser
+import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUserRepository
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.web.bind.annotation.*
 

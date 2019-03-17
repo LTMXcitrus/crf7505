@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.user
+package com.lemonfactory.crf7505.infrastructure.security.user
 
 import com.googlecode.objectify.Key
 import com.googlecode.objectify.ObjectifyService
