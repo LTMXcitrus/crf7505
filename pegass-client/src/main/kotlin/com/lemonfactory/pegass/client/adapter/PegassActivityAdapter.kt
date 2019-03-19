@@ -2,11 +2,11 @@ package com.lemonfactory.pegass.client.adapter
 
 import com.lemonfactory.crf7505.domain.model.Mission
 import com.lemonfactory.crf7505.domain.model.Role
-import com.lemonfactory.pegass.client.api.ActivityRole
-import com.lemonfactory.pegass.client.api.PegassActivity
+import com.lemonfactory.pegass.client.api.activity.ActivityRole
+import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.referentiel.UlReferentiel
 
-class PegassAdapter() {
+class PegassActivityAdapter() {
 
     fun transform(pegassActivities: List<PegassActivity>): List<Mission> {
         return pegassActivities

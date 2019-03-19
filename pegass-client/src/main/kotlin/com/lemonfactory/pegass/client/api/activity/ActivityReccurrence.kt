@@ -1,4 +1,4 @@
-package com.lemonfactory.pegass.client.api
+package com.lemonfactory.pegass.client.api.activity
 
 import java.time.LocalDateTime
 

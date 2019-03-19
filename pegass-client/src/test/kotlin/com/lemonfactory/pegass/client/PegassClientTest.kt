@@ -1,6 +1,6 @@
 package com.lemonfactory.pegass.client
 
-import com.lemonfactory.pegass.client.api.PegassActivity
+import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.nhaarman.mockito_kotlin.any
 import org.junit.Before
 import org.junit.Test

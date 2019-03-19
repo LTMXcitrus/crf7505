@@ -1,4 +1,4 @@
-package com.lemonfactory.pegass.client.api
+package com.lemonfactory.pegass.client.api.activity
 
 data class ActivityRole(val id: String?,
                         val code: String,

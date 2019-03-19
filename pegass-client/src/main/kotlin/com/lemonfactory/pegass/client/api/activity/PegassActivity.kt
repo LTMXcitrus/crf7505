@@ -1,4 +1,6 @@
-package com.lemonfactory.pegass.client.api
+package com.lemonfactory.pegass.client.api.activity
+
+import com.lemonfactory.pegass.client.api.PegassVolunteer
 
 data class PegassActivity(val id: String,
                           val type: String,
