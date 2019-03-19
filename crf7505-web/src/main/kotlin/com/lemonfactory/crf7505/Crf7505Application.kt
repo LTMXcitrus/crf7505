@@ -9,11 +9,14 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import com.googlecode.objectify.ObjectifyFilter
+import com.lemonfactory.pegass.client.PegassModule
 import org.springframework.boot.web.servlet.FilterRegistrationBean
+import org.springframework.context.annotation.Import
 import org.springframework.context.annotation.PropertySource
 
-
 @SpringBootApplication
+@Import(CrfModule::class,
+        PegassModule::class)
 @PropertySource("classpath:application.properties")
 class Crf7505Application : SpringBootServletInitializer() {
     init {

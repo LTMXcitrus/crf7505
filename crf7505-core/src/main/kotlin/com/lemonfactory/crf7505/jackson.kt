@@ -1,6 +1,5 @@
-package com.lemonfactory.pegass.client
+package com.lemonfactory.crf7505
 
-import com.fasterxml.jackson.databind.DeserializationConfig
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule

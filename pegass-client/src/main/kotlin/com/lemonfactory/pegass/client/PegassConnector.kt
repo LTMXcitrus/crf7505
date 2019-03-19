@@ -12,16 +12,17 @@ const val connectUrl = "https://id.authentification.croix-rouge.fr/my.policy"
 fun main(args: Array<String>) {
     java.util.logging.Logger.getLogger("com.gargoylesoftware").level = java.util.logging.Level.OFF
 
-    val pegassConnector = PegassConnector("lemonnierma", "lor18colen")
+    val pegassConnector = PegassConnector()
+    pegassConnector.connect("lemonnierma", "lor18colen")
 
     val calendarResponse = pegassConnector.getPage("https://pegass.croix-rouge.fr/crf/rest/seance?debut=2019-03-18&fin=2019-03-25&groupeAction=1&page=0&pageInfo=true&perPage=2147483647&zoneGeoId=75&zoneGeoType=departement")
     println(calendarResponse)
 }
 
-class PegassConnector(val username: String, val password: String) {
+class PegassConnector() {
     private val webClient: WebClient = WebClient(BrowserVersion.CHROME)
 
-    fun connect() {
+    fun connect(username: String, password: String) {
         webClient.options.isJavaScriptEnabled = false
         webClient.options.isThrowExceptionOnFailingStatusCode = false
         webClient.options.isThrowExceptionOnScriptError = false
