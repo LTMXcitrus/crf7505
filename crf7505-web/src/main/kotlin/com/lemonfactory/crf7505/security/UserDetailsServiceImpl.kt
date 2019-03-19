@@ -1,6 +1,6 @@
-package com.lemonfactory.crf7505.infrastructure.security
+package com.lemonfactory.crf7505.security
 
-import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUserRepository
+import com.lemonfactory.crf7505.security.user.ApplicationUserRepository
 import org.springframework.security.authentication.DisabledException
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails

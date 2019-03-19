@@ -1,6 +1,6 @@
-package com.lemonfactory.crf7505.infrastructure.security
+package com.lemonfactory.crf7505.security
 
-import com.lemonfactory.crf7505.infrastructure.security.SecurityConstants.SIGN_UP_URL
+import com.lemonfactory.crf7505.security.SecurityConstants.SIGN_UP_URL
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.PropertySource

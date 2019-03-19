@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.infrastructure.security
+package com.lemonfactory.crf7505.security
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm.HMAC512
@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletResponse
 import javax.servlet.http.HttpServletRequest
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.lemonfactory.crf7505.infrastructure.security.SecurityConstants.EXPIRATION_TIME
-import com.lemonfactory.crf7505.infrastructure.security.SecurityConstants.HEADER_STRING
-import com.lemonfactory.crf7505.infrastructure.security.SecurityConstants.TOKEN_PREFIX
-import com.lemonfactory.crf7505.infrastructure.security.user.ApplicationUser
+import com.lemonfactory.crf7505.security.SecurityConstants.EXPIRATION_TIME
+import com.lemonfactory.crf7505.security.SecurityConstants.HEADER_STRING
+import com.lemonfactory.crf7505.security.SecurityConstants.TOKEN_PREFIX
+import com.lemonfactory.crf7505.security.user.ApplicationUser
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.AuthenticationException
 import org.springframework.security.core.GrantedAuthority

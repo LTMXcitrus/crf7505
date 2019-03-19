@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.infrastructure.security
+package com.lemonfactory.crf7505.security
 
 object SecurityConstants {
     val EXPIRATION_TIME: Long = 864000000 // 10 days
