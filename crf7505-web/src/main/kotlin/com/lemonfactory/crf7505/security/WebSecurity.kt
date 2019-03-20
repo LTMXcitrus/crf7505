@@ -30,7 +30,6 @@ class WebSecurity(val userDetailsService: UserDetailsServiceImpl,
 
     @Throws(Exception::class)
     override fun configure(http: HttpSecurity) {
-        println("-----#################---- secret: ${env?.getRequiredProperty("spring.security.secret")}")
         http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
                 .anyRequest().authenticated()
@@ -42,8 +41,8 @@ class WebSecurity(val userDetailsService: UserDetailsServiceImpl,
     }
 
     @Throws(Exception::class)
-    public override fun configure(auth: AuthenticationManagerBuilder?) {
-        auth!!.userDetailsService<UserDetailsService>(userDetailsService).passwordEncoder(bCryptPasswordEncoder)
+    public override fun configure(auth: AuthenticationManagerBuilder) {
+        auth.userDetailsService<UserDetailsService>(userDetailsService).passwordEncoder(bCryptPasswordEncoder)
     }
 
     @Bean

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.lemonfactory.crf7505.security.SecurityConstants.EXPIRATION_TIME
+import com.lemonfactory.crf7505.security.SecurityConstants.EXPOSE_AUTHORIZATION_HEADERS
 import com.lemonfactory.crf7505.security.SecurityConstants.HEADER_STRING
 import com.lemonfactory.crf7505.security.SecurityConstants.TOKEN_PREFIX
 import com.lemonfactory.crf7505.security.user.ApplicationUser
@@ -53,6 +54,7 @@ class JWTAuthenticationFilter(private val theAuthenticationManager: Authenticati
                 .withExpiresAt(Date(System.currentTimeMillis() + EXPIRATION_TIME))
                 .sign(HMAC512(secret.toByteArray()))
         res.addHeader(HEADER_STRING, TOKEN_PREFIX + token)
+        res.addHeader(EXPOSE_AUTHORIZATION_HEADERS, HEADER_STRING)
     }
 
 }
