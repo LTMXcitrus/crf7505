@@ -13,16 +13,16 @@ fun main(args: Array<String>) {
     java.util.logging.Logger.getLogger("com.gargoylesoftware").level = java.util.logging.Level.OFF
 
     val pegassConnector = PegassConnector()
-    pegassConnector.connect("", "")
 
-    val calendarResponse = pegassConnector.getPage("https://pegass.croix-rouge.fr/crf/rest/seance?debut=2019-03-18&fin=2019-03-25&groupeAction=1&page=0&pageInfo=true&perPage=2147483647&zoneGeoId=75&zoneGeoType=departement")
+    val calendarResponse = pegassConnector.getPage("", "", "https://pegass.croix-rouge.fr/crf/rest/seance?debut=2019-03-18&fin=2019-03-25&groupeAction=1&page=0&pageInfo=true&perPage=2147483647&zoneGeoId=75&zoneGeoType=departement")
     println(calendarResponse)
 }
 
-class PegassConnector() {
-    private val webClient: WebClient = WebClient(BrowserVersion.CHROME)
+class PegassConnector {
 
-    fun connect(username: String, password: String) {
+    private fun connect(username: String, password: String): WebClient {
+        val webClient = WebClient(BrowserVersion.CHROME)
+
         webClient.options.isJavaScriptEnabled = false
         webClient.options.isThrowExceptionOnFailingStatusCode = false
         webClient.options.isThrowExceptionOnScriptError = false
@@ -42,9 +42,11 @@ class PegassConnector() {
         webClient.getPage<HtmlPage>("https://pegass.croix-rouge.fr/")
                 .getFirstByXPath<HtmlElement>("//input[@value='Continue']")
                 .click<HtmlPage>()
+        return webClient
     }
 
-    fun getPage(url: String): String {
+    fun getPage(username: String, password: String, url: String): String {
+        val webClient = connect(username, password)
         webClient.getPage<HtmlPage>(url)
         return webClient.currentWindow.enclosedPage.webResponse.contentAsString
     }
