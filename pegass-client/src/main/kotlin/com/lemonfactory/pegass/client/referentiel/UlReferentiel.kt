@@ -16,15 +16,13 @@ object UlReferentiel {
     }
 
     fun getUlLabel(ulId: Int): String {
-        return referentiel
-                .filter { ul -> ul.pegassId == ulId }
-                .firstOrNull()
+        return referentiel.firstOrNull { ul -> ul.pegassId == ulId }
                 ?.label
                 ?: "Ul inconnue"
     }
 
     private fun load(): List<Ul> {
-        val reader = CsvReader(UlReferentiel::class.java.classLoader.getResource("ulReferentiel.csv").path)
+        val reader = CsvReader(UlReferentiel::class.java.getResource("/ulReferentiel.csv").path, ';')
         reader.readHeaders()
         val ref = mutableListOf<Ul>()
         while (reader.readRecord()) {

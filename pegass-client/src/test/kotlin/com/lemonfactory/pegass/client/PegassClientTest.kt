@@ -6,14 +6,15 @@ import org.junit.Before
 import org.junit.Test
 import org.mockito.Mockito
 import org.mockito.Mockito.`when`
+import java.time.LocalDate
 
 
 class PegassClientTest {
 
 
-    val pegassConnectorMock = Mockito.mock(PegassConnector::class.java)
+    val pegassConnectorMock = Mockito.mock(PegassSession::class.java)
 
-    val pegassClient: PegassClient = PegassClient(pegassConnectorMock)
+    val pegassClient: PegassClient = PegassClient()
 
     @Before
     fun setUp() {
@@ -25,7 +26,7 @@ class PegassClientTest {
         // Given
 
         // When
-        val response: List<PegassActivity> = pegassClient.getActivities()
+        val response: List<PegassActivity> = pegassClient.getActivities(pegassConnectorMock, LocalDate.now(), LocalDate.now())
 
         // Then
         assert(response.isNotEmpty())

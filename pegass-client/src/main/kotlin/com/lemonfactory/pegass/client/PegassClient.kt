@@ -7,26 +7,36 @@ import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.api.format.PegassSearchUserResponse
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerNomination
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerTraining
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
-class PegassClient(val pegassConnector: PegassConnector) {
+private const val PEGASS_DATETIME_FORMATTER = "yyyy-MM-dd"
 
-    fun getActivities(username: String, password: String): List<PegassActivity> {
-        val pegassResponse = pegassConnector.getPage(username, password, "https://pegass.croix-rouge.fr/crf/rest/activite?debut=2018-09-10&fin=2018-09-26&groupeAction=1&zoneGeoId=75&zoneGeoType=departement")
+class PegassClient {
+
+    fun getActivities(pegassSession: PegassSession, start: LocalDate, end: LocalDate): List<PegassActivity> {
+        val startDate = start.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
+        val endDate = end.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
+        val pegassResponse = pegassSession
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&groupeAction=1&zoneGeoId=75&zoneGeoType=departement")
         return mapper.readValue(pegassResponse)
     }
 
-    fun getVolunteers(username: String, password: String): List<PegassVolunteer> {
-        val pegassResponse = pegassConnector.getPage(username, password, "https://pegass.croix-rouge.fr/crf/rest/utilisateur?groupeAction=1&page=0&pageInfo=true&perPage=11&searchType=benevoles&structure=893&withMoyensCom=true")
+    fun getVolunteers(pegassSession: PegassSession): List<PegassVolunteer> {
+        val pegassResponse = pegassSession
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/utilisateur?groupeAction=1&page=0&pageInfo=true&searchType=benevoles&structure=893&withMoyensCom=true")
         return mapper.readValue<PegassSearchUserResponse>(pegassResponse).list
     }
 
-    fun getVolunteerTrainingState(username: String, password: String, nivol: String): List<PegassVolunteerTraining> {
-        val pegassResponse = pegassConnector.getPage(username, password, "https://pegass.croix-rouge.fr/crf/rest/formationutilisateur?utilisateur=$nivol")
+    fun getVolunteerTrainingState(pegassSession: PegassSession, nivol: String): List<PegassVolunteerTraining> {
+        val pegassResponse = pegassSession
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/formationutilisateur?utilisateur=$nivol")
         return mapper.readValue(pegassResponse)
     }
 
-    fun getVolunteerNominations(username: String, password: String, nivol: String): List<PegassVolunteerNomination> {
-        val pegassResponse = pegassConnector.getPage(username, password, "https://pegass.croix-rouge.fr/crf/rest/nominationutilisateur?utilisateur=$nivol")
+    fun getVolunteerNominations(pegassSession: PegassSession, nivol: String): List<PegassVolunteerNomination> {
+        val pegassResponse = pegassSession
+                .getPage( "https://pegass.croix-rouge.fr/crf/rest/nominationutilisateur?utilisateur=$nivol")
         return mapper.readValue(pegassResponse)
     }
 

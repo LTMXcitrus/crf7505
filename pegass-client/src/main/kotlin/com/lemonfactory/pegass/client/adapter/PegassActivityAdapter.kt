@@ -6,7 +6,7 @@ import com.lemonfactory.pegass.client.api.activity.ActivityRole
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.referentiel.UlReferentiel
 
-class PegassActivityAdapter() {
+class PegassActivityAdapter {
 
     fun transform(pegassActivities: List<PegassActivity>): List<Mission> {
         return pegassActivities

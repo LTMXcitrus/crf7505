@@ -1,5 +1,6 @@
 package com.lemonfactory.pegass.client
 
+import com.lemonfactory.pegass.client.adapter.PegassActivityAdapter
 import com.lemonfactory.pegass.client.adapter.PegassTrainingAdapter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -14,17 +15,22 @@ open class PegassModule {
 
     @Bean
     open fun pegassClient(): PegassClient {
-        return PegassClient(pegassConnector())
-    }
-
-    @Bean
-    open fun pegassConnector(): PegassConnector {
-        return PegassConnector()
+        return PegassClient()
     }
 
     @Bean
     open fun pegassTrainingAdapter(): PegassTrainingAdapter {
         return PegassTrainingAdapter()
+    }
+
+    @Bean
+    open fun pegassMissionService(): PegassMissionService {
+        return PegassMissionService(pegassClient(), pegassActivityAdapter())
+    }
+
+    @Bean
+    open fun pegassActivityAdapter(): PegassActivityAdapter {
+        return PegassActivityAdapter()
     }
 
 }

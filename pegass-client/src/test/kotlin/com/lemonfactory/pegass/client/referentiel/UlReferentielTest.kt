@@ -5,7 +5,6 @@ import org.junit.Test
 
 class UlReferentielTest {
 
-
     @Test
     fun getAllUlIds_returnsAllUlIds() {
         val ulIds = UlReferentiel.getAllUlIds()

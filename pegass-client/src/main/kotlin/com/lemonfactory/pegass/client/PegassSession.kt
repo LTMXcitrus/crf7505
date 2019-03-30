@@ -9,20 +9,10 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage
 
 const val connectUrl = "https://id.authentification.croix-rouge.fr/my.policy"
 
-fun main(args: Array<String>) {
-    java.util.logging.Logger.getLogger("com.gargoylesoftware").level = java.util.logging.Level.OFF
+class PegassSession(val username: String, val password: String) {
+    private val webClient = WebClient(BrowserVersion.CHROME)
 
-    val pegassConnector = PegassConnector()
-
-    val calendarResponse = pegassConnector.getPage("", "", "https://pegass.croix-rouge.fr/crf/rest/seance?debut=2019-03-18&fin=2019-03-25&groupeAction=1&page=0&pageInfo=true&perPage=2147483647&zoneGeoId=75&zoneGeoType=departement")
-    println(calendarResponse)
-}
-
-class PegassConnector {
-
-    private fun connect(username: String, password: String): WebClient {
-        val webClient = WebClient(BrowserVersion.CHROME)
-
+    init {
         webClient.options.isJavaScriptEnabled = false
         webClient.options.isThrowExceptionOnFailingStatusCode = false
         webClient.options.isThrowExceptionOnScriptError = false
@@ -34,19 +24,17 @@ class PegassConnector {
                 .click<HtmlPage>()
                 .getFirstByXPath<HtmlForm>("//form")
 
-        form.getInputByName<HtmlInput>("username").valueAttribute = username
-        form.getInputByName<HtmlInput>("password").valueAttribute = password
+        form.getInputByName<HtmlInput>("username").valueAttribute = this.username
+        form.getInputByName<HtmlInput>("password").valueAttribute = this.password
         form.getFirstByXPath<HtmlElement>("//input[@class='credentials_input_submit']")
                 .click<HtmlPage>()
 
         webClient.getPage<HtmlPage>("https://pegass.croix-rouge.fr/")
                 .getFirstByXPath<HtmlElement>("//input[@value='Continue']")
                 .click<HtmlPage>()
-        return webClient
     }
 
-    fun getPage(username: String, password: String, url: String): String {
-        val webClient = connect(username, password)
+    fun getPage(url: String): String {
         webClient.getPage<HtmlPage>(url)
         return webClient.currentWindow.enclosedPage.webResponse.contentAsString
     }
