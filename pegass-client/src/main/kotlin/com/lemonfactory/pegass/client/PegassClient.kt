@@ -7,19 +7,23 @@ import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.api.format.PegassSearchUserResponse
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerNomination
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerTraining
+import org.slf4j.LoggerFactory
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 private const val PEGASS_DATETIME_FORMATTER = "yyyy-MM-dd"
 
 class PegassClient {
+    private val LOGGER = LoggerFactory.getLogger(PegassClient::class.java)
 
     fun getActivities(pegassSession: PegassSession, start: LocalDate, end: LocalDate): List<PegassActivity> {
         val startDate = start.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
         val endDate = end.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
-        val pegassResponse = pegassSession
-                .getPage("https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&groupeAction=1&zoneGeoId=75&zoneGeoType=departement")
-        return mapper.readValue(pegassResponse)
+
+        val url = "https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&groupeAction=1&zoneGeoId=75&zoneGeoType=departement"
+        LOGGER.info("Retrieve activities: $url")
+
+        return mapper.readValue(pegassSession.getPage(url))
     }
 
     fun getVolunteers(pegassSession: PegassSession): List<PegassVolunteer> {
@@ -36,7 +40,7 @@ class PegassClient {
 
     fun getVolunteerNominations(pegassSession: PegassSession, nivol: String): List<PegassVolunteerNomination> {
         val pegassResponse = pegassSession
-                .getPage( "https://pegass.croix-rouge.fr/crf/rest/nominationutilisateur?utilisateur=$nivol")
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/nominationutilisateur?utilisateur=$nivol")
         return mapper.readValue(pegassResponse)
     }
 

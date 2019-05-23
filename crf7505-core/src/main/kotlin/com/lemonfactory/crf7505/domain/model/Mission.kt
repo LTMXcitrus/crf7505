@@ -10,4 +10,17 @@ data class Mission(@Id val id: String,
                    val endTime: LocalDateTime,
                    val ul: String,
                    val name: String,
-                   val roles: List<Role>)
+                   val roles: List<Role>) {
+
+    fun getCommonId(): String {
+        return id.split("-")[0]
+    }
+
+    fun getOccurenceId(): String {
+        val idSplitted = id.split("-")
+        return when {
+            idSplitted.size > 2 -> idSplitted[2]
+            else -> ""
+        }
+    }
+}
