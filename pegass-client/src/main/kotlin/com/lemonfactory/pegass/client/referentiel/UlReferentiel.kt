@@ -2,6 +2,8 @@ package com.lemonfactory.pegass.client.referentiel
 
 import com.csvreader.CsvReader
 import com.lemonfactory.pegass.client.model.Ul
+import org.apache.commons.lang3.CharSet
+import java.nio.charset.Charset
 
 object UlReferentiel {
 
@@ -22,7 +24,7 @@ object UlReferentiel {
     }
 
     private fun load(): List<Ul> {
-        val reader = CsvReader(UlReferentiel::class.java.getResource("/ulReferentiel.csv").path, ';')
+        val reader = CsvReader(UlReferentiel::class.java.classLoader.getResourceAsStream("ulReferentiel.csv"), ';', Charset.forName("UTF-8"))
         reader.readHeaders()
         val ref = mutableListOf<Ul>()
         while (reader.readRecord()) {
