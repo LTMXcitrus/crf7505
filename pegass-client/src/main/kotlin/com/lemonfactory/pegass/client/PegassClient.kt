@@ -16,6 +16,20 @@ private const val PEGASS_DATETIME_FORMATTER = "yyyy-MM-dd"
 class PegassClient {
     private val LOGGER = LoggerFactory.getLogger(PegassClient::class.java)
 
+    fun getActivitiesFilteredWithDates(pegassSession: PegassSession, start: LocalDate, end: LocalDate): List<PegassActivity> {
+        return getActivities(pegassSession, start, end)
+                .mapNotNull { pegassActivity -> filterByDate(pegassActivity, start, end) }
+    }
+
+    private fun filterByDate(pegassActivity: PegassActivity, start: LocalDate, end: LocalDate): PegassActivity? {
+        val seanceList = pegassActivity.seanceList
+                .filter { seance -> seance.fin.toLocalDate().isAfter(start) && seance.debut.toLocalDate().isBefore(end) }
+        if(seanceList.isEmpty()) {
+            return null
+        }
+        return pegassActivity.copy(seanceList = seanceList)
+    }
+
     fun getActivities(pegassSession: PegassSession, start: LocalDate, end: LocalDate): List<PegassActivity> {
         val startDate = start.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
         val endDate = end.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))

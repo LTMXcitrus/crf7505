@@ -11,4 +11,9 @@ class UlReferentielTest {
 
         assertThat(ulIds).isNotEmpty
     }
+
+    @Test
+    fun getUlLabel_UlIdOfParisV_ReturnsV() {
+        assertThat(UlReferentiel.getUlLabel(893)).isEqualTo("V");
+    }
 }

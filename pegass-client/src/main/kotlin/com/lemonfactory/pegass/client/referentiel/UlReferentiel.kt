@@ -2,7 +2,6 @@ package com.lemonfactory.pegass.client.referentiel
 
 import com.csvreader.CsvReader
 import com.lemonfactory.pegass.client.model.Ul
-import org.apache.commons.lang3.CharSet
 import java.nio.charset.Charset
 
 object UlReferentiel {
