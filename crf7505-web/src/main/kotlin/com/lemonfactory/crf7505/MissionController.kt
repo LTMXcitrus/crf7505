@@ -1,13 +1,15 @@
 package com.lemonfactory.crf7505
 
 import com.lemonfactory.crf7505.domain.model.PegassUser
+import com.lemonfactory.crf7505.infrastructure.MissionRepository
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.web.bind.annotation.*
 import java.time.LocalDate
+import java.time.LocalDateTime
 
 @RestController
-class MissionController(val missionService: MissionService) {
+class MissionController(val missionRepository: MissionRepository) {
 
     @ModelAttribute
     fun initLocalDate(): LocalDate {
@@ -17,9 +19,9 @@ class MissionController(val missionService: MissionService) {
 
     @PostMapping("mission/activities")
     fun activities(@RequestBody user: PegassUser,
-                   @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam start: LocalDate,
-                   @DateTimeFormat(pattern = "yyyy-MM-dd") @RequestParam end: LocalDate): String {
-        return mapper.writeValueAsString(missionService.getAllMissions(user, start, end))
+                   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) @RequestParam start: LocalDateTime,
+                   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) @RequestParam end: LocalDateTime): String {
+        return mapper.writeValueAsString(missionRepository.getMissionsByDay(user, start, end))
     }
 
 }

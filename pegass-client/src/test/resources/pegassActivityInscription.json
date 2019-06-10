@@ -1,0 +1,904 @@
+[
+  {
+    "id": "p1024699",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001302296M",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "58",
+    "type": "COMP",
+    "isMultiple": false
+  },
+  {
+    "id": "p1114792",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001627054K",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1185299",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001801570C",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "commentaire": "CI Tente",
+    "statut": "VALIDEE",
+    "role": "75",
+    "type": "NOMI",
+    "isMultiple": false
+  },
+  {
+    "id": "p1185300",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00000793054N",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1198435",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001840417C",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "75",
+    "type": "NOMI",
+    "isMultiple": false
+  },
+  {
+    "id": "p1206611",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001334142D",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1219603",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000004149M",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "10",
+    "type": "COMP",
+    "isMultiple": false
+  },
+  {
+    "id": "p1234358",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000021378J",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "171",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1245270",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00000058472F",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "40",
+    "type": "NOMI",
+    "isMultiple": false
+  },
+  {
+    "id": "p1258460",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001019814S",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1265289",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00000022634C",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "commentaire": "CD MGE",
+    "statut": "VALIDEE",
+    "role": "PARTICIPANT",
+    "type": "COMP",
+    "isMultiple": false
+  },
+  {
+    "id": "p1266302",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01100000089A",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1268544",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000000429M",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1269283",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00002182320K",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": true
+  },
+  {
+    "id": "p1269316",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00002035651M",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "commentaire": "Au retour du pèlerinage",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": true
+  },
+  {
+    "id": "p1269497",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001360067H",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "167",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1269500",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000029425S",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1269501",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000029427U",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1270303",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00002137563L",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1272917",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01000028599G",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1273883",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01100004668V",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "commentaire": "Parrainage, 1er DPS",
+    "statut": "VALIDEE",
+    "role": "171",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1273890",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "01100004671Y",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "commentaire": "Parrainage, 1er DPS",
+    "statut": "VALIDEE",
+    "role": "171",
+    "type": "FORM",
+    "isMultiple": false
+  },
+  {
+    "id": "p1276779",
+    "activite": {
+      "id": "p487864",
+      "type": "aa",
+      "typeActivite": {
+        "id": 10109,
+        "libelle": "Pré Inscription DPS",
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "action": {
+          "id": 19,
+          "libelle": "Postes de secours",
+          "groupeAction": {
+            "id": 1,
+            "libelle": "Urgence et Secourisme"
+          }
+        }
+      },
+      "statut": "Complète"
+    },
+    "seance": {
+      "id": "p487843"
+    },
+    "utilisateur": {
+      "id": "00001361166C",
+      "actif": false,
+      "mineur": false
+    },
+    "debut": "2019-06-09T18:00:00",
+    "fin": "2019-06-10T06:00:00",
+    "statut": "VALIDEE",
+    "role": "166",
+    "type": "FORM",
+    "isMultiple": false
+  }
+]

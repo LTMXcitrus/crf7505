@@ -1,6 +1,7 @@
 package com.lemonfactory.pegass.client.api.activity
 
 import com.lemonfactory.pegass.client.api.PegassVolunteer
+import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 
 data class PegassActivity(val id: String,
                           val type: String,
@@ -14,4 +15,5 @@ data class PegassActivity(val id: String,
                           val seanceList: List<ActivitySeance>,
                           val responsable: PegassVolunteer,
                           val commentaire: String?,
-                          val rappel: Boolean)
+                          val rappel: Boolean,
+                          val inscriptions: List<PegassInscription> = emptyList())

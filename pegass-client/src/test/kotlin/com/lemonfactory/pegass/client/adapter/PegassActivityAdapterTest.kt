@@ -1,55 +1,64 @@
 package com.lemonfactory.pegass.client.adapter
 
 import com.lemonfactory.pegass.client.testutils.aPegassActivity
+import com.lemonfactory.pegass.client.testutils.aPegassInscription
+import com.lemonfactory.pegass.client.testutils.anActivityRole
 import com.lemonfactory.pegass.client.testutils.anActivitySeance
 import org.assertj.core.api.Assertions.assertThat
-
 import org.junit.Test
-import java.time.LocalDateTime
-import java.util.function.Predicate
 
 class PegassActivityAdapterTest {
 
-    val adapter = PegassActivityAdapter()
-
+    private val pegassInscriptionAdapter = PegassInscriptionAdapter()
+    private val pegassRoleAdapter = PegassRoleAdapter()
+    private val adapter = PegassActivityAdapter(pegassInscriptionAdapter, pegassRoleAdapter)
 
     @Test
-    fun transform_singlePegassActivity_returnsMissionDay() {
+    fun transform_noActivity_returnEmptyList() {
         // Given
-        val pegassActivity = aPegassActivity().copy(seanceList = listOf(anActivitySeance()))
 
         // When
-        val missionDays = adapter.transform(listOf(pegassActivity))
+        val missions = adapter.transform(emptyList())
 
         // Then
-        assertThat(missionDays).isNotEmpty
+        assertThat(missions).isEmpty()
     }
 
     @Test
-    fun transform_twoPegassActivitiesWithSingleSeance_returnsOneMissionDayWithTwoMissions() {
+    fun transform_emptySeancesListPegassActivity_returnsEmptyList() {
         // Given
-        val pegassActivity = aPegassActivity().copy(seanceList = listOf(anActivitySeance()))
+        val activity = aPegassActivity().copy(seanceList = emptyList())
 
         // When
-        val missionDays = adapter.transform(listOf(pegassActivity, pegassActivity))
+        val missions = adapter.transform(listOf(activity))
 
         // Then
-        assertThat(missionDays).hasSize(1)
-        assertThat(missionDays[0].missions).hasSize(2)
+        assertThat(missions).isEmpty()
     }
 
     @Test
-    fun transform_pegassActivitiesWithTwoSeances_returnsTwoMissionDaysWithOneMission() {
+    fun transform_singlePegassActivity_returnsMission() {
         // Given
-        val firstSeance = anActivitySeance()
-        val secondSeance = anActivitySeance().copy(debut = LocalDateTime.now().plusDays(1), fin = LocalDateTime.now().plusDays(1))
-        val pegassActivity = aPegassActivity().copy(seanceList = listOf(firstSeance, secondSeance))
+        val activitySeance = anActivitySeance().copy(
+                roleConfigList = listOf(anActivityRole())
+        )
+        val activity = aPegassActivity().copy(
+                seanceList = listOf(activitySeance),
+                inscriptions = listOf(aPegassInscription())
+        )
 
         // When
-        val missionDays = adapter.transform(listOf(pegassActivity))
+        val missions = adapter.transform(listOf(activity))
 
         // Then
-        assertThat(missionDays).hasSize(2)
-        assertThat(missionDays).allMatch { mission -> mission.missions.size == 1 }
+        assertThat(missions).hasSize(1)
+        val mission = missions[0]
+        assertThat(mission.beginDate).isEqualTo(activity.seanceList[0].debut)
+        assertThat(mission.endDate).isEqualTo(activity.seanceList[0].fin)
+        assertThat(mission.name).isEqualToIgnoringCase(activity.libelle)
+        assertThat(mission.ul).isEqualTo("V")
+        assertThat(mission.inscriptions).isNotEmpty
+        assertThat(mission.roles).isNotEmpty
     }
+
 }

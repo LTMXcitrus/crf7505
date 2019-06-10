@@ -1,0 +1,6402 @@
+[
+  {
+    "id": "d75201904003",
+    "type": "ad",
+    "libelle": "BC - Pélerinage de Tradition CHARTRES / PARIS",
+    "typeActivite": {
+      "id": 10113,
+      "libelle": "Postes de secours",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 904
+    },
+    "structureMenantActivite": {
+      "id": 904
+    },
+    "seanceList": [
+      {
+        "id": "d75201904003-1",
+        "activite": {
+          "id": "d75201904003",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-08T08:00:00",
+        "fin": "2019-06-10T20:00:00",
+        "adresse": " Place Vauban Départ de la cathédrale de CHARTRES - arrivée PARIS  75007 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "CS",
+            "role": "Chef de secteur",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 13
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 7,
+            "idKeyQualification": 3
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001302296M",
+      "actif": false,
+      "mineur": false
+    }
+  },
+  {
+    "id": "p487864",
+    "type": "aa",
+    "libelle": "MARVELLOUS ISLAND J2",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 904
+    },
+    "structureMenantActivite": {
+      "id": 904
+    },
+    "seanceList": [
+      {
+        "id": "p487843",
+        "activite": {
+          "id": "p487864",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T18:00:00",
+        "fin": "2019-06-10T06:00:00",
+        "adresse": "PLAGE DE TORCY",
+        "roleConfigList": [
+          {
+            "id": "p1126775",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 2,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1126776",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1126777",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 7,
+            "type": "FORM"
+          },
+          {
+            "id": "p1126778",
+            "code": "171",
+            "role": "PREVENTION ET SECOURS CIVIQUES DE NIVEAU 1",
+            "actif": true,
+            "effectif": 3,
+            "type": "FORM"
+          },
+          {
+            "id": "p1126781",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1143601",
+            "code": "58",
+            "role": "Infirmier",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1384896",
+            "code": "40",
+            "role": "Directeur Local de l'Urgence et du Secourisme",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1394720",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 7,
+            "type": "FORM"
+          },
+          {
+            "id": "p1394725",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001801570C",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": ""
+  },
+  {
+    "id": "p606940",
+    "type": "aa",
+    "libelle": "Disc Jockey",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 894
+    },
+    "structureMenantActivite": {
+      "id": 894
+    },
+    "seanceList": [
+      {
+        "id": "p606914",
+        "activite": {
+          "id": "p606940",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T20:00:00",
+        "fin": "2019-06-10T02:00:00",
+        "adresse": "Hippodrome d'auteuil",
+        "roleConfigList": [
+          {
+            "id": "p1406328",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1406329",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1406330",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1406331",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1406332",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000007948V",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Réactivéle 09/06/2019",
+    "rappel": true
+  },
+  {
+    "id": "p600555",
+    "type": "aa",
+    "libelle": "Disc Jockey",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Annulée",
+    "structureOrganisatrice": {
+      "id": 894
+    },
+    "structureMenantActivite": {
+      "id": 894
+    },
+    "seanceList": [
+      {
+        "id": "p600529",
+        "activite": {
+          "id": "p600555",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T20:00:00",
+        "fin": "2019-06-10T02:00:00",
+        "adresse": "Paris 16",
+        "roleConfigList": [
+          {
+            "id": "p1391639",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1391640",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1391641",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1391642",
+            "code": "171",
+            "role": "PREVENTION ET SECOURS CIVIQUES DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1391643",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000007948V",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p435454",
+    "type": "aa",
+    "libelle": "MOPS - Astreinte",
+    "typeActivite": {
+      "id": 10117,
+      "libelle": "Astreinte / Disponibilité",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 21,
+        "libelle": "Urgence et autres opérations",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "4b3b5b51-5762-4625-a719-d798733aebb7",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2018-09-01T00:00:00",
+      "fin": "2019-12-31T23:59:00"
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p435433",
+        "activite": {
+          "id": "p435454",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T00:00:00",
+        "fin": "2019-06-10T23:55:00",
+        "adresse": "Itinérant",
+        "roleConfigList": [
+          {
+            "id": "p1008571",
+            "code": "47",
+            "role": "Chauffeur LOG",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1008572",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000256594F",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Astreinte logistique : TITANE 75 : Portable 0664498417 - Pager 0657497644* / CRISTAL 75 : Portable 0626841188 - Pager 0657478695* / RADAR 75 : Portable 0635537688 - Pager 0657471371*    * Urgence uniquement",
+    "rappel": true
+  },
+  {
+    "id": "p599606",
+    "type": "aa",
+    "libelle": "DPS FAN Zone Coupe du Monde de Football Féminin",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "82608354-18b4-4ede-9211-463ba7bf115f",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2019-06-07T00:00:00",
+      "fin": "2019-07-07T23:59:00"
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 908
+    },
+    "structureMenantActivite": {
+      "id": 908
+    },
+    "seanceList": [
+      {
+        "id": "p599580",
+        "activite": {
+          "id": "p599606",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T00:05:00",
+        "fin": "2019-06-10T00:35:00",
+        "adresse": "Forum des halles",
+        "roleConfigList": [
+          {
+            "id": "p1389435",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1389436",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1389437",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1389438",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1389439",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000020716V",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Horaires 12h-23h30\nCet événement permettra juste de suivre les effectifs engagés.\nPensez à mettre les horaires sur lesquels vous êtes disponibles en commentaire",
+    "rappel": true
+  },
+  {
+    "id": "p443509",
+    "type": "aa",
+    "libelle": "Nautique - Entraînement Piscine",
+    "typeActivite": {
+      "id": 11007,
+      "libelle": "Equipe nautique",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "e776a5ef-c168-48b2-8b01-24c00115b13b",
+      "creationEnMasse": false,
+      "type": "HEBDOMADAIRE",
+      "creneauRecurrentList": [],
+      "debut": "2018-09-03T00:00:00",
+      "fin": "2019-06-24T23:59:00"
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p443488",
+        "activite": {
+          "id": "p443509",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T02:00:00",
+        "fin": "2019-06-10T04:00:00",
+        "adresse": "Voir planning Jeunesse & Avenir",
+        "roleConfigList": [
+          {
+            "id": "p1025689",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 10,
+            "type": "COMP"
+          },
+          {
+            "id": "p1025690",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000001962J",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Précisez le ou les jours en commentaire.",
+    "rappel": true
+  },
+  {
+    "id": "p605411",
+    "type": "aa",
+    "libelle": "MOPS - Marvellous Island 2019",
+    "typeActivite": {
+      "id": 10107,
+      "libelle": "Logistique / ETIR",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p605385",
+        "activite": {
+          "id": "p605411",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T03:30:00",
+        "fin": "2019-06-10T08:30:00",
+        "adresse": "Rue du Parc de Loisir de Torcy - 77200 Saint-Thibault-des-Vignes",
+        "roleConfigList": [
+          {
+            "id": "p1402802",
+            "code": "220",
+            "role": "Chef de Secteur Logistique",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1402803",
+            "code": "47",
+            "role": "Chauffeur LOG",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1402804",
+            "code": "14",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 2,
+            "type": "COMP"
+          },
+          {
+            "id": "p1402805",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000256594F",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Démontage logistique",
+    "rappel": true
+  },
+  {
+    "id": "p574118",
+    "type": "aa",
+    "libelle": "PELERINAGE DE CHARTRES 2019 J3",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 904
+    },
+    "structureMenantActivite": {
+      "id": 904
+    },
+    "seanceList": [
+      {
+        "id": "p574092",
+        "activite": {
+          "id": "p574118",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T07:00:00",
+        "fin": "2019-06-10T22:00:00",
+        "adresse": "ENTRE CHARTRES ET PARIS",
+        "roleConfigList": [
+          {
+            "id": "p1328786",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 3,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1328787",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 2,
+            "type": "COMP"
+          },
+          {
+            "id": "p1328788",
+            "code": "58",
+            "role": "Infirmier",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1328789",
+            "code": "59",
+            "role": "Médecin",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1328792",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1328793",
+            "code": "77",
+            "role": "Chauffeur Quad",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1328794",
+            "code": "9",
+            "role": "Chauffeur VL",
+            "actif": true,
+            "effectif": 2,
+            "type": "COMP"
+          },
+          {
+            "id": "p1328795",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1402737",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 3,
+            "type": "FORM"
+          },
+          {
+            "id": "p1405618",
+            "code": "167",
+            "role": "Chef de Dispositif de Moyenne et Grande Envergure",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001801570C",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Pélé 2019.\n\ndépart vendredi soir - jusqu'à samedi après diner (vers 22h)  \nCh Quad = PSE2",
+    "rappel": true
+  },
+  {
+    "id": "p593272",
+    "type": "aa",
+    "libelle": "Astreinte ELEC",
+    "typeActivite": {
+      "id": 10117,
+      "libelle": "Astreinte / Disponibilité",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 21,
+        "libelle": "Urgence et autres opérations",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p593246",
+        "activite": {
+          "id": "p593272",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T08:00:00",
+        "fin": "2019-06-14T20:00:00",
+        "adresse": "Dt75",
+        "roleConfigList": [
+          {
+            "id": "p1374551",
+            "code": "7",
+            "role": "Cadre de Permanence",
+            "actif": true,
+            "effectif": 2,
+            "type": "COMP"
+          },
+          {
+            "id": "p1374552",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000039302V",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p511679",
+    "type": "aa",
+    "libelle": "Régulation - SAMU 75",
+    "typeActivite": {
+      "id": 10114,
+      "libelle": "Régulation",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p511653",
+        "activite": {
+          "id": "p511679",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T10:30:00",
+        "fin": "2019-06-10T21:00:00",
+        "adresse": "Hôpital Necker / CRRA SAMU de Paris - 149, rue de Sèvres - Paris 15",
+        "roleConfigList": [
+          {
+            "id": "p1189669",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1189670",
+            "code": "32",
+            "role": "TSA : Transmetteur Secouriste Associatif",
+            "actif": true,
+            "effectif": 2,
+            "type": "COMP"
+          },
+          {
+            "id": "p1189671",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001342176K",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "",
+    "rappel": true
+  },
+  {
+    "id": "p572906",
+    "type": "aa",
+    "libelle": "Onyx",
+    "typeActivite": {
+      "id": 10118,
+      "libelle": "Cadre de Permanence",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 21,
+        "libelle": "Urgence et autres opérations",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p572880",
+        "activite": {
+          "id": "p572906",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "Paris",
+        "roleConfigList": [
+          {
+            "id": "p1325873",
+            "code": "7",
+            "role": "Cadre de Permanence",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325874",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000040357S",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p572907",
+    "type": "aa",
+    "libelle": "CS MTMA",
+    "typeActivite": {
+      "id": 10116,
+      "libelle": "Réseau 18",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 907
+    },
+    "structureMenantActivite": {
+      "id": 907
+    },
+    "seanceList": [
+      {
+        "id": "p572881",
+        "activite": {
+          "id": "p572907",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "12, rue Carpeaux - Paris 18",
+        "roleConfigList": [
+          {
+            "id": "p1325876",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325877",
+            "code": "255",
+            "role": "CHEF D'INTERVENTION BSPP",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1325878",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325879",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1335660",
+            "code": "171",
+            "role": "PREVENTION ET SECOURS CIVIQUES DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000015046N",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p572908",
+    "type": "aa",
+    "libelle": "CS CHLY",
+    "typeActivite": {
+      "id": 10116,
+      "libelle": "Réseau 18",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p572882",
+        "activite": {
+          "id": "p572908",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "26, rue de Chaligny - Paris 12",
+        "roleConfigList": [
+          {
+            "id": "p1325881",
+            "code": "255",
+            "role": "CHEF D'INTERVENTION BSPP",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1325882",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325883",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325885",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1402923",
+            "code": "171",
+            "role": "PREVENTION ET SECOURS CIVIQUES DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001209863S",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p572909",
+    "type": "aa",
+    "libelle": "CS PLAI",
+    "typeActivite": {
+      "id": 10116,
+      "libelle": "Réseau 18",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 903
+    },
+    "structureMenantActivite": {
+      "id": 903
+    },
+    "seanceList": [
+      {
+        "id": "p572883",
+        "activite": {
+          "id": "p572909",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "45, avenue Villemain - Paris 14",
+        "roleConfigList": [
+          {
+            "id": "p1325886",
+            "code": "255",
+            "role": "CHEF D'INTERVENTION BSPP",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1325887",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325888",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325889",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325890",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001616516G",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p572910",
+    "type": "aa",
+    "libelle": "Alpha Nord",
+    "typeActivite": {
+      "id": 10115,
+      "libelle": "Réseau 15",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 905
+    },
+    "structureMenantActivite": {
+      "id": 905
+    },
+    "seanceList": [
+      {
+        "id": "p572884",
+        "activite": {
+          "id": "p572910",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "Paris",
+        "roleConfigList": [
+          {
+            "id": "p1325892",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325893",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325894",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325895",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325896",
+            "code": "254",
+            "role": "CHEF D'INTERVENTION RESEAU DE SECOURS",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1334555",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "01000010749M",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p572911",
+    "type": "aa",
+    "libelle": "Alpha Sud",
+    "typeActivite": {
+      "id": 10115,
+      "libelle": "Réseau 15",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 65,
+        "libelle": "Réseau de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 892
+    },
+    "structureMenantActivite": {
+      "id": 892
+    },
+    "seanceList": [
+      {
+        "id": "p572885",
+        "activite": {
+          "id": "p572911",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T11:00:00",
+        "fin": "2019-06-10T20:59:00",
+        "adresse": "Paris",
+        "roleConfigList": [
+          {
+            "id": "p1325897",
+            "code": "10",
+            "role": "Chauffeur VPSP",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1325898",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1325900",
+            "code": "254",
+            "role": "CHEF D'INTERVENTION RESEAU DE SECOURS",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1325901",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1391858",
+            "code": "PARTICIPANT",
+            "role": "Participant",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000501081C",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p545316",
+    "type": "aa",
+    "libelle": "JA",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 904
+    },
+    "structureMenantActivite": {
+      "id": 904
+    },
+    "seanceList": [
+      {
+        "id": "p545290",
+        "activite": {
+          "id": "p545316",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T12:00:00",
+        "fin": "2019-06-10T20:00:00",
+        "adresse": "Jardin d'Acclimatation - 75016",
+        "roleConfigList": [
+          {
+            "id": "p1261580",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1261581",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1261582",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001801570C",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p592738",
+    "type": "aa",
+    "libelle": "Fan Zone - Coupe du Monde féminine - Créneau 1",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "b693d1c5-09da-4218-915b-b2958f1fe201",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2019-06-07T00:00:00",
+      "fin": "2019-07-07T23:59:00"
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p592712",
+        "activite": {
+          "id": "p592738",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T12:00:00",
+        "fin": "2019-06-10T14:00:00",
+        "adresse": "Forum des Halles",
+        "roleConfigList": [
+          {
+            "id": "p1373075",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373076",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373077",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001209863S",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p592769",
+    "type": "aa",
+    "libelle": "Fan Zone - Coupe du Monde féminine - Créneau 2",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "69bdb14d-27b0-4e1b-aba2-9c0b99e56d2b",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2019-06-07T00:00:00",
+      "fin": "2019-07-07T23:59:00"
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p592743",
+        "activite": {
+          "id": "p592769",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T14:00:00",
+        "fin": "2019-06-10T19:00:00",
+        "adresse": "Forum des Halles",
+        "roleConfigList": [
+          {
+            "id": "p1373171",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1373172",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 3,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373173",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 2,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373174",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          },
+          {
+            "id": "p1403879",
+            "code": "80",
+            "role": "Aide régulateur",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001209863S",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "p598877",
+    "type": "aa",
+    "libelle": "MOPS - Coupe du Monde de Football Féminin",
+    "typeActivite": {
+      "id": 10107,
+      "libelle": "Logistique / ETIR",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "03bc9500-0c1b-4f30-b385-8c227970f51a",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2019-06-07T00:00:00",
+      "fin": "2019-07-07T23:59:00"
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p598851",
+        "activite": {
+          "id": "p598877",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T17:00:00",
+        "fin": "2019-06-10T23:55:00",
+        "adresse": "Place René Cassin - 75001 Paris",
+        "roleConfigList": [
+          {
+            "id": "p1387792",
+            "code": "220",
+            "role": "Chef de Secteur Logistique",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1387793",
+            "code": "47",
+            "role": "Chauffeur LOG",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1387794",
+            "code": "14",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 1,
+            "type": "COMP"
+          },
+          {
+            "id": "p1387795",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00000256594F",
+      "actif": false,
+      "mineur": false
+    },
+    "commentaire": "Astreinte logistique",
+    "rappel": true
+  },
+  {
+    "id": "p592802",
+    "type": "aa",
+    "libelle": "Fan Zone - Coupe du Monde féminine - Créneau 3",
+    "typeActivite": {
+      "id": 10109,
+      "libelle": "Pré Inscription DPS",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "recurrence": {
+      "id": "44bf7997-fda1-4f1e-a093-0aacd1baa123",
+      "creationEnMasse": false,
+      "type": "JOURNALIERE",
+      "creneauRecurrentList": [],
+      "debut": "2019-06-07T00:00:00",
+      "fin": "2019-07-07T23:59:00"
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "p592776",
+        "activite": {
+          "id": "p592802",
+          "type": "aa"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T19:00:00",
+        "fin": "2019-06-10T23:30:00",
+        "adresse": "Forum des Halles",
+        "roleConfigList": [
+          {
+            "id": "p1373299",
+            "code": "75",
+            "role": "Chef d'Intervention",
+            "actif": true,
+            "effectif": 1,
+            "type": "NOMI"
+          },
+          {
+            "id": "p1373300",
+            "code": "167",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 2",
+            "actif": true,
+            "effectif": 4,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373301",
+            "code": "166",
+            "role": "PREMIERS SECOURS EN EQUIPE DE NIVEAU 1",
+            "actif": true,
+            "effectif": 1,
+            "type": "FORM"
+          },
+          {
+            "id": "p1373302",
+            "code": "PARTICIPANT_EXT",
+            "role": "Participant Exterieur",
+            "actif": true,
+            "effectif": 0,
+            "type": "COMP"
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001209863S",
+      "actif": false,
+      "mineur": false
+    },
+    "rappel": true
+  },
+  {
+    "id": "d75201903030",
+    "type": "ad",
+    "libelle": "Judo FSGT",
+    "typeActivite": {
+      "id": 10113,
+      "libelle": "Postes de secours",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 900
+    },
+    "structureMenantActivite": {
+      "id": 900
+    },
+    "seanceList": [
+      {
+        "id": "d75201903030-4",
+        "activite": {
+          "id": "d75201903030",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-15T14:00:00",
+        "fin": "2019-06-15T18:00:00",
+        "adresse": "13 Rue du Général Guillaumat Gymnase La Plaine  75015 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201903030-3",
+        "activite": {
+          "id": "d75201903030",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-25T14:00:00",
+        "fin": "2019-05-25T18:00:00",
+        "adresse": "13 Rue du Général Guillaumat Gymnase La Plaine  75015 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201903030-2",
+        "activite": {
+          "id": "d75201903030",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-04-13T14:00:00",
+        "fin": "2019-04-13T18:00:00",
+        "adresse": "68 Boulevard Poniatowski gymnase Léo Lagrange  75012 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201903030-1",
+        "activite": {
+          "id": "d75201903030",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-03-30T14:00:00",
+        "fin": "2019-03-30T18:00:00",
+        "adresse": "68 Boulevard Poniatowski gymnase Léo Lagrange  75012 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001625097I",
+      "actif": false,
+      "mineur": false
+    }
+  },
+  {
+    "id": "d75201905001",
+    "type": "ad",
+    "libelle": "Découverte d'activités sportives",
+    "typeActivite": {
+      "id": 10113,
+      "libelle": "Postes de secours",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Complète",
+    "structureOrganisatrice": {
+      "id": 898
+    },
+    "structureMenantActivite": {
+      "id": 898
+    },
+    "seanceList": [
+      {
+        "id": "d75201905001-3",
+        "activite": {
+          "id": "d75201905001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-29T11:00:00",
+        "fin": "2019-06-29T18:00:00",
+        "adresse": "2 Rue Eugene Spuller   75003 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905001-2",
+        "activite": {
+          "id": "d75201905001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-15T11:00:00",
+        "fin": "2019-06-15T18:00:00",
+        "adresse": "2 Rue Eugene Spuller   75003 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905001-1",
+        "activite": {
+          "id": "d75201905001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-25T11:00:00",
+        "fin": "2019-05-25T18:00:00",
+        "adresse": "2 Rue Eugene Spuller   75003 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001430280B",
+      "actif": false,
+      "mineur": false
+    }
+  },
+  {
+    "id": "d75201905032",
+    "type": "ad",
+    "libelle": "Fan Zone - Coupe du Monde féminine de football",
+    "typeActivite": {
+      "id": 10113,
+      "libelle": "Postes de secours",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Incomplète",
+    "structureOrganisatrice": {
+      "id": 80
+    },
+    "structureMenantActivite": {
+      "id": 80
+    },
+    "seanceList": [
+      {
+        "id": "d75201905032-58",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-07T12:00:00",
+        "fin": "2019-07-07T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-57",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-06T14:00:00",
+        "fin": "2019-07-06T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-56",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-06T12:00:00",
+        "fin": "2019-07-06T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-55",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-03T14:00:00",
+        "fin": "2019-07-03T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-54",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-03T12:00:00",
+        "fin": "2019-07-03T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-53",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-02T14:00:00",
+        "fin": "2019-07-02T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-52",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-02T12:00:00",
+        "fin": "2019-07-02T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-51",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-29T14:00:00",
+        "fin": "2019-06-29T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-50",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-29T12:00:00",
+        "fin": "2019-06-29T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-49",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-28T14:00:00",
+        "fin": "2019-06-28T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-48",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-28T12:00:00",
+        "fin": "2019-06-28T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-47",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-27T14:00:00",
+        "fin": "2019-06-27T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-46",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-27T12:00:00",
+        "fin": "2019-06-27T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-45",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-25T14:00:00",
+        "fin": "2019-06-25T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-44",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-25T12:00:00",
+        "fin": "2019-06-25T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-43",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-24T14:00:00",
+        "fin": "2019-06-24T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-42",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-24T12:00:00",
+        "fin": "2019-06-24T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-41",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-23T19:00:00",
+        "fin": "2019-06-23T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-40",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-23T14:00:00",
+        "fin": "2019-06-23T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-39",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-23T12:00:00",
+        "fin": "2019-06-23T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-38",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-22T19:00:00",
+        "fin": "2019-06-22T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-37",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-22T14:00:00",
+        "fin": "2019-06-22T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-36",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-22T12:00:00",
+        "fin": "2019-06-22T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-35",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-20T19:00:00",
+        "fin": "2019-06-20T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-34",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-20T14:00:00",
+        "fin": "2019-06-20T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-33",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-20T12:00:00",
+        "fin": "2019-06-20T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-32",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-19T14:00:00",
+        "fin": "2019-06-19T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-31",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-19T12:00:00",
+        "fin": "2019-06-19T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-30",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-18T14:00:00",
+        "fin": "2019-06-18T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-29",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-18T12:00:00",
+        "fin": "2019-06-18T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-28",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-17T19:00:00",
+        "fin": "2019-06-17T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-27",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-17T14:00:00",
+        "fin": "2019-06-17T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-26",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-17T12:00:00",
+        "fin": "2019-06-17T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-25",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-16T14:00:00",
+        "fin": "2019-06-16T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-24",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-16T12:00:00",
+        "fin": "2019-06-16T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-23",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-15T14:00:00",
+        "fin": "2019-06-15T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-22",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-15T12:00:00",
+        "fin": "2019-06-15T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-21",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-14T14:00:00",
+        "fin": "2019-06-14T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-20",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-14T12:00:00",
+        "fin": "2019-06-14T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-19",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-13T14:00:00",
+        "fin": "2019-06-13T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-18",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-13T12:00:00",
+        "fin": "2019-06-13T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-17",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-12T19:00:00",
+        "fin": "2019-06-12T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-16",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-12T14:00:00",
+        "fin": "2019-06-12T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-15",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-12T12:00:00",
+        "fin": "2019-06-12T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-14",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-11T19:00:00",
+        "fin": "2019-06-11T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-13",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-11T14:00:00",
+        "fin": "2019-06-11T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-12",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-11T12:00:00",
+        "fin": "2019-06-11T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-11",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T19:00:00",
+        "fin": "2019-06-10T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-10",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T14:00:00",
+        "fin": "2019-06-10T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-9",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-10T12:00:00",
+        "fin": "2019-06-10T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-8",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T19:00:00",
+        "fin": "2019-06-09T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-7",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T14:00:00",
+        "fin": "2019-06-09T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-6",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T12:00:00",
+        "fin": "2019-06-09T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-5",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-08T14:00:00",
+        "fin": "2019-06-08T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 4,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-4",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-08T12:00:00",
+        "fin": "2019-06-08T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-3",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-07T19:00:00",
+        "fin": "2019-06-07T23:30:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 5,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "CI",
+            "role": "Chef d’intervention",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 2
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 8,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-2",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-07T14:00:00",
+        "fin": "2019-06-07T19:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 3,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201905032-1",
+        "activite": {
+          "id": "d75201905032",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-07T12:00:00",
+        "fin": "2019-06-07T14:00:00",
+        "adresse": "1 Rue Pierre Lescot Jardin Nelson Mandela  75001 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 3
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001209863S",
+      "actif": false,
+      "mineur": false
+    }
+  },
+  {
+    "id": "d75201904001",
+    "type": "ad",
+    "libelle": "BC - JOCKEY DISC",
+    "typeActivite": {
+      "id": 10113,
+      "libelle": "Postes de secours",
+      "groupeAction": {
+        "libelle": "Urgence et Secourisme",
+        "tri": "ga1",
+        "id": 1
+      },
+      "action": {
+        "id": 19,
+        "libelle": "Postes de secours",
+        "groupeAction": {
+          "id": 1,
+          "libelle": "Urgence et Secourisme"
+        }
+      }
+    },
+    "statut": "Annulée",
+    "structureOrganisatrice": {
+      "id": 904
+    },
+    "structureMenantActivite": {
+      "id": 904
+    },
+    "seanceList": [
+      {
+        "id": "d75201904001-25",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-29T20:00:00",
+        "fin": "2019-09-30T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-24",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-22T20:00:00",
+        "fin": "2019-09-23T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-22",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-21T20:00:00",
+        "fin": "2019-09-22T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-23",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-15T20:00:00",
+        "fin": "2019-09-16T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-21",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-08T20:00:00",
+        "fin": "2019-09-09T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-20",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-09-01T20:00:00",
+        "fin": "2019-09-02T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-19",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-08-25T20:00:00",
+        "fin": "2019-08-26T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-18",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-08-18T20:00:00",
+        "fin": "2019-08-19T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippdrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-17",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-08-11T20:00:00",
+        "fin": "2019-08-12T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-16",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-08-04T20:00:00",
+        "fin": "2019-08-05T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-15",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-28T20:00:00",
+        "fin": "2019-07-29T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-14",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-21T20:00:00",
+        "fin": "2019-07-22T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-13",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-14T20:00:00",
+        "fin": "2019-07-15T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-12",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-07-13T20:00:00",
+        "fin": "2019-07-14T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-11",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-30T20:00:00",
+        "fin": "2019-07-01T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-10",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-23T20:00:00",
+        "fin": "2019-06-24T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hipodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-9",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-16T20:00:00",
+        "fin": "2019-06-17T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-8",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-15T20:00:00",
+        "fin": "2019-06-16T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-7",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-09T20:00:00",
+        "fin": "2019-06-10T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-6",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-06-02T20:00:00",
+        "fin": "2019-06-03T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-5",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-26T20:00:00",
+        "fin": "2019-05-27T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-4",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-19T18:00:00",
+        "fin": "2019-05-20T00:00:00",
+        "adresse": "0 Route d'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-3",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-18T18:00:00",
+        "fin": "2019-05-19T00:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-2",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-15T20:00:00",
+        "fin": "2019-05-16T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      },
+      {
+        "id": "d75201904001-1",
+        "activite": {
+          "id": "d75201904001",
+          "type": "ad"
+        },
+        "groupeAction": {
+          "libelle": "Urgence et Secourisme",
+          "tri": "ga1",
+          "id": 1
+        },
+        "debut": "2019-05-08T20:00:00",
+        "fin": "2019-05-09T02:00:00",
+        "adresse": "0 Route D'Auteuil aux Lacs Hippodrome d'Auteuil  75016 PARIS",
+        "roleConfigList": [
+          {
+            "code": "SEC",
+            "role": "Secouriste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 1
+          },
+          {
+            "code": "S",
+            "role": "Stagiaire",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 12
+          },
+          {
+            "code": "L",
+            "role": "Logisticien",
+            "actif": true,
+            "effectif": 0,
+            "idKeyQualification": 5
+          },
+          {
+            "code": "CP",
+            "role": "Chef de poste",
+            "actif": true,
+            "effectif": 1,
+            "idKeyQualification": 10
+          },
+          {
+            "code": "ES",
+            "role": "Equipier secouriste",
+            "actif": true,
+            "effectif": 2,
+            "idKeyQualification": 3
+          }
+        ]
+      }
+    ],
+    "responsable": {
+      "id": "00001302296M",
+      "actif": false,
+      "mineur": false
+    }
+  }
+]

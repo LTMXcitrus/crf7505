@@ -1,6 +1,5 @@
 package com.lemonfactory.crf7505
 
-import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.crf7505.security.user.ApplicationUser
 import com.lemonfactory.crf7505.security.user.ApplicationUserRepository
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -9,6 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.Bean
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import com.googlecode.objectify.ObjectifyFilter
+import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.pegass.client.PegassModule
 import org.springframework.boot.web.servlet.FilterRegistrationBean
 import org.springframework.context.annotation.Import

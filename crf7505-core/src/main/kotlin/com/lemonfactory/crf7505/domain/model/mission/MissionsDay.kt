@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.domain.model
+package com.lemonfactory.crf7505.domain.model.mission
 
 import java.time.LocalDate
 

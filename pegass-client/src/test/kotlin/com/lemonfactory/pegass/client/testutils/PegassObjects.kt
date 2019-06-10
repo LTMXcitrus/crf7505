@@ -2,6 +2,7 @@ package com.lemonfactory.pegass.client.testutils
 
 import com.lemonfactory.pegass.client.api.PegassVolunteer
 import com.lemonfactory.pegass.client.api.activity.*
+import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 import java.time.LocalDateTime
 
 fun aPegassActivity(): PegassActivity {
@@ -18,7 +19,8 @@ fun aPegassActivity(): PegassActivity {
             emptyList(),
             aPegassVolunteer(),
             "commentaire",
-            true
+            true,
+            emptyList()
     )
 }
 
@@ -75,6 +77,30 @@ fun anActivitySeance(): ActivitySeance {
     )
 }
 
+fun anActivityRole(): ActivityRole {
+    return ActivityRole(
+            "id",
+            "code",
+            "role",
+            true,
+            1,
+            "type",
+            0
+    )
+}
+
 fun anActivity(): Activity {
     return Activity("id", "type")
+}
+
+fun aPegassInscription(): PegassInscription {
+    return PegassInscription(
+            LocalDateTime.now(),
+            LocalDateTime.now().plusHours(8),
+            "id",
+            false,
+            "167",
+            "statut",
+            "FORM"
+    )
 }

@@ -1,12 +1,13 @@
 package com.lemonfactory.pegass.client
 
+import com.lemonfactory.pegass.client.TestValues.pegassResponse
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.nhaarman.mockito_kotlin.any
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mockito
 import org.mockito.Mockito.`when`
-import java.time.LocalDate
+import java.time.LocalDateTime
 
 
 class PegassClientTest {
@@ -26,7 +27,7 @@ class PegassClientTest {
         // Given
 
         // When
-        val response: List<PegassActivity> = pegassClient.getActivities(pegassConnectorMock, LocalDate.now(), LocalDate.now())
+        val response: List<PegassActivity> = pegassClient.getActivities(pegassConnectorMock, LocalDateTime.now(), LocalDateTime.now())
 
         // Then
         assert(response.isNotEmpty())
