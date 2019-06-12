@@ -8,4 +8,5 @@ data class PegassInscription(val debut: LocalDateTime,
                              val isMultiple: Boolean,
                              val role: String,
                              val statut: String,
-                             val type: String)
+                             val type: String,
+                             val commentaire: String? = null)

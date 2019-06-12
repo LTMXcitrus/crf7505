@@ -9,6 +9,7 @@ fun aMission(beginDate: LocalDateTime, endDate: LocalDateTime): Mission =
                 "name",
                 "ul",
                 emptyList(),
+                emptyList(),
                 emptyList()
         )
 

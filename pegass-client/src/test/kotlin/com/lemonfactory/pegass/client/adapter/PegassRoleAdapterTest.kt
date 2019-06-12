@@ -32,4 +32,17 @@ class PegassRoleAdapterTest {
         assertThat(roles[0].quantity).isEqualTo(1)
     }
 
+    @Test
+    fun transform_twoEqualActivityRoles_returnsCorrectRole() {
+        // Given
+        val activityRole = anActivityRole().copy(role = "167", type = "FORM", effectif = 2)
+
+        // When
+        val roles = adapter.transform(listOf(activityRole))
+        // Then
+        assertThat(roles).isNotEmpty
+        assertThat(roles[0].type).isEqualTo(RoleType.PSE2)
+        assertThat(roles[0].quantity).isEqualTo(2)
+    }
+
 }
