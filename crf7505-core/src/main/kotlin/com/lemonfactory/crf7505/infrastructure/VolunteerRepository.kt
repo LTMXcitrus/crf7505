@@ -8,4 +8,6 @@ interface VolunteerRepository {
 
     fun saveVolunteer(volunteer: Volunteer): Volunteer
 
+    fun removeVolunteer(volunteer: Volunteer): Boolean
+
 }

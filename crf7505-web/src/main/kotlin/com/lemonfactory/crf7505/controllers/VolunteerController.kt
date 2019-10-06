@@ -23,6 +23,11 @@ class VolunteerController(val trainingService: TrainingService,
         return mapper.writeValueAsString(volunteerRepository.saveVolunteer(volunteer))
     }
 
+    @PostMapping("/remove")
+    fun removeVolunteer(@RequestBody volunteer: Volunteer): String {
+        return mapper.writeValueAsString(volunteerRepository.removeVolunteer(volunteer))
+    }
+
     @PostMapping("/trainings")
     fun volunteerTrainings(@RequestBody user: PegassUser): String {
         return mapper.writeValueAsString(trainingService.getAllVolunteerTrainings(user.username, user.password))
