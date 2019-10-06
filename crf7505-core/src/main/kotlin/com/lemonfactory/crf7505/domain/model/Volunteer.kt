@@ -1,7 +1,8 @@
 package com.lemonfactory.crf7505.domain.model
 
-data class Volunteer(val id: String,
-                     val firstname: String,
+import com.lemonfactory.crf7505.domain.model.mission.RoleType
+
+data class Volunteer(val firstname: String,
                      val lastname: String,
-                     val trainings: List<Training>,
-                     val upToDate: Boolean)
+                     val role: RoleType,
+                     val emailAddress: String)

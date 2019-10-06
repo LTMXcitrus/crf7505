@@ -3,6 +3,7 @@ package com.lemonfactory.pegass.client
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.lemonfactory.crf7505.mapper
 import com.lemonfactory.pegass.client.api.PegassVolunteer
+import com.lemonfactory.pegass.client.api.activity.ActivitySeance
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 import com.lemonfactory.pegass.client.api.format.PegassSearchUserResponse
@@ -43,7 +44,7 @@ class PegassClient {
 
     fun getVolunteers(pegassSession: PegassSession): List<PegassVolunteer> {
         val pegassResponse = pegassSession
-                .getPage("https://pegass.croix-rouge.fr/crf/rest/utilisateur?groupeAction=1&page=0&pageInfo=true&searchType=benevoles&structure=893&withMoyensCom=true")
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/utilisateur?groupeAction=1&pageInfo=true&searchType=benevoles&structure=893&withMoyensCom=true&perPage=50")
         return mapper.readValue<PegassSearchUserResponse>(pegassResponse).list
     }
 
@@ -59,9 +60,9 @@ class PegassClient {
         return mapper.readValue(pegassResponse)
     }
 
-    fun getActivityInscriptions(pegassSession: PegassSession, activity: PegassActivity): List<PegassInscription> {
+    fun getSeanceInscriptions(pegassSession: PegassSession, seance: ActivitySeance): List<PegassInscription> {
         val pegassResponse = pegassSession
-                .getPage("https://pegass.croix-rouge.fr/crf/rest/seance/${activity.id}/inscription")
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/seance/${seance.id}/inscription")
         return mapper.readValue(pegassResponse)
     }
 

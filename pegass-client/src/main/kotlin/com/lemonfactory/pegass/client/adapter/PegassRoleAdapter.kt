@@ -7,11 +7,14 @@ import com.lemonfactory.pegass.client.api.activity.ActivityRole
 class PegassRoleAdapter {
 
     fun transform(roles: List<ActivityRole>): List<Role> {
-        return roles.map { role -> transform(role) }
+        return roles.mapNotNull { role -> transform(role) }
     }
 
-    fun transform(role: ActivityRole): Role {
-        val roleType = roleTypeFrom(role.role, role.type ?: "")
+    fun transform(role: ActivityRole): Role? {
+        if(role.effectif == 0) {
+            return null
+        }
+        val roleType = roleTypeFrom(role.type ?: "", role.code)
         return Role(roleType, role.effectif)
     }
 

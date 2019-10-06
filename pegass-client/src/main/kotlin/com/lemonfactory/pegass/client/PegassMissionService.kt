@@ -5,7 +5,6 @@ import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.pegass.client.adapter.PegassActivityAdapter
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
-import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 import java.time.LocalDateTime
 
 class PegassMissionService(val pegassClient: PegassClient, val pegassTrainingAdapter: PegassActivityAdapter) : MissionService {
@@ -18,11 +17,14 @@ class PegassMissionService(val pegassClient: PegassClient, val pegassTrainingAda
     private fun getAllActivities(user: PegassUser, start: LocalDateTime, end: LocalDateTime): List<PegassActivity> {
         val pegassSession = PegassSession(user.username, user.password)
         return pegassClient.getActivitiesFilteredWithDates(pegassSession, start, end)
-                .map { activity -> activity.copy(inscriptions = completeActivityWithInscriptions(pegassSession, activity)) }
+                .map { activity -> completeActivityWithInscriptions(pegassSession, activity) }
     }
 
-    private fun completeActivityWithInscriptions(pegassSession: PegassSession, activity: PegassActivity): List<PegassInscription> {
-        return pegassClient.getActivityInscriptions(pegassSession, activity)
+    private fun completeActivityWithInscriptions(pegassSession: PegassSession, activity: PegassActivity): PegassActivity {
+        val seancesWithInscriptions = activity.seanceList.map {
+            it.copy(inscriptions = pegassClient.getSeanceInscriptions(pegassSession, it))
+        }
+        return activity.copy(seanceList = seancesWithInscriptions)
     }
 
 }

@@ -9,8 +9,8 @@ import com.lemonfactory.pegass.client.referentiel.UlReferentiel
 
 
 class PegassActivityAdapter(
-        val pegassInscriptionAdapter: PegassInscriptionAdapter,
-        val pegassRoleAdapter: PegassRoleAdapter
+        private val pegassInscriptionAdapter: PegassInscriptionAdapter,
+        private val pegassRoleAdapter: PegassRoleAdapter
 ) {
 
     fun transform(pegassActivities: List<PegassActivity>): List<Mission> {
@@ -27,10 +27,11 @@ class PegassActivityAdapter(
         val end = seance.fin
         val name = pegassActivity.libelle
         val ul = UlReferentiel.getUlLabel(pegassActivity.structureMenantActivite.id)
-        val inscriptions = pegassInscriptionAdapter.transform(pegassActivity.inscriptions, seance)
+        val inscriptions = pegassInscriptionAdapter.transform(seance)
         val roles = pegassRoleAdapter.transform(seance.roleConfigList)
 
         return Mission(
+                seance.id,
                 begin,
                 end,
                 name,

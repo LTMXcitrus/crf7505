@@ -2,7 +2,8 @@ package com.lemonfactory.crf7505.domain.model.mission
 
 import java.time.LocalDateTime
 
-data class Mission(val beginDate: LocalDateTime,
+data class Mission(val id: String,
+                   val beginDate: LocalDateTime,
                    val endDate: LocalDateTime,
                    val name: String,
                    val ul: String,

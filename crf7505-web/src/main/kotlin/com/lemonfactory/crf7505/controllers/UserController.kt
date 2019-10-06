@@ -1,25 +1,15 @@
 package com.lemonfactory.crf7505.controllers
 
+import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.security.user.ApplicationUser
-import com.lemonfactory.crf7505.security.user.ApplicationUserRepository
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.web.bind.annotation.*
 
 
 @RestController
 @RequestMapping("/users")
-class UserController(val userRepository: ApplicationUserRepository,
+class UserController(val userRepository: ObjectifyDAO<ApplicationUser>,
                      val bCryptPasswordEncoder: BCryptPasswordEncoder) {
-
-
-
-
-    @GetMapping("")
-    fun user(): String {
-        val user = ApplicationUser("mattcitron2", "Matthieu", "password")
-        userRepository.save(user)
-        return userRepository.findAll().toString()
-    }
 
     @PostMapping("/sign-up")
     fun registerUser(@RequestBody user: ApplicationUser): String {

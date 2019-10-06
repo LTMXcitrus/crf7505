@@ -1,16 +1,16 @@
 package com.lemonfactory.pegass.client.adapter
 
 import com.lemonfactory.crf7505.domain.model.Training
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.domain.model.VolunteerTraining
 import com.lemonfactory.pegass.client.api.PegassVolunteer
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerTraining
 import java.time.LocalDate.now
 
 class PegassTrainingAdapter() {
 
-    fun buildVolunteer(volunteer: PegassVolunteer, pegassVolunteerTrainings: List<PegassVolunteerTraining>): Volunteer {
+    fun buildVolunteer(volunteer: PegassVolunteer, pegassVolunteerTrainings: List<PegassVolunteerTraining>): VolunteerTraining {
         val trainings = pegassVolunteerTrainings.map { pegassTraining -> buildTraining(pegassTraining) }
-        return Volunteer(
+        return VolunteerTraining(
                 volunteer.id,
                 volunteer.prenom ?: "prénom inconnu",
                 volunteer.nom ?: "nom inconnu",

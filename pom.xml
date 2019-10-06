@@ -6,6 +6,7 @@
         <module>pegass-client</module>
         <module>crf7505-core</module>
         <module>crf7505-web</module>
+        <module>appengine-mail-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

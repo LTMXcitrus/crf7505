@@ -11,6 +11,7 @@ class MissionRepositoryImpl(private val missionService: MissionService) : Missio
     override fun getMissionsByDay(user: PegassUser, begin: LocalDateTime, end: LocalDateTime): List<MissionsDay> {
         return missionService.getAllMissions(user, begin, end)
                 .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(end)  }
+                .filter { mission -> mission.missingRoles.isNotEmpty()}
                 .groupBy { mission -> mission.beginDate.toLocalDate() }
                 .map { entry -> MissionsDay(entry.key, entry.value) }
     }

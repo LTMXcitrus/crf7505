@@ -7,6 +7,7 @@ import com.lemonfactory.pegass.client.testutils.aPegassInscription
 import com.lemonfactory.pegass.client.testutils.anActivitySeance
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
+import java.time.LocalDateTime.now
 
 class PegassInscriptionAdapterTest {
 
@@ -18,7 +19,7 @@ class PegassInscriptionAdapterTest {
         val seance = anActivitySeance()
 
         // When
-        val inscriptions = adapter.transform(emptyList(), seance)
+        val inscriptions = adapter.transform(seance)
         // Then
         assertThat(inscriptions).isEmpty()
     }
@@ -26,11 +27,11 @@ class PegassInscriptionAdapterTest {
     @Test
     fun transform_singleInscription_returnsAnInscription() {
         // Given
-        val seance = anActivitySeance()
         val pegassInscription = aPegassInscription()
+        val seance = anActivitySeance().copy(inscriptions = listOf(pegassInscription))
 
         // When
-        val inscriptions = adapter.transform(listOf(pegassInscription), seance)
+        val inscriptions = adapter.transform(seance)
 
         // Then
         assertThat(inscriptions).isNotEmpty
@@ -43,11 +44,11 @@ class PegassInscriptionAdapterTest {
     @Test
     fun transform_singleInscriptionWithComments_returnsAnInscriptionWithCommentFlag() {
         // Given
-        val seance = anActivitySeance()
         val pegassInscription = aPegassInscription().copy(commentaire = "commentaire")
+        val seance = anActivitySeance().copy(inscriptions = listOf(pegassInscription))
 
         // When
-        val inscriptions = adapter.transform(listOf(pegassInscription), seance)
+        val inscriptions = adapter.transform(seance)
 
         // Then
         assertThat(inscriptions).isNotEmpty
@@ -61,11 +62,12 @@ class PegassInscriptionAdapterTest {
     @Test
     fun transform_singleInscriptionWithModifiedHours_returnsAnInscriptionWithModifiedHoursFlag() {
         // Given
-        val seance = anActivitySeance()
-        val pegassInscription = aPegassInscription().copy(commentaire = "commentaire", debut = seance.debut.plusHours(1))
+        val beginDate = now()
+        val pegassInscription = aPegassInscription().copy(commentaire = "commentaire", debut = beginDate.plusHours(1))
+        val seance = anActivitySeance().copy(inscriptions = listOf(pegassInscription), debut = beginDate)
 
         // When
-        val inscriptions = adapter.transform(listOf(pegassInscription), seance)
+        val inscriptions = adapter.transform( seance)
 
         // Then
         assertThat(inscriptions).isNotEmpty

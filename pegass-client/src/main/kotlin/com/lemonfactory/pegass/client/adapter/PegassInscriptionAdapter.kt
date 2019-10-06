@@ -7,12 +7,13 @@ import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 
 class PegassInscriptionAdapter {
 
-    fun transform(pegassInscriptions: List<PegassInscription>, seance: ActivitySeance): List<Inscription> {
-        return pegassInscriptions.map { pegassInscription -> transform(pegassInscription, seance) }
+    fun transform(seance: ActivitySeance): List<Inscription> {
+        return seance.inscriptions
+                .map { pegassInscription -> transform(pegassInscription, seance) }
     }
 
     private fun transform(pegassInscription: PegassInscription, seance: ActivitySeance): Inscription {
-        val roleType = roleTypeFrom(pegassInscription.role, pegassInscription.type)
+        val roleType = roleTypeFrom(pegassInscription.type, pegassInscription.role)
         return Inscription(
                 pegassInscription.debut,
                 pegassInscription.fin,

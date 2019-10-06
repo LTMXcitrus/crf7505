@@ -15,5 +15,4 @@ data class PegassActivity(val id: String,
                           val seanceList: List<ActivitySeance>,
                           val responsable: PegassVolunteer,
                           val commentaire: String?,
-                          val rappel: Boolean,
-                          val inscriptions: List<PegassInscription> = emptyList())
+                          val rappel: Boolean)

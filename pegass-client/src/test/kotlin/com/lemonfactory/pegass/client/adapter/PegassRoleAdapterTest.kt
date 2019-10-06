@@ -33,6 +33,17 @@ class PegassRoleAdapterTest {
     }
 
     @Test
+    fun transform_roleWithZeroEffectif_returnEmpty() {
+        // Given
+        val activityRole = anActivityRole().copy(role = "1", type = "COMP", effectif = 0)
+
+        // When
+        val roles = adapter.transform(listOf(activityRole))
+        // Then
+        assertThat(roles).isEmpty()
+    }
+
+    @Test
     fun transform_twoEqualActivityRoles_returnsCorrectRole() {
         // Given
         val activityRole = anActivityRole().copy(role = "167", type = "FORM", effectif = 2)
