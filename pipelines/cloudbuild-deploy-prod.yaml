@@ -3,6 +3,6 @@ steps:
     args: ['install']
     timeout: "500s"
   - name: 'gcr.io/cloud-builders/mvn'
-    args: ['appengine:deploy']
+    args: ['appengine:deploy', '-Dapp.deploy.projectId=crf7505-prod']
     timeout: "500s"
     dir: "crf7505-web"
