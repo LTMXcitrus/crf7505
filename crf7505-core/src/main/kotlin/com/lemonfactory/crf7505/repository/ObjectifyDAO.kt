@@ -19,8 +19,12 @@ class ObjectifyDAO<T : ObjectifyElement> {
     }
 
     inline fun <reified T> findById(id: String): T? {
-        return ObjectifyService.run {
-            ObjectifyService.ofy().load().type(T::class.java).id(id).now()
+        try {
+            return ObjectifyService.run {
+                ObjectifyService.ofy().load().type(T::class.java).id(id).now()
+            }
+        } catch(e: IllegalStateException) {
+            return null
         }
     }
 
