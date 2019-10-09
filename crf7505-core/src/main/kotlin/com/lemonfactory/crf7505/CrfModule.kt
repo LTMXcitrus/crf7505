@@ -1,6 +1,11 @@
 package com.lemonfactory.crf7505
 
+import com.lemonfactory.crf7505.config.Config
+import com.lemonfactory.crf7505.mails.MailPreparator
 import com.lemonfactory.crf7505.infrastructure.MissionService
+import com.lemonfactory.crf7505.mails.BodyTemplate
+import com.lemonfactory.crf7505.mails.FooterTemplate
+import com.lemonfactory.crf7505.mails.HeaderTemplate
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.repository.VolunteerRepositoryImpl
@@ -9,6 +14,7 @@ import org.springframework.context.annotation.Configuration
 
 @Configuration
 open class CrfModule {
+    private val RECAP_SENDER = "RECAP_SENDER"
 
     @Bean
     open fun missionRepository(missionService: MissionService): MissionRepositoryImpl {
@@ -18,6 +24,16 @@ open class CrfModule {
     @Bean
     open fun volunteerRepository(): VolunteerRepositoryImpl {
         return VolunteerRepositoryImpl(ObjectifyDAO())
+    }
+
+    @Bean
+    open fun mailPrepator(): MailPreparator {
+        return MailPreparator(
+                BodyTemplate(),
+                HeaderTemplate(),
+                FooterTemplate(),
+                Config.getEnvRequired(RECAP_SENDER)
+        )
     }
 
 }

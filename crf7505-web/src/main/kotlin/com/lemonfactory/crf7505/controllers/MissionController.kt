@@ -3,6 +3,7 @@ package com.lemonfactory.crf7505.controllers
 import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.domain.model.PegassUser
 import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
+import com.lemonfactory.crf7505.mails.MailPreparator
 import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionRepository
 import com.lemonfactory.crf7505.mapper
@@ -12,7 +13,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 @RestController
-class MissionController(val missionRepository: MissionRepository, val mailService: MailService) {
+class MissionController(val missionRepository: MissionRepository, val mailService: MailService, val mailPreparator: MailPreparator) {
 
     @ModelAttribute
     fun initLocalDate(): LocalDate {
@@ -28,8 +29,9 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
     }
 
     @PostMapping("mission/recapMissions")
-    fun recapMissions(@RequestBody missionsDay: List<MissionsDay>) {
-
+    fun recapMissions(@RequestBody missionsDay: List<MissionsDay>): String {
+        //return mapper.writeValueAsString(mailPreparator.generateMails())
+        TODO()
     }
 
     @PostMapping("mission/recap")

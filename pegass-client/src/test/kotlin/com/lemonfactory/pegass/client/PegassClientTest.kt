@@ -12,9 +12,9 @@ import java.time.LocalDateTime
 class PegassClientTest {
 
 
-    val pegassConnectorMock = Mockito.mock(PegassSession::class.java)
+    private val pegassConnectorMock = Mockito.mock(PegassSession::class.java)
 
-    val pegassClient: PegassClient = PegassClient()
+    private val pegassClient: PegassClient = PegassClient()
 
     @Before
     fun setUp() {
@@ -31,6 +31,4 @@ class PegassClientTest {
         // Then
         assert(response.isNotEmpty())
     }
-
-
 }
