@@ -6,6 +6,7 @@ import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 import com.lemonfactory.crf7505.mails.MailPreparator
 import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionRepository
+import com.lemonfactory.crf7505.mails.MailHandler
 import com.lemonfactory.crf7505.mapper
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.web.bind.annotation.*
@@ -13,7 +14,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 @RestController
-class MissionController(val missionRepository: MissionRepository, val mailService: MailService, val mailPreparator: MailPreparator) {
+class MissionController(val missionRepository: MissionRepository, val mailService: MailService, val mailHandler: MailHandler) {
 
     @ModelAttribute
     fun initLocalDate(): LocalDate {
@@ -30,8 +31,7 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
 
     @PostMapping("mission/recapMissions")
     fun recapMissions(@RequestBody missionsDay: List<MissionsDay>): String {
-        //return mapper.writeValueAsString(mailPreparator.generateMails())
-        TODO()
+        return mapper.writeValueAsString(mailHandler.genMails(missionsDay))
     }
 
     @PostMapping("mission/recap")

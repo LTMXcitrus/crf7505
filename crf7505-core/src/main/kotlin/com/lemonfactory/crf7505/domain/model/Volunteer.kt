@@ -7,10 +7,13 @@ import com.lemonfactory.crf7505.domain.model.mission.RoleType
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-data class Volunteer(var firstname: String = "",
-                     var lastname: String = "",
-                     var role: RoleType = RoleType.PARTICIPANT,
-                     @Id var emailAddress: String = "") : ObjectifyElement {
+data class Volunteer(
+        @Id var emailAddress: String = "",
+        var firstname: String = "",
+        var lastname: String = "",
+        var role: RoleType = RoleType.PARTICIPANT,
+        var interestedIn: List<RoleType> = emptyList()
+) : ObjectifyElement {
 
     override fun getId() = emailAddress
 

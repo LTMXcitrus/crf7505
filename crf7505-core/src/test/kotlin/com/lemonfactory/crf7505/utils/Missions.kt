@@ -4,6 +4,7 @@ import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.domain.model.mission.Role
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
 import java.time.LocalDateTime
+import java.time.LocalDateTime.now
 
 object Missions {
 
@@ -42,6 +43,18 @@ object Missions {
                     emptyList(),
                     emptyList(),
                     emptyList()
+            )
+
+    fun aMissionsWithMissingRolesFor(roles: List<RoleType>) =
+            Mission(
+                    "code",
+                    now(),
+                    now().plusHours(2),
+                    "name",
+                    "ul",
+                    emptyList(),
+                    emptyList(),
+                    roles.map { Role(it, 1) }
             )
 
 }
