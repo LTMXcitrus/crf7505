@@ -12,9 +12,11 @@ import com.lemonfactory.crf7505.repository.VolunteerRepositoryImpl
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
+
+private const val RECAP_SENDER = "RECAP_SENDER"
+
 @Configuration
 open class CrfModule {
-    private val RECAP_SENDER = "RECAP_SENDER"
 
     @Bean
     open fun missionRepository(missionService: MissionService): MissionRepositoryImpl {
