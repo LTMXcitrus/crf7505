@@ -1,9 +1,6 @@
 package com.lemonfactory.crf7505
 
-import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.crf7505.config.Config
-import com.lemonfactory.crf7505.config.ConfigValue
-import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.mails.*
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
@@ -17,11 +14,6 @@ private const val RECAP_SENDER = "RECAP_SENDER"
 
 @Configuration
 open class CrfModule {
-    init {
-        ObjectifyService.init()
-        ObjectifyService.register(Volunteer::class.java)
-        ObjectifyService.register(ConfigValue::class.java)
-    }
 
     @Bean
     open fun missionRepository(missionService: MissionService): MissionRepositoryImpl {

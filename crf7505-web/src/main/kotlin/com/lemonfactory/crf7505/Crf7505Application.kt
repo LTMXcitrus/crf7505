@@ -27,6 +27,8 @@ class Crf7505Application : SpringBootServletInitializer() {
     init {
         ObjectifyService.init()
         ObjectifyService.register(ApplicationUser::class.java)
+        ObjectifyService.register(Volunteer::class.java)
+        ObjectifyService.register(ConfigValue::class.java)
     }
 
     @Bean
