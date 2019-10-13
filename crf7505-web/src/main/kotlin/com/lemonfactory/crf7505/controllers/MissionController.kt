@@ -34,10 +34,10 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
         return mapper.writeValueAsString(mailHandler.genMails(missionsDay))
     }
 
-    @PostMapping("mission/recap")
-    fun sendRecap(@RequestBody mail: CrfMail) {
-        mailService.sendMails(listOf(mail))
-        return
+    @PostMapping("mission/sendRecap")
+    fun sendRecap(@RequestBody mails: List<CrfMail>): String {
+        mailService.sendMails(mails)
+        return mapper.writeValueAsString(true)
     }
 
 }

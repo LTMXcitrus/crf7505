@@ -16,7 +16,7 @@ class MailHandler(private val mailPreparator: MailPreparator,
 
     private fun generateMail(volunteer: Volunteer, missionsDays: List<MissionsDay>): CrfMail {
         val missionsForVolunteer = missionFilter.filter(missionsDays, volunteer)
-        return mailPreparator.generateMails(
+        return mailPreparator.generateMail(
                 volunteer,
                 missionsForVolunteer
         )

@@ -1,11 +1,8 @@
 package com.lemonfactory.crf7505
 
 import com.lemonfactory.crf7505.config.Config
-import com.lemonfactory.crf7505.mails.MailPreparator
 import com.lemonfactory.crf7505.infrastructure.MissionService
-import com.lemonfactory.crf7505.mails.BodyTemplate
-import com.lemonfactory.crf7505.mails.FooterTemplate
-import com.lemonfactory.crf7505.mails.HeaderTemplate
+import com.lemonfactory.crf7505.mails.*
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.repository.VolunteerRepositoryImpl
@@ -36,6 +33,18 @@ open class CrfModule {
                 FooterTemplate(),
                 Config.getEnvRequired(RECAP_SENDER)
         )
+    }
+
+    @Bean
+    open fun missionFilter(): MissionFilter {
+        return MissionFilter()
+    }
+
+    @Bean
+    open fun mailHandler(): MailHandler {
+        return MailHandler(mailPrepator(),
+                volunteerRepository(),
+                missionFilter())
     }
 
 }
