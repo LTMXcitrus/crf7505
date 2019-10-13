@@ -23,10 +23,10 @@ class MissionFilter {
     }
 
     private fun filterMissions(missions: List<Mission>, volunteer: Volunteer): List<Mission> {
-        if(volunteer.getInterests().isEmpty()) {
+        if(volunteer.interests().isEmpty()) {
             return missions.filter { mission -> hasMatchingRole(mission.missingRoles, defaultInterests[volunteer.role]) }
         }
-        return missions.filter { mission -> hasMatchingRole(mission.missingRoles, volunteer.getInterests()) }
+        return missions.filter { mission -> hasMatchingRole(mission.missingRoles, volunteer.interests()) }
     }
 
     private fun hasMatchingRole(missingRoles: List<Role>, interestedIn: List<RoleType>?) =

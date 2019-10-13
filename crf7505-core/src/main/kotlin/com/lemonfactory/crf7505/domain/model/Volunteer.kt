@@ -17,7 +17,7 @@ data class Volunteer(
 
     override fun getId() = emailAddress
 
-    fun getInterests(): List<RoleType> {
+    fun interests(): List<RoleType> {
         return interestedIn.map { RoleType.valueOf(it) }
     }
 }
