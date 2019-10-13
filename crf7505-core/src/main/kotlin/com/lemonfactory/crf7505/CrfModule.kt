@@ -26,12 +26,17 @@ open class CrfModule {
     }
 
     @Bean
+    open fun config(): Config {
+        return Config(ObjectifyDAO())
+    }
+
+    @Bean
     open fun mailPrepator(): MailPreparator {
         return MailPreparator(
                 BodyTemplate(),
                 HeaderTemplate(),
                 FooterTemplate(),
-                Config.getEnvRequired(RECAP_SENDER)
+                config()
         )
     }
 

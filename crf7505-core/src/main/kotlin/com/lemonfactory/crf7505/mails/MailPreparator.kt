@@ -1,5 +1,7 @@
 package com.lemonfactory.crf7505.mails
 
+import com.lemonfactory.crf7505.config.Config
+import com.lemonfactory.crf7505.config.ConfigKeys
 import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
@@ -7,11 +9,11 @@ import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 class MailPreparator(private val bodyTemplate: BodyTemplate,
                      private val headerTemplate: HeaderTemplate,
                      private val footerTemplate: FooterTemplate,
-                     private val sender: String) {
+                     private val config: Config) {
 
     fun generateMail(volunteer: Volunteer, missions: List<MissionsDay>): CrfMail {
         return CrfMail(
-                sender,
+                config.getEnvRequired(ConfigKeys.RECAP_SENDER),
                 volunteer.emailAddress,
                 "subject",
                 headerTemplate.generateHeader(volunteer) + "\n"+
