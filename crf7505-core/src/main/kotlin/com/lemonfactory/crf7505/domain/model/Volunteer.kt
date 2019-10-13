@@ -12,9 +12,12 @@ data class Volunteer(
         var firstname: String = "",
         var lastname: String = "",
         var role: RoleType = RoleType.PARTICIPANT,
-        var interestedIn: List<RoleType> = emptyList()
+        private var interestedIn: List<String> = emptyList()
 ) : ObjectifyElement {
 
     override fun getId() = emailAddress
 
+    fun getInterests(): List<RoleType> {
+        return interestedIn.map { RoleType.valueOf(it) }
+    }
 }

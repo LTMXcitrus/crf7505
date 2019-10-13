@@ -9,16 +9,16 @@ import java.time.LocalDateTime.now
 object Missions {
 
     fun aMissionWithMissingRoles(): Mission {
-        //return Mission(
-        //        "id",
-        //        now(),
-        //        now().plusHours(2),
-        //        "name",
-        //        "ul",
-        //        emptyList(),
-        //        TODO()
-        //)
-        TODO()
+        return Mission(
+                "id",
+                now(),
+                now().plusHours(2),
+                "name",
+                "ul",
+                emptyList(),
+                emptyList(),
+                listOf(Role(RoleType.PSE1, 1))
+        )
     }
 
     fun aMissionWithMissingRoles(beginDate: LocalDateTime, endDate: LocalDateTime): Mission =

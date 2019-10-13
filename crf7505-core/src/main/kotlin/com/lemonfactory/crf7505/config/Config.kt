@@ -1,8 +1,10 @@
 package com.lemonfactory.crf7505.config
 
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
+import org.slf4j.LoggerFactory
 
 object Config {
+    private val LOGGER = LoggerFactory.getLogger(Config::class.java)
 
     private val objectifyDAO: ObjectifyDAO<ConfigValue> = ObjectifyDAO()
 
@@ -12,7 +14,12 @@ object Config {
     }
 
     fun getEnvRequired(name: String): String {
-        return objectifyDAO.findById<ConfigValue>(name)!!.value
+        try {
+            return objectifyDAO.findById<ConfigValue>(name)!!.value
+        } catch(e: KotlinNullPointerException) {
+            LOGGER.error("The property $name is required.")
+            return name
+        }
     }
 
 }
