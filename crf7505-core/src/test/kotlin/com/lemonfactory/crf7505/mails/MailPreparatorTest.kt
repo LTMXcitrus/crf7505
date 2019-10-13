@@ -1,11 +1,14 @@
 package com.lemonfactory.crf7505.mails
 
+import com.lemonfactory.crf7505.config.Config
+import com.lemonfactory.crf7505.config.ConfigKeys
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyList
 import org.mockito.Mockito
@@ -19,8 +22,14 @@ class MailPreparatorTest {
     val bodyTemplate = Mockito.mock(BodyTemplate::class.java)
     val headerTemplate = Mockito.mock(HeaderTemplate::class.java)
     val footerTemplate = Mockito.mock(FooterTemplate::class.java)
+    val config = Mockito.mock(Config::class.java)
 
-    val mailPreparator = MailPreparator(bodyTemplate, headerTemplate, footerTemplate, SENDER)
+    val mailPreparator = MailPreparator(bodyTemplate, headerTemplate, footerTemplate, config)
+
+    @Before
+    fun setUp() {
+        `when`(config.getEnvRequired(ConfigKeys.RECAP_SENDER)).thenReturn(SENDER)
+    }
 
     @Test
     fun `should return header body and footer concated`() {
