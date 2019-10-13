@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import com.googlecode.objectify.ObjectifyFilter
 import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.appenginemailclient.MailClientModule
+import com.lemonfactory.crf7505.config.ConfigValue
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.pegass.client.PegassModule
@@ -27,6 +28,7 @@ class Crf7505Application : SpringBootServletInitializer() {
         ObjectifyService.init()
         ObjectifyService.register(ApplicationUser::class.java)
         ObjectifyService.register(Volunteer::class.java)
+        ObjectifyService.register(ConfigValue::class.java)
     }
 
     @Bean
