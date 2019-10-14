@@ -3,6 +3,7 @@ package com.lemonfactory.appenginemailclient
 import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.infrastructure.MailService
 import org.slf4j.LoggerFactory
+import org.springframework.scheduling.annotation.Scheduled
 import java.io.UnsupportedEncodingException
 import java.util.*
 import javax.mail.Message
@@ -13,7 +14,7 @@ import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
 import kotlin.concurrent.schedule
 
-class MailServiceImpl(val sender: MailSender) : MailService {
+class MailServiceImpl(private val sender: MailSender) : MailService {
     private val LOGGER = LoggerFactory.getLogger(MailServiceImpl::class.java)
 
     override fun sendMails(crfMails: List<CrfMail>) {
@@ -41,15 +42,18 @@ class MailServiceImpl(val sender: MailSender) : MailService {
         sender.send(msg)
     }
 
+
+    @Scheduled()
     private fun sendMailsByLot(session: Session, crfMails: List<CrfMail>) {
-        var candidates = crfMails.take(8)
-        val timer = Timer()
-        timer.schedule(0, 65000) {
-            candidates.forEach { sendMail(session, it) }
-            candidates = crfMails.minus(candidates)
-            if (candidates.isEmpty()) {
-                timer.cancel()
-            }
-        }
+        crfMails.forEach { sendMail(session, it) }
+//        var candidates = crfMails.take(8)
+//        val timer = Timer()
+//        timer.schedule(0, 65000) {
+//            candidates.forEach { sendMail(session, it) }
+//            candidates = crfMails.minus(candidates)
+//            if (candidates.isEmpty()) {
+//                timer.cancel()
+//            }
+//        }
     }
 }
