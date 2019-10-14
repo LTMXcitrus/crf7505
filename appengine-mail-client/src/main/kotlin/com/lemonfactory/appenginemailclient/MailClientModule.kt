@@ -9,7 +9,7 @@ open class MailClientModule {
 
     @Bean
     open fun mailService(): MailService {
-        return MailServiceImpl()
+        return MailServiceImpl(MailSender())
     }
 
 }

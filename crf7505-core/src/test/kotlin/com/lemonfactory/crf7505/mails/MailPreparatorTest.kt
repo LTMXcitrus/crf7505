@@ -15,16 +15,16 @@ import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import java.time.LocalDate.now
 import java.time.format.DateTimeFormatter
-import java.util.*
+
+private const val SENDER = "SENDER"
 
 class MailPreparatorTest {
-    private val SENDER = "SENDER"
-    val bodyTemplate = Mockito.mock(BodyTemplate::class.java)
-    val headerTemplate = Mockito.mock(HeaderTemplate::class.java)
-    val footerTemplate = Mockito.mock(FooterTemplate::class.java)
-    val config = Mockito.mock(Config::class.java)
+    private val bodyTemplate = Mockito.mock(BodyTemplate::class.java)
+    private val headerTemplate = Mockito.mock(HeaderTemplate::class.java)
+    private val footerTemplate = Mockito.mock(FooterTemplate::class.java)
+    private val config = Mockito.mock(Config::class.java)
 
-    val mailPreparator = MailPreparator(bodyTemplate, headerTemplate, footerTemplate, config)
+    private val mailPreparator = MailPreparator(bodyTemplate, headerTemplate, footerTemplate, config)
 
     @Before
     fun setUp() {
