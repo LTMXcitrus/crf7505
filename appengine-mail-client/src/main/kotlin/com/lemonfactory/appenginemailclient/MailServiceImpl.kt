@@ -8,19 +8,19 @@ import java.util.*
 import javax.mail.Message
 import javax.mail.MessagingException
 import javax.mail.Session
-import javax.mail.Transport
 import javax.mail.internet.AddressException
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
+import kotlin.concurrent.schedule
 
-class MailServiceImpl : MailService {
+class MailServiceImpl(val sender: MailSender) : MailService {
     private val LOGGER = LoggerFactory.getLogger(MailServiceImpl::class.java)
 
     override fun sendMails(crfMails: List<CrfMail>) {
         val props = Properties()
         val session = Session.getDefaultInstance(props, null)
         try {
-            crfMails.forEach { sendMail(session, it) }
+            sendMailsByLot(session, crfMails)
         } catch (e: AddressException) {
             LOGGER.error(e.message)
         } catch (e: MessagingException) {
@@ -38,6 +38,18 @@ class MailServiceImpl : MailService {
                 InternetAddress(crfMail.recipient))
         msg.subject = crfMail.subject
         msg.setText(crfMail.text, "utf-8", "html")
-        Transport.send(msg)
+        sender.send(msg)
+    }
+
+    private fun sendMailsByLot(session: Session, crfMails: List<CrfMail>) {
+        var candidates = crfMails.take(8)
+        val timer = Timer()
+        timer.schedule(0, 65000) {
+            candidates.forEach { sendMail(session, it) }
+            candidates = crfMails.minus(candidates)
+            if (candidates.isEmpty()) {
+                timer.cancel()
+            }
+        }
     }
 }
