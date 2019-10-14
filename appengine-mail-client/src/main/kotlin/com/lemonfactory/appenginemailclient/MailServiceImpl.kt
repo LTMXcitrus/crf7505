@@ -37,7 +37,7 @@ class MailServiceImpl : MailService {
         msg.addRecipient(Message.RecipientType.TO,
                 InternetAddress(crfMail.recipient))
         msg.subject = crfMail.subject
-        msg.setText(crfMail.text)
+        msg.setText(crfMail.text, "utf-8", "html")
         Transport.send(msg)
     }
 }
