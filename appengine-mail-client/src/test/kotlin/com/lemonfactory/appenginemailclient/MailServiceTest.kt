@@ -18,10 +18,10 @@ class MailServiceTest {
         val crfMail = CrfMail("sender", "recipient", "subject", "text")
 
         // when
-        mailService.sendMails(listOf(crfMail))
+        mailService.sendMails(listOf(crfMail, crfMail))
 
         // Then
-        verify(sender, times(1)).send(any<MimeMessage>())
+        verify(sender, times(2)).send(any())
     }
 
 }
