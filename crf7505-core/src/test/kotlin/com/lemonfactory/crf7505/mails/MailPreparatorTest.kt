@@ -3,7 +3,6 @@ package com.lemonfactory.crf7505.mails
 import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.config.ConfigKeys
 import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
@@ -14,8 +13,6 @@ import org.mockito.ArgumentMatchers.anyList
 import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import java.time.LocalDate
-import java.time.LocalDate.now
-import java.time.format.DateTimeFormatter
 
 private const val SENDER = "SENDER"
 
@@ -59,7 +56,7 @@ class MailPreparatorTest {
         `when`(footerTemplate.generateFooter()).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
         val now = LocalDate.of(2019, 10, 15)
-        val mission = MissionsDay(now, listOf(Missions.aMissionWithMissingRoles()))
+        val mission = Missions.aMissionWithMissingRoles()
 
         // When
         val crfMail = mailPreparator.generateMail(volunteer, listOf(mission))

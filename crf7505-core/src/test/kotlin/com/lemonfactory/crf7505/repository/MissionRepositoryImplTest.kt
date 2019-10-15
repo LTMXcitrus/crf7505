@@ -43,11 +43,9 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsDay = missionRepository.getMissionsByDay(PegassUser("", ""), beginLimit, endLimit)
+        val missions = missionRepository.getMissions(PegassUser("", ""), beginLimit, endLimit)
 
         // Then
-        assertThat(missionsDay).hasSize(1)
-        val missions = missionsDay[0].missions
         assertThat(missions).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
     }
 
@@ -68,11 +66,9 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsDay = missionRepository.getMissionsByDay(PegassUser("", ""), beginLimit, endLimit)
+        val missions = missionRepository.getMissions(PegassUser("", ""), beginLimit, endLimit)
 
         // Then
-        assertThat(missionsDay).hasSize(1)
-        val missions = missionsDay[0].missions
         assertThat(missions).containsExactlyInAnyOrder(missionNotComplete)
     }
 

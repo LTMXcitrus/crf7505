@@ -1,12 +1,9 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 import com.lemonfactory.crf7505.utils.Missions
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import java.time.LocalDate
-import java.time.LocalDate.now
-import java.time.format.DateTimeFormatter
 
 private const val DATE_FORMAT = "EEEE dd MMMM"
 
@@ -19,17 +16,14 @@ class BodyTemplateTest {
         // Given
         val now = LocalDate.of(2019, 10, 15)
         val tomorrow = now.plusDays(1)
-        val day1Mission1 = Missions.aMissionWithMissingRoles()
-        val day1Mission2 = Missions.aMissionWithMissingRoles()
-        val day2Mission1 = Missions.aMissionWithMissingRoles()
-        val missionsDay1 = MissionsDay(now, listOf(day1Mission1, day1Mission2))
-        val missionsDay2 = MissionsDay(tomorrow, listOf(day2Mission1))
+        val mission1 = Missions.aMissionWithMissingRoles(now)
+        val mission2 = Missions.aMissionWithMissingRoles(now)
+        val mission3 = Missions.aMissionWithMissingRoles(tomorrow)
 
-        val missionsDays = listOf(missionsDay1, missionsDay2)
 
 
         // When
-        val body = bodyTemplate.generateBody(missionsDays)
+        val body = bodyTemplate.generateBody(listOf(mission1, mission2, mission3))
 
 
         // Then
