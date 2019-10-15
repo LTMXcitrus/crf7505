@@ -3,16 +3,17 @@ package com.lemonfactory.crf7505.utils
 import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.domain.model.mission.Role
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
+import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.LocalDateTime.now
+import java.time.LocalDate.now
 
 object Missions {
 
-    fun aMissionWithMissingRoles(): Mission {
+    fun aMissionWithMissingRoles(now: LocalDate = now()): Mission {
         return Mission(
                 "id",
-                now(),
-                now().plusHours(2),
+                now.atStartOfDay(),
+                now.atStartOfDay().plusHours(2),
                 "name",
                 "ul",
                 emptyList(),
@@ -48,8 +49,8 @@ object Missions {
     fun aMissionsWithMissingRolesFor(roles: List<RoleType>) =
             Mission(
                     "code",
-                    now(),
-                    now().plusHours(2),
+                    now().atStartOfDay(),
+                    now().atStartOfDay().plusHours(2),
                     "name",
                     "ul",
                     emptyList(),

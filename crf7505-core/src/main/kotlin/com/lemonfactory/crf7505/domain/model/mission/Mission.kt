@@ -1,5 +1,6 @@
 package com.lemonfactory.crf7505.domain.model.mission
 
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 data class Mission(val id: String,
@@ -11,4 +12,5 @@ data class Mission(val id: String,
                    val roles: List<Role>,
                    val missingRoles: List<Role>,
                    val hasCommentedInscriptions: Boolean = false,
-                   val hasModifiedHoursInscriptions: Boolean = false)
+                   val hasModifiedHoursInscriptions: Boolean = false,
+                   val date: LocalDate = beginDate.toLocalDate())
