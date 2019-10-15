@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505.controllers
 
+import com.lemonfactory.crf7505.api.GenerateMailBody
 import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.domain.model.PegassUser
-import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionRepository
 import com.lemonfactory.crf7505.mails.MailHandler
@@ -29,8 +29,8 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
     }
 
     @PostMapping("mission/recapMissions")
-    fun recapMissions(@RequestBody missions: List<Mission>): String {
-        return mapper.writeValueAsString(mailHandler.genMails(missions))
+    fun recapMissions(@RequestBody body: GenerateMailBody): String {
+        return mapper.writeValueAsString(mailHandler.genMails(body.header, body.missions, body.footer))
     }
 
     @PostMapping("mission/sendRecap")

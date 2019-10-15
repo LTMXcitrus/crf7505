@@ -11,14 +11,14 @@ class MailPreparator(private val bodyTemplate: BodyTemplate,
                      private val footerTemplate: FooterTemplate,
                      private val config: Config) {
 
-    fun generateMail(volunteer: Volunteer, missions: List<Mission>): CrfMail {
+    fun generateMail(volunteer: Volunteer, missions: List<Mission>, header: String, footer: String): CrfMail {
         return CrfMail(
                 config.getEnvRequired(ConfigKeys.RECAP_SENDER),
                 volunteer.emailAddress,
                 "subject",
-                headerTemplate.generateHeader(volunteer) + "\n"+
+                headerTemplate.generateHeader(volunteer, header) + "\n"+
                         bodyTemplate.generateBody(missions) +
-                        footerTemplate.generateFooter()
+                        footerTemplate.generateFooter(footer)
 
         )
     }
