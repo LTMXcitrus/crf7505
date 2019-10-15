@@ -13,6 +13,7 @@ import org.junit.Test
 import org.mockito.ArgumentMatchers.anyList
 import org.mockito.Mockito
 import org.mockito.Mockito.`when`
+import java.time.LocalDate
 import java.time.LocalDate.now
 import java.time.format.DateTimeFormatter
 
@@ -57,7 +58,7 @@ class MailPreparatorTest {
         `when`(headerTemplate.generateHeader(any())).thenReturn("header")
         `when`(footerTemplate.generateFooter()).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
-        val now = now()
+        val now = LocalDate.of(2019, 10, 15)
         val mission = MissionsDay(now, listOf(Missions.aMissionWithMissingRoles()))
 
         // When
@@ -69,9 +70,9 @@ class MailPreparatorTest {
         assertThat(crfMail.sender).isEqualTo(SENDER)
         assertThat(crfMail.text).isEqualToIgnoringWhitespace(
                 """header
-                    <div><b>${now.format(DateTimeFormatter.ofPattern("EEEE dd MMMM")).capitalize()}</b>
+                    <div><b>Mardi 15 octobre</b>
                         <ul>
-                            <li>name</li>
+                            <li>name<span style="background-color: #EEEEEE; padding: 5px">Il manque: 1 PSE1</span></li>
                         </ul>
                     </div>
                 footer"""
