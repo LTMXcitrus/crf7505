@@ -12,10 +12,10 @@ class FooterTemplateTest {
         // Given
 
         // When
-        val footer = footerTemplate.generateFooter()
+        val footer = footerTemplate.generateFooter("footer")
 
         // Then
-        assertThat(footer).isEqualTo("footer")
+        assertThat(footer).isEqualToIgnoringWhitespace("<p>footer</p>")
     }
 
 }

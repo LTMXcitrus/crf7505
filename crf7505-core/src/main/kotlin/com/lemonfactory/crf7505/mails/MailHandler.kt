@@ -9,16 +9,18 @@ class MailHandler(private val mailPreparator: MailPreparator,
                   private val volunteerRepositoryImpl: VolunteerRepository,
                   private val missionFilter: MissionFilter) {
 
-    fun genMails(missionsDays: List<Mission>): List<CrfMail> {
+    fun genMails(header: String, missions: List<Mission>, footer: String): List<CrfMail> {
         val volunteers = volunteerRepositoryImpl.retrieveAllVolunteers()
-        return volunteers.map { generateMail(it, missionsDays) }
+        return volunteers.map { generateMail(it, missions, header, footer) }
     }
 
-    private fun generateMail(volunteer: Volunteer, missionsDays: List<Mission>): CrfMail {
+    private fun generateMail(volunteer: Volunteer, missionsDays: List<Mission>, header: String, footer: String): CrfMail {
         val missionsForVolunteer = missionFilter.filter(missionsDays, volunteer)
         return mailPreparator.generateMail(
                 volunteer,
-                missionsForVolunteer
+                missionsForVolunteer,
+                header,
+                footer
         )
     }
 
