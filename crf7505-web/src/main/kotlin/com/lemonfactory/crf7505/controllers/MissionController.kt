@@ -30,7 +30,7 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
 
     @PostMapping("mission/recapMissions")
     fun recapMissions(@RequestBody body: GenerateMailBody): String {
-        return mapper.writeValueAsString(mailHandler.genMails(body.header, body.missions, body.footer))
+        return mapper.writeValueAsString(mailHandler.genMails(body.subject, body.header, body.missions, body.footer))
     }
 
     @PostMapping("mission/sendRecap")

@@ -38,7 +38,7 @@ class MailPreparatorTest {
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, emptyList(), "header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, emptyList(), "subject","header", "footer")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")
@@ -56,10 +56,10 @@ class MailPreparatorTest {
         `when`(footerTemplate.generateFooter(any())).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
         val now = LocalDate.of(2019, 10, 15)
-        val mission = Missions.aMissionWithMissingRoles()
+        val mission = Missions.aMissionWithMissingRoles(now)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, listOf(mission), "header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, listOf(mission), "subject", "header", "footer")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")
