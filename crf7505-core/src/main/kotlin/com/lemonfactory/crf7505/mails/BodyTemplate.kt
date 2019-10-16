@@ -1,33 +1,41 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
-import kotlinx.html.b
-import kotlinx.html.div
-import kotlinx.html.li
+import com.lemonfactory.crf7505.domain.model.mission.Mission
+import kotlinx.html.*
 import kotlinx.html.stream.createHTML
-import kotlinx.html.ul
+import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.util.*
 
 private const val DATE_FORMAT = "EEEE dd MMMM"
 
 class BodyTemplate {
 
-    fun generateBody(missions: List<MissionsDay>): String {
+    fun generateBody(missions: List<Mission>): String {
+        val missionsByDay = missions.groupBy { it.beginDate.toLocalDate() }
         return createHTML().div {
-            missions.map { day ->
+            missionsByDay.entries.map { (day, missions) ->
                 b {
-                    +day.date.format(DateTimeFormatter.ofPattern(DATE_FORMAT)).capitalize()
+                    +day.format(DateTimeFormatter.ofPattern(DATE_FORMAT, Locale.FRANCE)).capitalize()
                 }
                 ul {
-                    day.missions.map {
+                    missions.map {
                         li {
-                            +it.name
+                             + "${it.name} "
+                            span {
+                                style = "background-color: #EEEEEE; padding: 5px"
+                                +missionRolesString(it)
+                            }
                         }
                     }
                 }
 
             }
         }
+    }
+
+    private fun missionRolesString(mission: Mission): String {
+        return mission.missingRoles.joinToString (", ", "Il manque: ") {"${it.quantity} ${it.type.toString}"}
     }
 
 }

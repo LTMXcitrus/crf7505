@@ -2,7 +2,6 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.domain.model.mission.Mission
-import com.lemonfactory.crf7505.domain.model.mission.MissionsDay
 import com.lemonfactory.crf7505.domain.model.mission.Role
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
 import com.lemonfactory.crf7505.domain.model.mission.RoleType.*
@@ -17,12 +16,7 @@ class MissionFilter {
             PSC1 to listOf(PSC1)
     )
 
-
-    fun filter(missionsDays: List<MissionsDay>, volunteer: Volunteer): List<MissionsDay> {
-        return missionsDays.map { day -> MissionsDay(day.date, filterMissions(day.missions, volunteer)) }
-    }
-
-    private fun filterMissions(missions: List<Mission>, volunteer: Volunteer): List<Mission> {
+    fun filter(missions: List<Mission>, volunteer: Volunteer): List<Mission> {
         if(volunteer.interests().isEmpty()) {
             return missions.filter { mission -> hasMatchingRole(mission.missingRoles, defaultInterests[volunteer.role]) }
         }
