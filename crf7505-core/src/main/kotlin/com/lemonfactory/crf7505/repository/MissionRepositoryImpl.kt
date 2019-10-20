@@ -11,7 +11,7 @@ class MissionRepositoryImpl(private val missionService: MissionService) : Missio
     override fun getMissions(user: PegassUser, begin: LocalDateTime, end: LocalDateTime): List<Mission> {
         return missionService.getAllMissions(user, begin, end)
                 .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(end)  }
-                .filter { mission -> mission.missingRoles.isNotEmpty()}
+                .filter { mission -> mission.missingRoles.isNotEmpty() || mission.hasCommentedInscriptions || mission.hasModifiedHoursInscriptions}
     }
 
 }
