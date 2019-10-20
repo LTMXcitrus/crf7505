@@ -15,9 +15,9 @@ class MissionRepositoryImplTest {
     private val midday = LocalDateTime.now().withHour(12)
     private val aPegassUser = PegassUser("", "")
 
-    val missionService = Mockito.mock(MissionService::class.java)
+    private val missionService = Mockito.mock(MissionService::class.java)
 
-    val missionRepository = MissionRepositoryImpl(missionService)
+    private val missionRepository = MissionRepositoryImpl(missionService)
 
     @Test
     fun `getMissionsByDay remove out of date range missions`() {
@@ -50,7 +50,7 @@ class MissionRepositoryImplTest {
     }
 
     @Test
-    fun `getMissionsByDay remove complete missions`() {
+    fun `getMissionsByDay remove complete missions but keep mission with commented or modified inscriptions`() {
         // Given
 
         val beginLimit = midday.minusHours(2)
@@ -58,18 +58,22 @@ class MissionRepositoryImplTest {
 
         val missionComplete = aMissionWithoutMissingRoles(midday.minusHours(1), midday.plusHours(1))
         val missionNotComplete = aMissionWithMissingRoles(midday.minusHours(1), midday.plusHours(1))
+        val missionCompleteCommented = missionComplete.copy(hasCommentedInscriptions = true)
+        val missionCompleteModified = missionComplete.copy(hasModifiedHoursInscriptions = true)
 
 
         `when`(missionService.getAllMissions(aPegassUser, beginLimit, endLimit)).thenReturn(listOf(
                 missionComplete,
-                missionNotComplete
+                missionNotComplete,
+                missionCompleteCommented,
+                missionCompleteModified
         ))
 
         // When
         val missions = missionRepository.getMissions(PegassUser("", ""), beginLimit, endLimit)
 
         // Then
-        assertThat(missions).containsExactlyInAnyOrder(missionNotComplete)
+        assertThat(missions).containsExactlyInAnyOrder(missionNotComplete, missionCompleteCommented, missionCompleteModified)
     }
 
 
