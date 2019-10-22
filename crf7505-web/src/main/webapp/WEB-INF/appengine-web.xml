@@ -3,4 +3,7 @@
     <application>crf7505</application>
     <threadsafe>true</threadsafe>
     <runtime>java8</runtime>
+    <automatic-scaling>
+        <min-instances>1</min-instances>
+    </automatic-scaling>
 </appengine-web-app>
