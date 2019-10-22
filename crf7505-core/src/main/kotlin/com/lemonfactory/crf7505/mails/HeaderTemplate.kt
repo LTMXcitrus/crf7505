@@ -8,14 +8,15 @@ class HeaderTemplate {
     fun generateHeader(volunteer: Volunteer, header: String): String {
         return createHTML().div {
             p { +"Bonjour ${volunteer.firstname}," }
-            p { +header }
-            p { +"Tu trouveras ci-après le récapitulatif de la semaine." }
             p {
-                +"Le responsable missions de la semaine est "
+                +"Tu trouveras ci-après le récapitulatif de la semaine."
+                br { }
+                +"Le responsable missions est "
                 b {
                     +"Emmanuel"
                 }
             }
+            p { +header }
         }
     }
 

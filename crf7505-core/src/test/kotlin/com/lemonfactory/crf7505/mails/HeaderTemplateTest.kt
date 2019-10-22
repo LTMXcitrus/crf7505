@@ -19,9 +19,8 @@ class HeaderTemplateTest {
         assertThat(header).isEqualToIgnoringWhitespace("""
                     <div>
                         <p>Bonjour toi,</p>
+                        <p>Tu trouveras ci-après le récapitulatif de la semaine.<br>Le responsable missions est <b>Emmanuel</b></p>
                         <p>header</p>
-                        <p>Tu trouveras ci-après le récapitulatif de la semaine.</p>
-                        <p>Le responsable missions de la semaine est <b>Emmanuel</b></p>
                     </div>
                     """)
     }
