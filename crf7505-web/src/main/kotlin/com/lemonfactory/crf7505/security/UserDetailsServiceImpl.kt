@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.security
 
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
-import com.lemonfactory.crf7505.security.user.ApplicationUser
+import com.lemonfactory.crf7505.user.ApplicationUser
 import org.springframework.security.authentication.DisabledException
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails

@@ -15,7 +15,7 @@ import com.lemonfactory.crf7505.security.SecurityConstants.EXPIRATION_TIME
 import com.lemonfactory.crf7505.security.SecurityConstants.EXPOSE_AUTHORIZATION_HEADERS
 import com.lemonfactory.crf7505.security.SecurityConstants.HEADER_STRING
 import com.lemonfactory.crf7505.security.SecurityConstants.TOKEN_PREFIX
-import com.lemonfactory.crf7505.security.user.ApplicationUser
+import com.lemonfactory.crf7505.user.ApplicationUser
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.AuthenticationException
 import org.springframework.security.core.GrantedAuthority
