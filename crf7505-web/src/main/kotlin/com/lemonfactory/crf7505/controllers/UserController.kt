@@ -14,7 +14,7 @@ class UserController(val userRepository: ObjectifyDAO<ApplicationUser>,
     @PostMapping("/sign-up")
     fun registerUser(@RequestBody user: ApplicationUser): String {
         val hashedPassword = bCryptPasswordEncoder.encode(user.password)
-        val userToStore = ApplicationUser(user.username, user.firstname, hashedPassword)
+        val userToStore = user.copy(password = hashedPassword)
         userRepository.save(userToStore)
         return "Welcome ${userToStore.firstname} !"
     }

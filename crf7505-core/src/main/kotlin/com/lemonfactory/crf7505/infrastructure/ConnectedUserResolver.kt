@@ -4,6 +4,6 @@ import com.lemonfactory.crf7505.user.ApplicationUser
 
 interface ConnectedUserResolver {
 
-    fun resolveConnectedUser(): ApplicationUser?
+    fun resolveConnectedUser(username: String? = null): ApplicationUser?
 
 }
