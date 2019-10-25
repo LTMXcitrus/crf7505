@@ -13,7 +13,7 @@ class HeaderTemplateTest {
         // Given
 
         // When
-        val header = headerTemplate.generateHeader(Volunteer(firstname = "toi"), "header")
+        val header = headerTemplate.generateHeader(Volunteer(firstname = "toi"), "header", "Emmanuel")
 
         // Then
         assertThat(header).isEqualToIgnoringWhitespace("""

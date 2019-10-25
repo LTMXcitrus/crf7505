@@ -5,7 +5,7 @@ import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 
 class HeaderTemplate {
-    fun generateHeader(volunteer: Volunteer, header: String): String {
+    fun generateHeader(volunteer: Volunteer, header: String, respMission: String): String {
         return createHTML().div {
             p { +"Bonjour ${volunteer.firstname}," }
             p {
@@ -13,7 +13,7 @@ class HeaderTemplate {
                 br { }
                 +"Le responsable missions est "
                 b {
-                    +"Emmanuel"
+                    +respMission
                 }
             }
             p { +header }
