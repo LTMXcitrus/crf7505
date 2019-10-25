@@ -7,8 +7,12 @@ import org.springframework.security.core.context.SecurityContextHolder
 
 class ConnectedUserResolverImpl(val applicationUserDao : ObjectifyDAO<ApplicationUser>) : ConnectedUserResolver {
 
-    override fun resolveConnectedUser(): ApplicationUser? {
-        val connectedUsername = SecurityContextHolder.getContext().authentication.principal
+    override fun resolveConnectedUser(username: String?): ApplicationUser? {
+        val connectedUsername = if(username.isNullOrBlank()) {
+            SecurityContextHolder.getContext().authentication.principal
+        } else {
+            username!!
+        }
         if(connectedUsername is String) {
             return applicationUserDao.findById<ApplicationUser>(connectedUsername)
         }
