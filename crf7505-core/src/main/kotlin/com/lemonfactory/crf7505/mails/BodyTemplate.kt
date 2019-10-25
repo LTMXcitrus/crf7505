@@ -3,7 +3,6 @@ package com.lemonfactory.crf7505.mails
 import com.lemonfactory.crf7505.domain.model.mission.Mission
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
-import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -11,7 +10,7 @@ private const val DATE_FORMAT = "EEEE dd MMMM"
 
 class BodyTemplate {
 
-    fun generateBody(missions: List<Mission>): String {
+    fun generateBody(missions: List<Mission>, localMissions: List<Mission>): String {
         val missionsByDay = missions.groupBy { it.beginDate.toLocalDate() }
         return createHTML().div {
             missionsByDay.entries.map { (day, missions) ->

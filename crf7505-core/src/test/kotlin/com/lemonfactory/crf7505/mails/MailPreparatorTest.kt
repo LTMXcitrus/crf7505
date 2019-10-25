@@ -32,13 +32,13 @@ class MailPreparatorTest {
     @Test
     fun `should return header body and footer concated`() {
         // Given
-        `when`(bodyTemplate.generateBody(anyList())).thenReturn("body")
+        `when`(bodyTemplate.generateBody(anyList(), anyList())).thenReturn("body")
         `when`(headerTemplate.generateHeader(any(), any())).thenReturn("header")
         `when`(footerTemplate.generateFooter(any())).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, emptyList(), "subject","header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, emptyList(), listOf(), "subject","header", "footer")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")
@@ -51,7 +51,7 @@ class MailPreparatorTest {
     @Test
     fun `should return header body-with-missions and footer concated`() {
         // Given
-        `when`(bodyTemplate.generateBody(anyList())).thenCallRealMethod()
+        `when`(bodyTemplate.generateBody(anyList(), anyList())).thenCallRealMethod()
         `when`(headerTemplate.generateHeader(any(), any())).thenReturn("header")
         `when`(footerTemplate.generateFooter(any())).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
@@ -59,7 +59,7 @@ class MailPreparatorTest {
         val mission = Missions.aMissionWithMissingRoles(now)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, listOf(mission), "subject", "header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, listOf(mission), listOf(), "subject", "header", "footer")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")

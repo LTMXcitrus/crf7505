@@ -1,6 +1,7 @@
 package com.lemonfactory.crf7505.repository
 
 import com.lemonfactory.crf7505.domain.model.PegassUser
+import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.utils.Missions.aMissionWithMissingRoles
 import com.lemonfactory.crf7505.utils.Missions.aMissionWithoutMissingRoles
@@ -16,8 +17,9 @@ class MissionRepositoryImplTest {
     private val aPegassUser = PegassUser("", "")
 
     private val missionService = Mockito.mock(MissionService::class.java)
+    private val connectedUserResolver = Mockito.mock(ConnectedUserResolver::class.java)
 
-    private val missionRepository = MissionRepositoryImpl(missionService)
+    private val missionRepository = MissionRepositoryImpl(missionService, connectedUserResolver)
 
     @Test
     fun `getMissionsByDay remove out of date range missions`() {
@@ -43,10 +45,10 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missions = missionRepository.getMissions(PegassUser("", ""), beginLimit, endLimit)
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).externalActivities
 
         // Then
-        assertThat(missions).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
+        assertThat(missionsOtherStructures).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
     }
 
     @Test
@@ -70,10 +72,10 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missions = missionRepository.getMissions(PegassUser("", ""), beginLimit, endLimit)
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).externalActivities
 
         // Then
-        assertThat(missions).containsExactlyInAnyOrder(missionNotComplete, missionCompleteCommented, missionCompleteModified)
+        assertThat(missionsOtherStructures).containsExactlyInAnyOrder(missionNotComplete, missionCompleteCommented, missionCompleteModified)
     }
 
 

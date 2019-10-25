@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505.api
 
-import com.lemonfactory.crf7505.domain.model.mission.Mission
+import com.lemonfactory.crf7505.domain.model.Activities
 
 data class GenerateMailBody(val subject: String,
                             val header: String,
                             val footer: String,
-                            val missions: List<Mission>)
+                            val activities: Activities)

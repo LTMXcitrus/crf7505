@@ -1,6 +1,7 @@
 package com.lemonfactory.crf7505
 
 import com.lemonfactory.crf7505.config.Config
+import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.mails.*
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
@@ -16,8 +17,8 @@ private const val RECAP_SENDER = "RECAP_SENDER"
 open class CrfModule {
 
     @Bean
-    open fun missionRepository(missionService: MissionService): MissionRepositoryImpl {
-        return MissionRepositoryImpl(missionService)
+    open fun missionRepository(missionService: MissionService, connectedUserResolver: ConnectedUserResolver): MissionRepositoryImpl {
+        return MissionRepositoryImpl(missionService, connectedUserResolver)
     }
 
     @Bean
