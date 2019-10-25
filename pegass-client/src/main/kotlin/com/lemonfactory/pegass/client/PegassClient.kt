@@ -66,4 +66,13 @@ class PegassClient {
         return mapper.readValue(pegassResponse)
     }
 
+
+    fun getActivitiesForStructure(pegassSession: PegassSession, start:LocalDateTime, end: LocalDateTime, structureId: Int): List<PegassActivity> {
+        val startDate = start.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
+        val endDate = end.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
+        val pegassResponse = pegassSession
+                .getPage("https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&structure=$structureId")
+        return mapper.readValue(pegassResponse)
+    }
+
 }

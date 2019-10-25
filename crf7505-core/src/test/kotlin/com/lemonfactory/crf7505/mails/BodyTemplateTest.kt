@@ -23,7 +23,7 @@ class BodyTemplateTest {
 
 
         // When
-        val body = bodyTemplate.generateBody(listOf(mission1, mission2, mission3))
+        val body = bodyTemplate.generateBody(listOf(mission1, mission2, mission3), emptyList())
 
 
         // Then

@@ -1,8 +1,6 @@
 package com.lemonfactory.pegass.client.adapter
 
-import com.lemonfactory.crf7505.domain.model.mission.Inscription
-import com.lemonfactory.crf7505.domain.model.mission.Mission
-import com.lemonfactory.crf7505.domain.model.mission.Role
+import com.lemonfactory.crf7505.domain.model.mission.*
 import com.lemonfactory.pegass.client.api.activity.ActivitySeance
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.referentiel.UlReferentiel
@@ -29,6 +27,8 @@ class PegassActivityAdapter(
         val ul = UlReferentiel.getUlLabel(pegassActivity.structureMenantActivite.id)
         val inscriptions = pegassInscriptionAdapter.transform(seance)
         val roles = pegassRoleAdapter.transform(seance.roleConfigList)
+        val activityType = typeActivityOf(pegassActivity.typeActivite.action.id)
+        val activityGroup = retrieveActivityGroupFromId(pegassActivity.typeActivite.groupeAction.id)
 
         return Mission(
                 seance.id,
@@ -40,7 +40,9 @@ class PegassActivityAdapter(
                 roles,
                 findMissingRoles(roles, inscriptions),
                 inscriptions.any { it.hasComments },
-                inscriptions.any { it.hasModifiedHours }
+                inscriptions.any { it.hasModifiedHours },
+                activityType,
+                activityGroup
         )
     }
 

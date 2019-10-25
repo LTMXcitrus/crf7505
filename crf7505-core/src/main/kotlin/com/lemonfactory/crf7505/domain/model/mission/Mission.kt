@@ -13,4 +13,7 @@ data class Mission(val id: String,
                    val missingRoles: List<Role>,
                    val hasCommentedInscriptions: Boolean = false,
                    val hasModifiedHoursInscriptions: Boolean = false,
-                   val date: LocalDate = beginDate.toLocalDate())
+                   val activityType: TypeActivity = TypeActivity.MISSION,
+                   val activityGroup: ActivityGroup? = ActivityGroup.US,
+                   val date: LocalDate = beginDate.toLocalDate()
+                   )
