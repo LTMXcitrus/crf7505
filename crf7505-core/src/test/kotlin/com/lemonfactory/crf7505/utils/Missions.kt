@@ -2,10 +2,23 @@ package com.lemonfactory.crf7505.utils
 
 import com.lemonfactory.crf7505.domain.model.mission.*
 import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.LocalDate.now
+import java.time.LocalDateTime
 
 object Missions {
+
+    fun aMission(now: LocalDate = now()): Mission {
+        return Mission(
+                "id",
+                now.atStartOfDay(),
+                now.atStartOfDay().plusHours(2),
+                "name",
+                "ul",
+                emptyList(),
+                emptyList(),
+                listOf(Role(RoleType.PSE1, 1))
+        )
+    }
 
     fun aMissionWithMissingRoles(now: LocalDate = now()): Mission {
         return Mission(

@@ -23,6 +23,7 @@ class MissionRepositoryImpl(private val missionService: MissionService, private 
     private fun retrieveLocalActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, userStructure: String?): List<Mission> {
         if(userStructure != null) {
             return missionService.getActivitiesForStructure(user, begin, end, userStructure)
+                    .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(end) }
                     .filter { mission -> mission.activityGroup != ActivityGroup.AS }
         }
         return emptyList()
