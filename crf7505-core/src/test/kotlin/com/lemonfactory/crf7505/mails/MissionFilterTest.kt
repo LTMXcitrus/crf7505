@@ -21,11 +21,11 @@ class MissionFilterTest {
         val mission2 = aMissionsWithMissingRolesFor(listOf(PSE1))
         val missions = listOf(mission1, mission2)
 
-        val volunteer = Volunteer(role= PSE2, interestedIn = listOf(PSE2.name))
+        val volunteer = Volunteer(role = PSE2, interestedIn = listOf(PSE2.name))
 
 
         // When
-        val missionsFiltered = filter.filter(missions, volunteer)
+        val missionsFiltered = filter.filter(missions, volunteer, "")
 
         // Then
 
@@ -43,7 +43,7 @@ class MissionFilterTest {
 
 
         // When
-        val missionsFiltered = filter.filter(missions, volunteer)
+        val missionsFiltered = filter.filter(missions, volunteer, "")
 
         // Then
 
@@ -63,7 +63,7 @@ class MissionFilterTest {
 
 
         // When
-        val missionsFiltered = filter.filter(missions, volunteer)
+        val missionsFiltered = filter.filter(missions, volunteer, "")
 
         // Then
 
@@ -83,7 +83,7 @@ class MissionFilterTest {
 
 
         // When
-        val missionsFiltered = filter.filter(missions, volunteer)
+        val missionsFiltered = filter.filter(missions, volunteer, "")
 
         // Then
 

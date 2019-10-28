@@ -6,4 +6,5 @@ import java.time.LocalDateTime
 
 interface MissionService {
     fun getAllMissions(user: PegassUser, start: LocalDateTime, end: LocalDateTime): List<Mission>
+    fun getActivitiesForStructure(user: PegassUser, start: LocalDateTime, end: LocalDateTime, structure: String): List<Mission>
 }

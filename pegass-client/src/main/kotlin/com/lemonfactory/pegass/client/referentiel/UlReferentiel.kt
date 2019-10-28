@@ -22,6 +22,10 @@ object UlReferentiel {
                 ?: "Ul inconnue"
     }
 
+    fun getUlIdFromLabel(ulLabel: String): Int? {
+        return referentiel.firstOrNull { ul -> ul.label == ulLabel }?.pegassId
+    }
+
     private fun load(): List<Ul> {
         val reader = CsvReader(UlReferentiel::class.java.classLoader.getResourceAsStream("ulReferentiel.csv"), ';', Charset.forName("UTF-8"))
         reader.readHeaders()

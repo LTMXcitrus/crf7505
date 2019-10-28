@@ -2,6 +2,7 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.config.ConfigKeys
+import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.domain.model.mission.RoleType
 import com.lemonfactory.crf7505.utils.Missions
@@ -32,13 +33,13 @@ class MailPreparatorTest {
     @Test
     fun `should return header body and footer concated`() {
         // Given
-        `when`(bodyTemplate.generateBody(anyList())).thenReturn("body")
-        `when`(headerTemplate.generateHeader(any(), any())).thenReturn("header")
+        `when`(bodyTemplate.generateBody(any())).thenReturn("body")
+        `when`(headerTemplate.generateHeader(any(), any(), any())).thenReturn("header")
         `when`(footerTemplate.generateFooter(any())).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, emptyList(), "subject","header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, Activities(emptyList(), emptyList(), ""), "subject","header", "footer", "respMission")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")
@@ -51,15 +52,15 @@ class MailPreparatorTest {
     @Test
     fun `should return header body-with-missions and footer concated`() {
         // Given
-        `when`(bodyTemplate.generateBody(anyList())).thenCallRealMethod()
-        `when`(headerTemplate.generateHeader(any(), any())).thenReturn("header")
+        `when`(bodyTemplate.generateBody(any())).thenCallRealMethod()
+        `when`(headerTemplate.generateHeader(any(), any(), any())).thenReturn("header")
         `when`(footerTemplate.generateFooter(any())).thenReturn("footer")
         val volunteer = Volunteer("emailAddress", "firstname", "lastname", RoleType.PSE1)
         val now = LocalDate.of(2019, 10, 15)
         val mission = Missions.aMissionWithMissingRoles(now)
 
         // When
-        val crfMail = mailPreparator.generateMail(volunteer, listOf(mission), "subject", "header", "footer")
+        val crfMail = mailPreparator.generateMail(volunteer, Activities(listOf(mission), listOf(), ""), "subject", "header", "footer", "respMission")
 
         // Then
         assertThat(crfMail.recipient).isEqualTo("emailAddress")
@@ -67,12 +68,15 @@ class MailPreparatorTest {
         assertThat(crfMail.sender).isEqualTo(SENDER)
         assertThat(crfMail.text).isEqualToIgnoringWhitespace(
                 """header
-                    <div><b>Mardi 15 octobre</b>
-                        <ul>
-                            <li>name<span style="background-color: #EEEEEE; padding: 5px">Il manque: 1 PSE1</span></li>
-                        </ul>
-                    </div>
-                footer"""
+<div>
+  <h3>Les missions locales</h3>
+<span style="color: grey;">Mardi 15 octobre</span>
+  <ul>
+    <li><b>name</b><span> - Il manque: 1 PSE1</span></li>
+  </ul>
+  <h3>Les missions extérieures</h3>
+<span>Pas de missions extérieures</span></div>
+footer"""
         )
     }
 

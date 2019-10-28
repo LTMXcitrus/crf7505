@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505
 
-import com.lemonfactory.crf7505.security.user.ApplicationUser
+import com.lemonfactory.crf7505.user.ApplicationUser
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
@@ -11,7 +11,9 @@ import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.appenginemailclient.MailClientModule
 import com.lemonfactory.crf7505.config.ConfigValue
 import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
+import com.lemonfactory.crf7505.security.ConnectedUserResolverImpl
 import com.lemonfactory.pegass.client.PegassModule
 import org.springframework.boot.web.servlet.FilterRegistrationBean
 import org.springframework.context.annotation.Import
@@ -39,6 +41,11 @@ class Crf7505Application : SpringBootServletInitializer() {
     @Bean
     fun userRepository(): ObjectifyDAO<ApplicationUser> {
         return ObjectifyDAO()
+    }
+
+    @Bean
+    fun connectedUserResolver(userRepository: ObjectifyDAO<ApplicationUser>): ConnectedUserResolver {
+        return ConnectedUserResolverImpl(userRepository)
     }
 
     @Bean
