@@ -48,16 +48,17 @@ class MissionControllerTest {
                 "subject",
                 "header",
                 "footer",
-                activities
+                activities,
+                "respMission"
         )
         val mail = CrfMail("sender", "recipient", "subject", "text")
-        `when`(mailHandler.genMails("subject", "header", activities, "footer")).thenReturn(listOf(mail))
+        `when`(mailHandler.genMails("subject", "header", activities, "footer", "respMission")).thenReturn(listOf(mail))
 
         // When
         val responseBody = missionController.recapMissions(body)
 
         // Then
-        verify(mailHandler).genMails("subject", "header", activities, "footer")
+        verify(mailHandler).genMails("subject", "header", activities, "footer", "respMission")
         assertThat(responseBody).isEqualTo("[{\"sender\":\"sender\",\"recipient\":\"recipient\",\"subject\":\"subject\",\"text\":\"text\"}]")
     }
 
