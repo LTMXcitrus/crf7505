@@ -21,7 +21,7 @@ class BodyTemplateTest {
         val mission2 = Missions.aMissionWithMissingRoles(now)
         val mission3 = Missions.aMissionWithMissingRoles(tomorrow)
 
-        val localMission = Missions.aLocalReunion()
+        val localMission = Missions.aLocalReunion(now)
 
         val activities = Activities(
                 listOf(mission1, localMission, mission3),
@@ -48,7 +48,7 @@ class BodyTemplateTest {
   </ul>
 <br><span>Les autres missions</span>
 <br>
-<span style="color: grey;">Vendredi 25 octobre</span>
+<span style="color: grey;">Mardi 15 octobre</span>
   <ul>
     <li><b>Réunion de l'US</b><span> - Il manque: 15 Participant</span></li>
   </ul>

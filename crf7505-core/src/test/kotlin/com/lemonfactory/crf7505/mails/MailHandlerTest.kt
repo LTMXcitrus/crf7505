@@ -35,14 +35,14 @@ class MailHandlerTest {
         `when`(missionFilter.filter(any(), any(), any())).thenReturn(emptyList())
 
         // When
-        mailHandler.genMails("subject", "header", activities, "footer")
+        mailHandler.genMails("subject", "header", activities, "footer", "respMission")
 
         // Then
-        argumentCaptorTriple<Volunteer, List<Mission>, String>().let { (volunteer, list, string) ->
-            verify(mailPreparator).generateMail(volunteer.capture(), list.capture(), list.capture(), string.capture(), string.capture(), string.capture())
+        argumentCaptorTriple<Volunteer, Activities, String>().let { (volunteer, activities, string) ->
+            verify(mailPreparator).generateMail(volunteer.capture(), activities.capture(), string.capture(), string.capture(), string.capture(), string.capture())
             assertEquals(Volunteer(), volunteer.firstValue)
-            assertThat(list.allValues).containsOnly(emptyList())
-            assertThat(string.allValues).containsExactly("subject", "header", "footer")
+            assertThat(activities.firstValue).isEqualTo(Activities(emptyList(), emptyList(), "V"))
+            assertThat(string.allValues).containsExactly("subject", "header", "footer", "respMission")
         }
 
     }
@@ -59,7 +59,7 @@ class MailHandlerTest {
         `when`(missionFilter.filter(any(), any(), any())).thenReturn(emptyList())
 
         // When
-        mailHandler.genMails("subject", "header", activities, "footer")
+        mailHandler.genMails("subject", "header", activities, "footer", "respMission")
 
         // Then
 
@@ -79,7 +79,7 @@ class MailHandlerTest {
         `when`(missionFilter.filter(any(), any(), any())).thenReturn(emptyList())
 
         // When
-        mailHandler.genMails("subject", "header", activities, "footer")
+        mailHandler.genMails("subject", "header", activities, "footer", "respMission")
 
         // Then
         verify(volunteerRepository).retrieveAllVolunteers()
@@ -97,7 +97,7 @@ class MailHandlerTest {
         `when`(missionFilter.filter(any(), any(), any())).thenReturn(emptyList())
 
         // When
-        mailHandler.genMails("subject", "header", activities, "footer")
+        mailHandler.genMails("subject", "header", activities, "footer", "respMission")
 
         // Then
         verify(missionFilter, times(4)).filter(any(), any(), any())
