@@ -2,7 +2,6 @@ package com.lemonfactory.crf7505.repository
 
 import com.lemonfactory.crf7505.domain.model.PegassUser
 import com.lemonfactory.crf7505.domain.model.mission.ActivityGroup
-import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.user.ApplicationUser
