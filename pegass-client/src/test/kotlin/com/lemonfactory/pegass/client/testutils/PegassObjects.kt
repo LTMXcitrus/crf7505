@@ -7,8 +7,8 @@ import java.time.LocalDateTime
 
 fun aPegassActivity(): PegassActivity {
     return PegassActivity(
-            "code",
-            "type",
+            "codes",
+            "types",
             "libelle",
             anActivityType(),
             anActivityReccurrence(),
@@ -27,9 +27,9 @@ private fun structureParisV() = Structure(893)
 
 private fun anActivityReccurrence() =
         ActivityReccurrence(
-                "code",
+                "codes",
                 false,
-                "type",
+                "types",
                 emptyList(),
                 LocalDateTime.now(),
                 LocalDateTime.now()
@@ -66,7 +66,7 @@ fun aPegassVolunteer(): PegassVolunteer {
 
 fun anActivitySeance(): ActivitySeance {
     return ActivitySeance(
-            "seance-code",
+            "seance-codes",
             anActivity(),
             anActionGroup(),
             LocalDateTime.now(),
@@ -78,25 +78,25 @@ fun anActivitySeance(): ActivitySeance {
 
 fun anActivityRole(): ActivityRole {
     return ActivityRole(
-            "code",
-            "code",
-            "code",
+            "codes",
+            "codes",
+            "codes",
             true,
             1,
-            "type",
+            "types",
             0
     )
 }
 
 fun anActivity(): Activity {
-    return Activity("code", "type")
+    return Activity("codes", "types")
 }
 
 fun aPegassInscription(): PegassInscription {
     return PegassInscription(
             LocalDateTime.now(),
             LocalDateTime.now().plusHours(8),
-            "code",
+            "codes",
             false,
             "167",
             "statut",

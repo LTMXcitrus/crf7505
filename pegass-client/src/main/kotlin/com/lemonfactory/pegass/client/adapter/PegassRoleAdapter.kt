@@ -11,7 +11,7 @@ class PegassRoleAdapter {
     }
 
     fun transform(role: ActivityRole): Role? {
-        if(role.effectif == 0) {
+        if (role.effectif == 0) {
             return null
         }
         val roleType = roleTypeFrom(role.type ?: "", role.code)

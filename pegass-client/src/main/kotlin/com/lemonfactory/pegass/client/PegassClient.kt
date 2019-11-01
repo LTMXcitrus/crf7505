@@ -1,7 +1,7 @@
 package com.lemonfactory.pegass.client
 
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.lemonfactory.crf7505.mapper
+import com.lemonfactory.crf7505.jackson.mapper
 import com.lemonfactory.pegass.client.api.PegassVolunteer
 import com.lemonfactory.pegass.client.api.activity.ActivitySeance
 import com.lemonfactory.pegass.client.api.activity.PegassActivity

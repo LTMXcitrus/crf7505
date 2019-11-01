@@ -2,7 +2,6 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
@@ -10,7 +9,6 @@ import com.lemonfactory.crf7505.utils.argumentCaptorTriple
 import com.lemonfactory.crf7505.utils.mock
 import com.nhaarman.mockito_kotlin.times
 import com.nhaarman.mockito_kotlin.verify
-import junit.framework.Assert.assertEquals
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.mockito.Mockito.`when`

@@ -16,7 +16,7 @@ data class Mission(val id: String,
                    val activityType: TypeActivity = TypeActivity.MISSION,
                    val activityGroup: ActivityGroup? = ActivityGroup.US,
                    val date: LocalDate = beginDate.toLocalDate()
-                   ) {
+) {
 
     fun missionIsAMatch(interestedIn: List<RoleType>?, localStructure: String?): Boolean {
         return hasMatchingRole(this.missingRoles, interestedIn)

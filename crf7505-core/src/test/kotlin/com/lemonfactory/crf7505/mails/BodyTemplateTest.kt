@@ -6,8 +6,6 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import java.time.LocalDate
 
-private const val DATE_FORMAT = "EEEE dd MMMM"
-
 class BodyTemplateTest {
 
     private val bodyTemplate = BodyTemplate()
@@ -18,22 +16,19 @@ class BodyTemplateTest {
         val now = LocalDate.of(2019, 10, 15)
         val tomorrow = now.plusDays(1)
         val mission1 = Missions.aMissionWithMissingRoles(now)
-        val mission2 = Missions.aMissionWithMissingRoles(now)
+        val mission4 = Missions.aMissionWithPartialMissingRoles(now)
         val mission3 = Missions.aMissionWithMissingRoles(tomorrow)
 
         val localMission = Missions.aLocalReunion(now)
 
         val activities = Activities(
                 listOf(mission1, localMission, mission3),
-                listOf(mission1, mission2, mission3),
+                listOf(mission1, mission1, mission4, mission3),
                 "ul"
         )
 
-
-
         // When
         val body = bodyTemplate.generateBody(activities)
-
 
         // Then
         assertThat(body).isEqualToIgnoringWhitespace("""<div>
@@ -57,6 +52,7 @@ class BodyTemplateTest {
   <ul>
     <li><b>name</b><span> - Il manque: 1 PSE1</span></li>
     <li><b>name</b><span> - Il manque: 1 PSE1</span></li>
+    <li><b>name</b><span> - Il manque: 1 PSE1 (09h00-13h00), 1 PSE1</span></li>
   </ul>
 <span style="color: grey;">Mercredi 16 octobre</span>
   <ul>
@@ -70,21 +66,11 @@ class BodyTemplateTest {
     @Test
     fun bodyTemplateTest_with_emptyMissions() {
         // Given
-        val now = LocalDate.of(2019, 10, 15)
-        val tomorrow = now.plusDays(1)
-        val mission1 = Missions.aMissionWithMissingRoles(now)
-        val mission2 = Missions.aMissionWithMissingRoles(now)
-        val mission3 = Missions.aMissionWithMissingRoles(tomorrow)
-
-        val localMission = Missions.aLocalReunion()
-
         val activities = Activities(
                 emptyList(),
                 emptyList(),
                 "ul"
         )
-
-
 
         // When
         val body = bodyTemplate.generateBody(activities)

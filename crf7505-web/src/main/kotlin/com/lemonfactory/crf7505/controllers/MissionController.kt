@@ -6,7 +6,7 @@ import com.lemonfactory.crf7505.domain.model.PegassUser
 import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionRepository
 import com.lemonfactory.crf7505.mails.MailHandler
-import com.lemonfactory.crf7505.mapper
+import com.lemonfactory.crf7505.jackson.mapper
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.web.bind.annotation.*
 import java.time.LocalDate
