@@ -5,5 +5,6 @@
     <runtime>java8</runtime>
     <automatic-scaling>
         <min-instances>1</min-instances>
+        <max-instances>1</max-instances>
     </automatic-scaling>
 </appengine-web-app>
