@@ -24,8 +24,9 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
     @PostMapping("mission/activities")
     fun activities(@RequestBody user: PegassUser,
                    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) @RequestParam start: LocalDateTime,
-                   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) @RequestParam end: LocalDateTime): String {
-        return mapper.writeValueAsString(missionRepository.getActivities(user, start, end))
+                   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) @RequestParam end: LocalDateTime,
+                   @RequestParam addedDaysForLocalMissions: Number): String {
+        return mapper.writeValueAsString(missionRepository.getActivities(user, start, end, addedDaysForLocalMissions))
     }
 
     @PostMapping("mission/recapMissions")

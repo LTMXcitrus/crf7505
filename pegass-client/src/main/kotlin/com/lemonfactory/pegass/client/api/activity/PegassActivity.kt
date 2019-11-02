@@ -12,7 +12,7 @@ data class PegassActivity(val id: String,
                           val structureOrganisatrice: Structure,
                           val structureMenantActivite: Structure,
                           val structureCreateur: Structure?,
-                          val seanceList: List<ActivitySeance>,
+                          val seanceList: List<ActivitySeance> = emptyList(),
                           val responsable: PegassVolunteer,
                           val commentaire: String?,
                           val rappel: Boolean)
