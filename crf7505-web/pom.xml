@@ -155,7 +155,7 @@
                 <version>2.0.0</version>
                 <configuration>
                     <deploy.projectId>GCLOUD_CONFIG</deploy.projectId>
-                    <deploy.version>GCLOUD_CONFIG</deploy.version>
+                    <deploy.version>${project.version}</deploy.version>
                 </configuration>
             </plugin>
         </plugins>
