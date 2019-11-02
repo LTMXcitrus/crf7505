@@ -38,7 +38,7 @@ class MailHandlerTest {
         // Then
         argumentCaptorTriple<Volunteer, Activities, String>().let { (volunteer, activities, string) ->
             verify(mailPreparator).generateMail(volunteer.capture(), activities.capture(), string.capture(), string.capture(), string.capture(), string.capture())
-            assertEquals(Volunteer(), volunteer.firstValue)
+            assertThat(Volunteer()).isEqualTo(volunteer.firstValue)
             assertThat(activities.firstValue).isEqualTo(Activities(emptyList(), emptyList(), "V"))
             assertThat(string.allValues).containsExactly("subject", "header", "footer", "respMission")
         }
