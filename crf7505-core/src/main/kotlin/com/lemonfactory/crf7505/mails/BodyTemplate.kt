@@ -22,6 +22,9 @@ class BodyTemplate {
             displayAllMissions(activities.localActivities, "Pas de missions locales", activities.localStructure)
 
             h3 { +"Les missions extérieures" }
+            if (activities.externalActivities.isNotEmpty()) {
+                p { +"Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass." }
+            }
             displayAllMissions(activities.externalActivities, "Pas de missions extérieures")
         }
     }
@@ -34,7 +37,11 @@ class BodyTemplate {
             val otherActivities = otherActivitiesByDay(missions, structure)
             if (otherActivities.isNotEmpty()) {
                 br { }
-                span { +"Les autres missions" }
+                span {
+                    style = "color: grey;"
+                    +"Les autres missions"
+                }
+                br { }
                 br { }
                 displayMissions(otherActivities)
             }
@@ -50,13 +57,20 @@ class BodyTemplate {
             ul {
                 missions.map {
                     li {
-                        b { +it.name }
+                        missionTitle(it)
                         span {
-                            +" - ${missionRolesString(it)}"
+                            +missionRolesString(it)
                         }
                     }
                 }
             }
+        }
+    }
+
+    private fun LI.missionTitle(mission: Mission) {
+        a(href = "https://pegass.croix-rouge.fr/planning-des-activites/activite/${mission.id}/") {
+            style = "text-decoration: none;color: black;font-weight: bold;"
+            b { +mission.name }
         }
     }
 
@@ -69,12 +83,15 @@ class BodyTemplate {
                     .groupBy { it.date }
 
     private fun missionRolesString(mission: Mission): String {
+        if (mission.missingRoles.isEmpty()) {
+            return ""
+        }
         val partialMissingRolesString = partialMissingRolesString(mission, mission.missingRoles)
         val completeMissingRolesString = completeMissingRolesString(mission.missingRoles)
 
         val missingRolesString = partialMissingRolesString + completeMissingRolesString
 
-        return missingRolesString.joinToString(", ", "Il manque: ")
+        return missingRolesString.joinToString(", ", " - Il manque: ")
     }
 
     private fun completeMissingRolesString(missingRoles: List<Role>): List<String> {
