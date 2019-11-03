@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505
+package com.lemonfactory.crf7505.jackson
 
 import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper

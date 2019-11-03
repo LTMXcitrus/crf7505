@@ -4,7 +4,7 @@ import com.lemonfactory.crf7505.domain.model.PegassUser
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.TrainingService
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
-import com.lemonfactory.crf7505.mapper
+import com.lemonfactory.crf7505.jackson.mapper
 import org.springframework.web.bind.annotation.*
 
 @RestController

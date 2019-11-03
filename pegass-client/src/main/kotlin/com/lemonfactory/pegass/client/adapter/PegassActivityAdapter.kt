@@ -16,7 +16,6 @@ class PegassActivityAdapter(
     }
 
     private fun transform(pegassActivity: PegassActivity): List<Mission> {
-        println(pegassActivity.libelle + " " + pegassActivity.seanceList.size)
         return pegassActivity.seanceList.map { seance -> transform(seance, pegassActivity) }
     }
 

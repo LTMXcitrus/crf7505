@@ -17,7 +17,7 @@ class PegassMissionService(val pegassClient: PegassClient, val pegassActivityAda
                     pegassClient.getActivitiesForStructure(session, start, end, structureId)
                 } else {
                     emptyList()
-                }
+                }.map { activity -> completeActivityWithInscriptions(session, activity) }
         return pegassActivityAdapter.transform(pegassActivities)
     }
 

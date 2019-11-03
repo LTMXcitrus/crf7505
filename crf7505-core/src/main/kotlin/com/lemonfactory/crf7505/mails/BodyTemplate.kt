@@ -2,13 +2,17 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.mission.Mission
+import com.lemonfactory.crf7505.domain.model.mission.Role
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
 private const val DATE_FORMAT = "EEEE dd MMMM"
+private const val DATE_TIME_FORMAT = "HH'h'mm"
 
 class BodyTemplate {
 
@@ -31,7 +35,7 @@ class BodyTemplate {
             if (otherActivities.isNotEmpty()) {
                 br { }
                 span { +"Les autres missions" }
-                br {  }
+                br { }
                 displayMissions(otherActivities)
             }
         }
@@ -48,7 +52,7 @@ class BodyTemplate {
                     li {
                         b { +it.name }
                         span {
-                            + " - ${missionRolesString(it)}"
+                            +" - ${missionRolesString(it)}"
                         }
                     }
                 }
@@ -65,7 +69,36 @@ class BodyTemplate {
                     .groupBy { it.date }
 
     private fun missionRolesString(mission: Mission): String {
-        return mission.missingRoles.joinToString(", ", "Il manque: ") { "${it.quantity} ${it.type.toString}" }
+        val partialMissingRolesString = partialMissingRolesString(mission, mission.missingRoles)
+        val completeMissingRolesString = completeMissingRolesString(mission.missingRoles)
+
+        val missingRolesString = partialMissingRolesString + completeMissingRolesString
+
+        return missingRolesString.joinToString(", ", "Il manque: ")
+    }
+
+    private fun completeMissingRolesString(missingRoles: List<Role>): List<String> {
+        val completeMissingRoles = missingRoles.filter { role -> role.beginDate == null && role.endDate == null }
+        return completeMissingRoles.map { role -> "${role.quantity} ${role.type.toString}" }
+    }
+
+    private fun partialMissingRolesString(mission: Mission, missingRoles: List<Role>): List<String> {
+        val partialMissingRoles = missingRoles.filter { role -> role.beginDate != null || role.endDate != null }
+        return partialMissingRoles.map { partialMissingRoleString(mission, it) }
+                .filter { it.isNotBlank() }
+    }
+
+    private fun partialMissingRoleString(mission: Mission, partialMissingRole: Role): String {
+        val begin = computeTime(partialMissingRole.beginDate, mission.beginDate)
+        val end = computeTime(partialMissingRole.endDate, mission.endDate)
+        return "${partialMissingRole.quantity} ${partialMissingRole.type.toString} ($begin-$end)"
+    }
+
+    private fun computeTime(custom: LocalTime?, actual: LocalDateTime): String {
+        if (custom == null) {
+            return actual.format(DateTimeFormatter.ofPattern(DATE_TIME_FORMAT))
+        }
+        return custom.format(DateTimeFormatter.ofPattern(DATE_TIME_FORMAT))
     }
 
 }

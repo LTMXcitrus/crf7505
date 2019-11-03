@@ -61,7 +61,7 @@ class PegassActivityAdapterTest {
         assertThat(mission.name).isEqualToIgnoringCase(activity.libelle)
         assertThat(mission.ul).isEqualTo("V")
         assertThat(mission.inscriptions).isNotEmpty
-        assertThat(mission.id).isEqualTo("seance-code")
+        assertThat(mission.id).isEqualTo("seance-codes")
         assertThat(mission.roles).isNotEmpty
     }
 
@@ -69,8 +69,8 @@ class PegassActivityAdapterTest {
     fun getMissingRoles_noInscription_returnsAllEmptySpot() {
         // Given
         val roles = listOf(
-                anActivityRole().copy(type = RoleType.PSE2.type, role = RoleType.PSE2.code),
-                anActivityRole().copy(type = RoleType.PSE1.type, role = RoleType.PSE1.code)
+                anActivityRole().copy(type = RoleType.PSE2.types.first(), role = RoleType.PSE2.codes.first()),
+                anActivityRole().copy(type = RoleType.PSE1.types.first(), role = RoleType.PSE1.codes.first())
         )
         val activitySeance = anActivitySeance().copy(
                 roleConfigList = roles,
@@ -101,12 +101,12 @@ class PegassActivityAdapterTest {
         val beginDate = LocalDateTime.now()
         val endDate = LocalDateTime.now().plusHours(8)
         val roles = listOf(
-                anActivityRole().copy(type = RoleType.PSE2.type, role = RoleType.PSE2.code),
-                anActivityRole().copy(type = RoleType.PSE1.type, role = RoleType.PSE1.code)
+                anActivityRole().copy(type = RoleType.PSE2.types.first(), role = RoleType.PSE2.codes.first()),
+                anActivityRole().copy(type = RoleType.PSE1.types.first(), role = RoleType.PSE1.codes.first())
         )
         val inscriptions = listOf(
-                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE2.type, role = RoleType.PSE2.code),
-                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE1.type, role = RoleType.PSE1.code)
+                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE2.types.first(), role = RoleType.PSE2.codes.first()),
+                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE1.types.first(), role = RoleType.PSE1.codes.first())
         )
         val activitySeance = anActivitySeance().copy(
                 debut = beginDate,
@@ -133,12 +133,12 @@ class PegassActivityAdapterTest {
         val beginDate = LocalDateTime.now()
         val endDate = LocalDateTime.now().plusHours(8)
         val roles = listOf(
-                anActivityRole().copy(type = RoleType.PSE2.type, role = RoleType.PSE2.code, effectif = 2),
-                anActivityRole().copy(type = RoleType.PSE1.type, role = RoleType.PSE1.code),
-                anActivityRole().copy(type = RoleType.CI.type, role = RoleType.CI.code)
+                anActivityRole().copy(type = RoleType.PSE2.types.first(), role = RoleType.PSE2.codes.first(), effectif = 2),
+                anActivityRole().copy(type = RoleType.PSE1.types.first(), role = RoleType.PSE1.codes.first()),
+                anActivityRole().copy(type = RoleType.CI.types.first(), role = RoleType.CI.codes.first())
         )
         val inscriptions = listOf(
-                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE1.type, role = RoleType.PSE1.code)
+                aPegassInscription().copy(debut = beginDate, fin = endDate, type = RoleType.PSE1.types.first(), role = RoleType.PSE1.codes.first())
         )
         val activitySeance = anActivitySeance().copy(
                 debut = beginDate,

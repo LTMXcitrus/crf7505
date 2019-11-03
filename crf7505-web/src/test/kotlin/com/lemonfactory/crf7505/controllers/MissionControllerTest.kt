@@ -29,13 +29,14 @@ class MissionControllerTest {
         val pegassUser = PegassUser("user", "pwd")
         val start = LocalDateTime.now()
         val end = LocalDateTime.now().plusHours(1)
-        `when`(missionRepository.getActivities(pegassUser, start, end)).thenReturn(Activities(emptyList(), emptyList(), "userStructure"))
+        val addedDaysForLocalMissions = 7
+        `when`(missionRepository.getActivities(pegassUser, start, end, addedDaysForLocalMissions)).thenReturn(Activities(emptyList(), emptyList(), "userStructure"))
 
         // When
-        val responseBody = missionController.activities(pegassUser, start, end)
+        val responseBody = missionController.activities(pegassUser, start, end, addedDaysForLocalMissions)
 
         // Then
-        verify(missionRepository).getActivities(pegassUser, start, end)
+        verify(missionRepository).getActivities(pegassUser, start, end, addedDaysForLocalMissions)
         assertThat(responseBody).isEqualTo("{\"localActivities\":[],\"externalActivities\":[],\"localStructure\":\"userStructure\"}")
 
     }

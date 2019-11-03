@@ -5,11 +5,8 @@ import com.lemonfactory.crf7505.domain.model.mission.RoleType.*
 import com.lemonfactory.crf7505.utils.Missions.aMissionsWithMissingRolesFor
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
-import java.time.LocalDate.now
 
 class MissionFilterTest {
-
-    private val now = now()
 
     private val filter = MissionFilter()
 

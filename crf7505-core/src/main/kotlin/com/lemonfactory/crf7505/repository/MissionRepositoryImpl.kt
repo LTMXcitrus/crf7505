@@ -11,19 +11,20 @@ import java.time.LocalDateTime
 
 class MissionRepositoryImpl(private val missionService: MissionService, private val connectedUserResolver: ConnectedUserResolver) : MissionRepository {
 
-    override fun getActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime): Activities {
+    override fun getActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, addedDaysForLocalMissions: Number): Activities {
         val userStructure = connectedUserResolver.resolveConnectedUser()?.userStructure
         return Activities(
-                retrieveLocalActivities(user, begin, end, userStructure),
+                retrieveLocalActivities(user, begin, end, addedDaysForLocalMissions, userStructure),
                 retrieveExternalActivities(user, begin, end, userStructure),
                 userStructure
         )
     }
 
-    private fun retrieveLocalActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, userStructure: String?): List<Mission> {
+    private fun retrieveLocalActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, addedDaysForLocalMissions: Number, userStructure: String?): List<Mission> {
+        val realEnd = end.plusDays(addedDaysForLocalMissions.toLong())
         if(userStructure != null) {
-            return missionService.getActivitiesForStructure(user, begin, end, userStructure)
-                    .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(end) }
+            return missionService.getActivitiesForStructure(user, begin, realEnd, userStructure)
+                    .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(realEnd) }
                     .filter { mission -> mission.activityGroup != ActivityGroup.AS }
         }
         return emptyList()

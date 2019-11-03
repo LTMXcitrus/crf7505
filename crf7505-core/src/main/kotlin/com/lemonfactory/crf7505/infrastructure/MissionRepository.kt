@@ -5,5 +5,5 @@ import com.lemonfactory.crf7505.domain.model.PegassUser
 import java.time.LocalDateTime
 
 interface MissionRepository {
-    fun getActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime): Activities
+    fun getActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, addedDaysForLocalMissions: Number): Activities
 }

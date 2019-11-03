@@ -1,44 +1,44 @@
 package com.lemonfactory.crf7505.domain.model.mission
 
-enum class RoleType(val code: String, val type: String, val baseContactRoleId: String = "", val toString: String = "") {
+enum class RoleType(val codes: List<String>, val types: List<String>, val baseContactRoleId: String = "", val toString: String = "") {
 
-    PSC1("171", "FORM", "S", toString="PSC1"),
-    PSE1("166", "FORM", "SEC", toString="PSE1"),
-    PSE2("167", "FORM", "ES", toString="PSE2"),
-    PSE1_CYCLISTE("12", "FORM", toString="PSE1 Cycliste"),
-    PSE2_CYCLISTE("60", "FORM", toString="PSE2 Cycliste"),
-    PSE1_CAVALIER("50", "FORM", toString="PSE1 Cavalier"),
-    PSE2_CAVALIER("49", "FORM", toString="PSE2 Cavalier"),
-    CI("75", "NOMI", "CI", toString="CI"),
-    CDP("", "", "CP", toString="Chef de poste"),
-    CHEF_SECTEUR("108", "NOMI", toString="Chef de Secteur"),
-    CDPMGE("167", "NOMI", toString="Chef de Poste petite/moyenne envergure"),
-    CI_BSPP("255", "NOMI", toString="CI BSPP"),
-    CI_ALPHA("254", "NOMI", toString="CI ALPHA"),
-    CH_VPSP("10", "COMP", toString="Chauffeur VPSP"),
-    CH_VL("9", "COMP", toString="Chauffeur VL"),
-    CH_QUAD("77", "COMP", toString="Chauffeur QUAD"),
-    INFIRMIER("58", "COMP", toString="Infirmier"),
-    MEDECIN("59", "COMP", toString="Médecin"),
-    DLUS("40", "NOMI", toString="DLUS"),
-    REGULATEUR("18", "COMP", toString="Régulateur"),
-    REGULATEUR_TERRAIN("44", "COMP", toString="Régulateur Terrain"),
-    AIDE_REGULATEUR("80", "COMP", toString="Aide régulateur"),
-    LOGISTICIEN("", "", "L", toString="Logisticien"),
-    ONYX("7", "COMP", toString="ONYX"),
-    PARTICIPANT("0", "COMP", toString="Participant"),
-    PARTICIPANT_EXT("1", "COMP", toString="Participant extérieur");
+    PSC1(listOf("171"), listOf("FORM"), "S", toString = "PSC1"),
+    PSE1(listOf("166"), listOf("FORM"), "SEC", toString = "PSE1"),
+    PSE2(listOf("167"), listOf("FORM"), "ES", toString = "PSE2"),
+    PSE1_CYCLISTE(listOf("12"), listOf("FORM"), toString = "PSE1 Cycliste"),
+    PSE2_CYCLISTE(listOf("60"), listOf("FORM"), toString = "PSE2 Cycliste"),
+    PSE1_CAVALIER(listOf("50"), listOf("FORM"), toString = "PSE1 Cavalier"),
+    PSE2_CAVALIER(listOf("49"), listOf("FORM"), toString = "PSE2 Cavalier"),
+    CI(listOf("75"), listOf("NOMI"), "CI", toString = "CI"),
+    CDP(listOf(""), listOf(""), "CP", toString = "Chef de poste"),
+    CHEF_SECTEUR(listOf("108"), listOf("NOMI"), toString = "Chef de Secteur"),
+    CDPMGE(listOf("167"), listOf("NOMI"), toString = "Chef de Poste petite/moyenne envergure"),
+    CI_BSPP(listOf("255"), listOf("NOMI"), toString = "CI BSPP"),
+    CI_ALPHA(listOf("254"), listOf("NOMI"), toString = "CI ALPHA"),
+    CH_VPSP(listOf("10", "362"), listOf("COMP", "NOMI"), toString = "Chauffeur VPSP"),
+    CH_VL(listOf("9"), listOf("COMP"), toString = "Chauffeur VL"),
+    CH_QUAD(listOf("77"), listOf("COMP"), toString = "Chauffeur QUAD"),
+    INFIRMIER(listOf("58"), listOf("COMP"), toString = "Infirmier"),
+    MEDECIN(listOf("59"), listOf("COMP"), toString = "Médecin"),
+    DLUS(listOf("40"), listOf("NOMI"), toString = "DLUS"),
+    REGULATEUR(listOf("18"), listOf("COMP"), toString = "Régulateur"),
+    REGULATEUR_TERRAIN(listOf("44"), listOf("COMP"), toString = "Régulateur Terrain"),
+    AIDE_REGULATEUR(listOf("80"), listOf("COMP"), toString = "Aide régulateur"),
+    LOGISTICIEN(listOf(""), listOf(""), "L", toString = "Logisticien"),
+    ONYX(listOf("7"), listOf("COMP"), toString = "ONYX"),
+    PARTICIPANT(listOf("0"), listOf("COMP"), toString = "Participant"),
+    PARTICIPANT_EXT(listOf("1"), listOf("COMP"), toString = "Participant extérieur");
 }
 
 fun roleTypeFrom(type: String?, code: String): RoleType {
     return RoleType.values()
-            .find { value -> matchRoleType(value, type, code) }
+            .find { role -> matchRoleType(role, type, code) }
             ?: RoleType.PARTICIPANT
 }
 
-private fun matchRoleType(value: RoleType, type: String?, code: String): Boolean {
+private fun matchRoleType(roleType: RoleType, type: String?, code: String): Boolean {
     if (type.isNullOrBlank()) {
-        return value.baseContactRoleId == code
+        return roleType.baseContactRoleId == code
     }
-    return value.code == code && value.type == type
+    return roleType.codes.contains(code) && roleType.types.contains(type)
 }

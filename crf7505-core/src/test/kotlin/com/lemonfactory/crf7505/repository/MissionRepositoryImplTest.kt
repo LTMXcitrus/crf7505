@@ -2,13 +2,13 @@ package com.lemonfactory.crf7505.repository
 
 import com.lemonfactory.crf7505.domain.model.PegassUser
 import com.lemonfactory.crf7505.domain.model.mission.ActivityGroup
-import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.user.ApplicationUser
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.Missions.aMissionWithMissingRoles
 import com.lemonfactory.crf7505.utils.Missions.aMissionWithoutMissingRoles
+import com.nhaarman.mockito_kotlin.verify
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -37,12 +37,14 @@ class MissionRepositoryImplTest {
 
         val beginLimit = midday.minusHours(2)
         val endLimit = midday.plusHours(2)
+        val addedDaysForLocalMissions = 7
 
         val missionCompletelyBefore = aMissionWithMissingRoles(midday.minusDays(2), midday.minusDays(1))
         val missionPartiallyBefore = aMissionWithMissingRoles(midday.minusHours(3), midday)
         val missionBetween = aMissionWithMissingRoles(midday.minusHours(1), midday.plusHours(1))
         val missionPartiallyAfter = aMissionWithMissingRoles(midday.plusHours(1), midday.plusHours(3))
-        val missionCompletelyAfter = aMissionWithMissingRoles(midday.plusHours(3), midday.plusHours(4))
+        val localMissionPartiallyAfter = aMissionWithMissingRoles(midday.plusDays(7).plusHours(1), midday.plusDays(7).plusHours(3))
+        val missionCompletelyAfter = aMissionWithMissingRoles(midday.plusDays(7).plusHours(3), midday.plusDays(7).plusHours(4))
         val missionCovering = aMissionWithMissingRoles(midday.minusHours(3), midday.plusHours(3))
 
         `when`(missionService.getAllMissions(aPegassUser, beginLimit, endLimit)).thenReturn(listOf(
@@ -53,22 +55,22 @@ class MissionRepositoryImplTest {
                 missionCompletelyAfter,
                 missionCovering
         ))
-        `when`(missionService.getActivitiesForStructure(aPegassUser, beginLimit, endLimit, "V")).thenReturn(listOf(
+        `when`(missionService.getActivitiesForStructure(aPegassUser, beginLimit, endLimit.plusDays(addedDaysForLocalMissions.toLong()), "V")).thenReturn(listOf(
                 missionCompletelyBefore,
                 missionPartiallyBefore,
                 missionBetween,
-                missionPartiallyAfter,
+                localMissionPartiallyAfter,
                 missionCompletelyAfter,
                 missionCovering
         ))
 
         // When
-        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).externalActivities
-        val localMissions = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).localActivities
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).externalActivities
+        val localMissions = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).localActivities
 
         // Then
         assertThat(missionsOtherStructures).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
-        assertThat(localMissions).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
+        assertThat(localMissions).containsExactlyInAnyOrder(missionBetween, localMissionPartiallyAfter)
     }
 
     @Test
@@ -77,6 +79,7 @@ class MissionRepositoryImplTest {
 
         val beginLimit = midday.minusHours(2)
         val endLimit = midday.plusHours(2)
+        val addedDaysForLocalMissions = 7
 
         val missionComplete = aMissionWithoutMissingRoles(midday.minusHours(1), midday.plusHours(1))
         val missionNotComplete = aMissionWithMissingRoles(midday.minusHours(1), midday.plusHours(1))
@@ -92,7 +95,7 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).externalActivities
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).externalActivities
 
         // Then
         assertThat(missionsOtherStructures).containsExactlyInAnyOrder(missionNotComplete, missionCompleteCommented, missionCompleteModified)
@@ -104,13 +107,14 @@ class MissionRepositoryImplTest {
 
         val beginLimit = midday.minusDays(1).minusHours(2)
         val endLimit = midday.plusDays(1).plusHours(2)
+        val addedDaysForLocalMissions = 7
 
         val asActivity = Missions.aMission(midday.toLocalDate()).copy(activityGroup = ActivityGroup.AS)
         val formationActivity = Missions.aMission(midday.toLocalDate()).copy(activityGroup = ActivityGroup.FORMATION)
         val supportActivity = Missions.aMission(midday.toLocalDate()).copy(activityGroup = ActivityGroup.SOUTIEN_ACTIVITES)
         val usActivity = Missions.aMission(midday.toLocalDate()).copy(activityGroup = ActivityGroup.US)
 
-        `when`(missionService.getActivitiesForStructure(aPegassUser, beginLimit, endLimit, "V")).thenReturn(listOf(
+        `when`(missionService.getActivitiesForStructure(aPegassUser, beginLimit, endLimit.plusDays(addedDaysForLocalMissions.toLong()), "V")).thenReturn(listOf(
                 asActivity,
                 formationActivity,
                 supportActivity,
@@ -118,7 +122,7 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).localActivities
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).localActivities
 
         // Then
         assertThat(missionsOtherStructures).containsExactlyInAnyOrder(formationActivity, supportActivity, usActivity)
@@ -130,6 +134,7 @@ class MissionRepositoryImplTest {
 
         val beginLimit = midday.minusDays(1).minusHours(2)
         val endLimit = midday.plusDays(1).plusHours(2)
+        val addedDaysForLocalMissions = 7
 
         val localActivity = Missions.aMission(midday.toLocalDate()).copy(ul = "V")
         val externalActivity1 = Missions.aMission(midday.toLocalDate()).copy(ul = "X")
@@ -144,10 +149,26 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit).externalActivities
+        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).externalActivities
 
         // Then
         assertThat(missionsOtherStructures).containsExactlyInAnyOrder(externalActivity1, externalActivity2, externalActivity3)
+    }
+
+
+    @Test
+    fun `getActivities localactivities should use addeddaysForLocalMissions`() {
+        // Given
+
+        val beginLimit = midday.minusDays(1).minusHours(2)
+        val endLimit = midday.plusDays(1).plusHours(2)
+        val addedDaysForLocalMissions = 7
+
+        // When
+        missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).externalActivities
+
+        // Then
+        verify(missionService).getActivitiesForStructure(PegassUser("", ""), beginLimit, endLimit.plusDays(addedDaysForLocalMissions.toLong()), "V")
     }
 
 

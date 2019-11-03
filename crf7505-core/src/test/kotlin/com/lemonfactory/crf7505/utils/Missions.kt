@@ -4,6 +4,7 @@ import com.lemonfactory.crf7505.domain.model.mission.*
 import java.time.LocalDate
 import java.time.LocalDate.now
 import java.time.LocalDateTime
+import java.time.LocalTime
 
 object Missions {
 
@@ -50,19 +51,19 @@ object Missions {
 
     fun aMissionWithMissingRoles(beginDate: LocalDateTime, endDate: LocalDateTime): Mission =
             Mission(
-                    "code",
+                    "codes",
                     beginDate,
                     endDate,
                     "name",
                     "ul",
                     emptyList(),
                     emptyList(),
-                    listOf(Role(RoleType.PSC1,1))
+                    listOf(Role(RoleType.PSC1, 1))
             )
 
     fun aMissionWithoutMissingRoles(beginDate: LocalDateTime, endDate: LocalDateTime): Mission =
             Mission(
-                    "code",
+                    "codes",
                     beginDate,
                     endDate,
                     "name",
@@ -74,7 +75,7 @@ object Missions {
 
     fun aMissionsWithMissingRolesFor(roles: List<RoleType>) =
             Mission(
-                    "code",
+                    "codes",
                     now().atStartOfDay(),
                     now().atStartOfDay().plusHours(2),
                     "name",
@@ -84,4 +85,15 @@ object Missions {
                     roles.map { Role(it, 1) }
             )
 
+    fun aMissionWithPartialMissingRoles(now: LocalDate) = Mission(
+            "id",
+            now.atStartOfDay(),
+            now.atStartOfDay().plusHours(2),
+            "name",
+            "ul",
+            emptyList(),
+            emptyList(),
+            listOf(Role(RoleType.PSE1, 1, LocalTime.of(9, 0), LocalTime.of(13, 0)),
+                    Role(RoleType.PSE1, 1))
+    )
 }
