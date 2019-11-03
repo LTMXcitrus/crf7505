@@ -12,7 +12,7 @@ data class Volunteer(
         var firstname: String = "",
         var lastname: String = "",
         var role: RoleType = RoleType.PARTICIPANT,
-        private var interestedIn: List<String> = emptyList()
+        var interestedIn: List<String> = mutableListOf()
 ) : ObjectifyElement {
 
     override fun getId() = emailAddress

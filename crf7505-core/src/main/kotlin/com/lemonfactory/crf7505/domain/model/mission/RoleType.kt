@@ -31,7 +31,8 @@ enum class RoleType(val codes: List<String>, val types: List<String>, val baseCo
     FORMATEUR(listOf("FORMATEUR"), emptyList(), "FORMATEUR", toString = "Formateur"),
     ASSISTANT(listOf("ASSISTANT"), emptyList(), "ASSISTANT", toString = "Assistant"),
     TSA(listOf("32"), listOf("COMP"), "", toString = "TSA"),
-    CADRE_LOCAL(listOf("6"), listOf("COMP"), "", toString = "Cadre Local");
+    CADRE_LOCAL(listOf("6"), listOf("COMP"), "", toString = "Cadre Local"),
+    CADRE_ASTREINTE_SANTE(listOf("52"), listOf("COMP"), toString= "Cadre d'astreinte de santé");
 }
 
 fun roleTypeFrom(type: String?, code: String): RoleType {
