@@ -71,7 +71,7 @@ class MailPreparatorTest {
   <h3>Les missions locales</h3>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/" style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/" style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
   <h3>Les missions extérieures</h3>
 <span>Pas de missions extérieures</span></div>

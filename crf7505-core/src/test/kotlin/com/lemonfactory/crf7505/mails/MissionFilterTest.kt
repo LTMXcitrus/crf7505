@@ -2,6 +2,8 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.domain.model.mission.RoleType.*
+import com.lemonfactory.crf7505.utils.Missions.aLocalReunion
+import com.lemonfactory.crf7505.utils.Missions.aMission
 import com.lemonfactory.crf7505.utils.Missions.aMissionsWithMissingRolesFor
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
@@ -85,6 +87,24 @@ class MissionFilterTest {
         // Then
 
         assertThat(missionsFiltered).containsExactly(mission1)
+    }
+
+    @Test
+    fun `complete local mission is a match`() {
+        // Given
+        val mission = aMission()
+                .copy(missingRoles = emptyList(), ul = "ul")
+
+
+        val volunteer = Volunteer(role = PSE1)
+
+
+        // When
+        val missionsFiltered = filter.filter(listOf(mission), volunteer, "ul")
+
+        // Then
+
+        assertThat(missionsFiltered).containsExactly(mission)
     }
 
 }
