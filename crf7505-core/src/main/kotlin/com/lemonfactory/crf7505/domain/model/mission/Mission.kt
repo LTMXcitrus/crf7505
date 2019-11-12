@@ -21,7 +21,12 @@ data class Mission(val id: String,
     fun missionIsAMatch(interestedIn: List<RoleType>?, localStructure: String?): Boolean {
         return hasMatchingRole(this.missingRoles, interestedIn)
                 || this.isOtherActivity(localStructure)
+                || this.isACompleteLocalMission(localStructure)
 
+    }
+
+    private fun isACompleteLocalMission(localStructure: String?): Boolean {
+        return (localStructure?.equals(this.ul) ?: false) && missingRoles.isEmpty()
     }
 
     fun isOtherActivity(localStructure: String?): Boolean {

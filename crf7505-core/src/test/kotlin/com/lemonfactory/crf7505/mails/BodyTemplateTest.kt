@@ -35,30 +35,30 @@ class BodyTemplateTest {
   <h3>Les missions locales</h3>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 <span style="color: grey;">Mercredi 16 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 <br><span style="color: grey;">Les autres missions</span>
 <br>
 <br>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>Réunion de l'US</b></a><span> - Il manque: 15 Participant</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>Réunion de l'US (ul)</b></a><span> - Il manque: 15 Participant</span></li>
   </ul>
   <h3>Les missions extérieures</h3>
-  <p>Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass.</p>
+  <p style="color: red;text-decoration: underline">Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass.</p>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1 (09h00-13h00), 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1 (09h00-13h00), 1 PSE1</span></li>
   </ul>
 <span style="color: grey;">Mercredi 16 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 </div>
         """.trimIndent())
@@ -90,30 +90,30 @@ class BodyTemplateTest {
   <h3>Les missions locales</h3>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 <span style="color: grey;">Mercredi 16 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 <br><span style="color: grey;">Les autres missions</span>
 <br>
 <br>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>Réunion de l'US</b></a><span></span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>Réunion de l'US (ul)</b></a><span></span></li>
   </ul>
   <h3>Les missions extérieures</h3>
-  <p>Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass.</p>
+  <p style="color: red;text-decoration: underline">Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass.</p>
 <span style="color: grey;">Mardi 15 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1 (09h00-13h00), 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1 (09h00-13h00), 1 PSE1</span></li>
   </ul>
 <span style="color: grey;">Mercredi 16 octobre</span>
   <ul>
-    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: none;color: black;font-weight: bold;"><b>name</b></a><span> - Il manque: 1 PSE1</span></li>
+    <li><a href="https://pegass.croix-rouge.fr/planning-des-activites/activite/id/"style="text-decoration: underline;font-weight: bold;"><b>name (ul)</b></a><span> - Il manque: 1 PSE1</span></li>
   </ul>
 </div>
         """.trimIndent())

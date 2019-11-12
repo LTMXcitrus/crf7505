@@ -23,7 +23,10 @@ class BodyTemplate {
 
             h3 { +"Les missions extérieures" }
             if (activities.externalActivities.isNotEmpty()) {
-                p { +"Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass." }
+                p {
+                    style = "color: red;text-decoration: underline"
+                    +"Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass."
+                }
             }
             displayAllMissions(activities.externalActivities, "Pas de missions extérieures")
         }
@@ -69,8 +72,8 @@ class BodyTemplate {
 
     private fun LI.missionTitle(mission: Mission) {
         a(href = "https://pegass.croix-rouge.fr/planning-des-activites/activite/${mission.id}/") {
-            style = "text-decoration: none;color: black;font-weight: bold;"
-            b { +mission.name }
+            style = "text-decoration: underline;font-weight: bold;"
+            b { +"${mission.name} (${mission.ul})" }
         }
     }
 
