@@ -6,10 +6,14 @@ import com.gargoylesoftware.htmlunit.html.HtmlElement
 import com.gargoylesoftware.htmlunit.html.HtmlForm
 import com.gargoylesoftware.htmlunit.html.HtmlInput
 import com.gargoylesoftware.htmlunit.html.HtmlPage
+import com.lemonfactory.pegass.client.errorHandlers.PegassCssErrorHandlers
 
 const val connectUrl = "https://id.authentification.croix-rouge.fr/my.policy"
 
-class PegassSession(val username: String, val password: String) {
+class PegassSession(
+        private val username: String,
+        private val password: String
+) {
     private val webClient = WebClient(BrowserVersion.CHROME)
 
     init {
@@ -18,6 +22,7 @@ class PegassSession(val username: String, val password: String) {
         webClient.options.isThrowExceptionOnScriptError = false
         webClient.options.isUseInsecureSSL = true
         webClient.cookieManager.isCookiesEnabled = true
+        webClient.cssErrorHandler = PegassCssErrorHandlers()
 
         val form = webClient.getPage<HtmlPage>(connectUrl)
                 .getFirstByXPath<HtmlElement>("//a[@href='/']")
