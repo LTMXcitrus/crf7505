@@ -17,11 +17,11 @@ import java.time.LocalDateTime
 
 class MissionControllerTest {
 
-    val missionRepository: MissionRepository = mock()
-    val mailService: MailService = mock()
-    val mailHandler: MailHandler = mock()
+    private val missionRepository: MissionRepository = mock()
+    private val mailService: MailService = mock()
+    private val mailHandler: MailHandler = mock()
 
-    val missionController = MissionController(missionRepository, mailService, mailHandler)
+    private val missionController = MissionController(missionRepository, mailService, mailHandler)
 
     @Test
     fun `activities should`() {
@@ -69,11 +69,10 @@ class MissionControllerTest {
         val mail = CrfMail("sender", "recipient", "subject", "text")
 
         // When
-        val responseBody = missionController.sendRecap(listOf(mail))
+        missionController.sendRecap(listOf(mail))
 
         // Then
         verify(mailService).sendMails(listOf(mail))
-        assertThat(responseBody).isEqualTo("true")
     }
 
 

@@ -46,6 +46,13 @@
             <version>1.6.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- SENDGRID-->
+        <dependency>
+            <groupId>com.sendgrid</groupId>
+            <artifactId>sendgrid-java</artifactId>
+            <version>4.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
