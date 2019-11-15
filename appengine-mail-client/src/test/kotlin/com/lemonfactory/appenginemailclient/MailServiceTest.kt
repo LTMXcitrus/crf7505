@@ -1,16 +1,16 @@
 package com.lemonfactory.appenginemailclient
 
+import com.lemonfactory.appenginemailclient.adapter.SendGridAdapter
 import com.lemonfactory.crf7505.domain.model.CrfMail
-import com.nhaarman.mockito_kotlin.times
 import com.nhaarman.mockito_kotlin.verify
 import org.junit.Test
 import org.mockito.Mockito
-import javax.mail.internet.MimeMessage
 
 class MailServiceTest {
 
     private val sender = Mockito.mock(MailSender::class.java)
-    private val mailService= MailServiceImpl(sender)
+    private val adapter = Mockito.mock(SendGridAdapter::class.java)
+    private val mailService= MailServiceImpl(sender, adapter)
 
     @Test
     fun sendMail_oneMail_should_call_sender() {
@@ -21,7 +21,7 @@ class MailServiceTest {
         mailService.sendMails(listOf(crfMail, crfMail))
 
         // Then
-        verify(sender, times(2)).send(any())
+        verify(sender).sendMails(any())
     }
 
 }
