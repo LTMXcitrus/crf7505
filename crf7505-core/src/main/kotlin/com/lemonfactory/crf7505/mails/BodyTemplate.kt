@@ -70,7 +70,14 @@ class BodyTemplate {
         }
     }
 
+    private fun missionHours(mission: Mission): String {
+        val begin = mission.beginDate.format(DateTimeFormatter.ofPattern("HH'h'mm"))
+        val end = mission.endDate.format(DateTimeFormatter.ofPattern("HH'h'mm"))
+        return "$begin-$end"
+    }
+
     private fun LI.missionTitle(mission: Mission) {
+        +"${missionHours(mission)}: "
         a(href = "https://pegass.croix-rouge.fr/planning-des-activites/activite/${mission.id}/") {
             style = "text-decoration: underline;font-weight: bold;"
             b { +"${mission.name} (${mission.ul})" }
