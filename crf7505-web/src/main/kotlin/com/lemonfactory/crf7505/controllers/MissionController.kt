@@ -36,8 +36,7 @@ class MissionController(val missionRepository: MissionRepository, val mailServic
 
     @PostMapping("mission/sendRecap")
     fun sendRecap(@RequestBody mails: List<CrfMail>): String {
-        mailService.sendMails(mails)
-        return mapper.writeValueAsString(true)
+        return mapper.writeValueAsString(mailService.sendMails(mails))
     }
 
 }
