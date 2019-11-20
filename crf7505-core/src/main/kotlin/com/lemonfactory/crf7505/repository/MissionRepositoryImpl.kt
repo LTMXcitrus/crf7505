@@ -17,12 +17,12 @@ class MissionRepositoryImpl(private val missionService: MissionService, private 
                 retrieveLocalActivities(user, begin, end, addedDaysForLocalMissions, userStructure),
                 retrieveExternalActivities(user, begin, end, userStructure),
                 userStructure
-        )
+        ).also { missionService.terminate() }
     }
 
     private fun retrieveLocalActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, addedDaysForLocalMissions: Number, userStructure: String?): List<Mission> {
         val realEnd = end.plusDays(addedDaysForLocalMissions.toLong())
-        if(userStructure != null) {
+        if (userStructure != null) {
             return missionService.getActivitiesForStructure(user, begin, realEnd, userStructure)
                     .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(realEnd) }
                     .filter { mission -> mission.activityGroup != ActivityGroup.AS }
@@ -31,7 +31,7 @@ class MissionRepositoryImpl(private val missionService: MissionService, private 
     }
 
     private fun retrieveExternalActivities(user: PegassUser, begin: LocalDateTime, end: LocalDateTime, userStructure: String?): List<Mission> {
-        return missionService.getAllMissions(user, begin, end)
+        return missionService.getExternalMissions(user, begin, end, userStructure)
                 .filter { mission -> mission.beginDate.isAfter(begin) && mission.beginDate.isBefore(end) }
                 .filter { mission ->
                     mission.missingRoles.isNotEmpty()
