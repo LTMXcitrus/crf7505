@@ -5,6 +5,8 @@ import com.lemonfactory.crf7505.domain.model.mission.Mission
 import java.time.LocalDateTime
 
 interface MissionService {
-    fun getAllMissions(user: PegassUser, start: LocalDateTime, end: LocalDateTime): List<Mission>
+    fun getExternalMissions(user: PegassUser, start: LocalDateTime, end: LocalDateTime, structure: String?): List<Mission>
     fun getActivitiesForStructure(user: PegassUser, start: LocalDateTime, end: LocalDateTime, structure: String): List<Mission>
+
+    fun terminate()
 }

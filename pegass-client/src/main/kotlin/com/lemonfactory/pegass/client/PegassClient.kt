@@ -26,7 +26,7 @@ class PegassClient {
     private fun filterByDate(pegassActivity: PegassActivity, start: LocalDateTime, end: LocalDateTime): PegassActivity? {
         val seanceList = pegassActivity.seanceList
                 .filter { seance -> seance.fin.isAfter(start) && seance.debut.isBefore(end) }
-        if(seanceList.isEmpty()) {
+        if (seanceList.isEmpty()) {
             return null
         }
         return pegassActivity.copy(seanceList = seanceList)
@@ -67,12 +67,12 @@ class PegassClient {
     }
 
 
-    fun getActivitiesForStructure(pegassSession: PegassSession, start:LocalDateTime, end: LocalDateTime, structureId: Int): List<PegassActivity> {
+    fun getActivitiesForStructure(pegassSession: PegassSession, start: LocalDateTime, end: LocalDateTime, structureId: Int): List<PegassActivity> {
         val startDate = start.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
         val endDate = end.format(DateTimeFormatter.ofPattern(PEGASS_DATETIME_FORMATTER))
-        val pegassResponse = pegassSession
-                .getPage("https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&structure=$structureId")
-        return mapper.readValue(pegassResponse)
+        val url = "https://pegass.croix-rouge.fr/crf/rest/activite?debut=$startDate&fin=$endDate&structure=$structureId"
+        LOGGER.info("Retrieve activities: $url")
+        return mapper.readValue(pegassSession.getPage(url))
     }
 
 }

@@ -47,7 +47,7 @@ class MissionRepositoryImplTest {
         val missionCompletelyAfter = aMissionWithMissingRoles(midday.plusDays(7).plusHours(3), midday.plusDays(7).plusHours(4))
         val missionCovering = aMissionWithMissingRoles(midday.minusHours(3), midday.plusHours(3))
 
-        `when`(missionService.getAllMissions(aPegassUser, beginLimit, endLimit)).thenReturn(listOf(
+        `when`(missionService.getExternalMissions(aPegassUser, beginLimit, endLimit, "V")).thenReturn(listOf(
                 missionCompletelyBefore,
                 missionPartiallyBefore,
                 missionBetween,
@@ -65,8 +65,9 @@ class MissionRepositoryImplTest {
         ))
 
         // When
-        val missionsOtherStructures = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).externalActivities
-        val localMissions = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions).localActivities
+        val activities = missionRepository.getActivities(PegassUser("", ""), beginLimit, endLimit, addedDaysForLocalMissions)
+        val missionsOtherStructures = activities.externalActivities
+        val localMissions = activities.localActivities
 
         // Then
         assertThat(missionsOtherStructures).containsExactlyInAnyOrder(missionBetween, missionPartiallyAfter)
@@ -87,7 +88,7 @@ class MissionRepositoryImplTest {
         val missionCompleteModified = missionComplete.copy(hasModifiedHoursInscriptions = true)
 
 
-        `when`(missionService.getAllMissions(aPegassUser, beginLimit, endLimit)).thenReturn(listOf(
+        `when`(missionService.getExternalMissions(aPegassUser, beginLimit, endLimit, "V")).thenReturn(listOf(
                 missionComplete,
                 missionNotComplete,
                 missionCompleteCommented,
@@ -141,7 +142,7 @@ class MissionRepositoryImplTest {
         val externalActivity2 = Missions.aMission(midday.toLocalDate()).copy(ul = "X")
         val externalActivity3 = Missions.aMission(midday.toLocalDate()).copy(ul = "X")
 
-        `when`(missionService.getAllMissions(aPegassUser, beginLimit, endLimit)).thenReturn(listOf(
+        `when`(missionService.getExternalMissions(aPegassUser, beginLimit, endLimit, "V")).thenReturn(listOf(
                 localActivity,
                 externalActivity1,
                 externalActivity2,
@@ -170,6 +171,4 @@ class MissionRepositoryImplTest {
         // Then
         verify(missionService).getActivitiesForStructure(PegassUser("", ""), beginLimit, endLimit.plusDays(addedDaysForLocalMissions.toLong()), "V")
     }
-
-
 }
