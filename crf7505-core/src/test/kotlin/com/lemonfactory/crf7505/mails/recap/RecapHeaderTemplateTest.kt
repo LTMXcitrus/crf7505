@@ -1,19 +1,19 @@
-package com.lemonfactory.crf7505.mails
+package com.lemonfactory.crf7505.mails.recap
 
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
-class HeaderTemplateTest {
+class RecapHeaderTemplateTest {
 
-    val headerTemplate = HeaderTemplate()
+    val headerTemplate = RecapHeaderTemplate()
 
     @Test
     fun headerTemplateTest() {
         // Given
 
         // When
-        val header = headerTemplate.generateHeader(Volunteer(firstname = "toi"), "header", "Emmanuel")
+        val header = headerTemplate.generateHeader(RecapHeader(Volunteer(firstname = "toi"), "header", "Emmanuel"))
 
         // Then
         assertThat(header).isEqualToIgnoringWhitespace("""

@@ -4,6 +4,10 @@ import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.crf7505.mails.*
+import com.lemonfactory.crf7505.mails.recap.RecapBodyTemplate
+import com.lemonfactory.crf7505.mails.recap.RecapFooterTemplate
+import com.lemonfactory.crf7505.mails.recap.RecapHeaderTemplate
+import com.lemonfactory.crf7505.mails.recap.RecapMailPreparator
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.repository.VolunteerRepositoryImpl
@@ -29,11 +33,11 @@ open class CrfModule {
     }
 
     @Bean
-    open fun mailPrepator(): MailPreparator {
-        return MailPreparator(
-                BodyTemplate(),
-                HeaderTemplate(),
-                FooterTemplate(),
+    open fun recapMailPrepator(): RecapMailPreparator {
+        return RecapMailPreparator(
+                RecapBodyTemplate(),
+                RecapHeaderTemplate(),
+                RecapFooterTemplate(),
                 config()
         )
     }
@@ -45,7 +49,7 @@ open class CrfModule {
 
     @Bean
     open fun mailHandler(): MailHandler {
-        return MailHandler(mailPrepator(),
+        return MailHandler(recapMailPrepator(),
                 volunteerRepository(),
                 missionFilter())
     }

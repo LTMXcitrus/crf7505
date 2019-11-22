@@ -8,7 +8,7 @@ import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.referentiel.UlReferentiel
 import java.time.LocalDateTime
 
-class PegassMissionService(val pegassClient: PegassClient, val pegassActivityAdapter: PegassActivityAdapter) : MissionService {
+class PegassMissionService(private val pegassClient: PegassClient, private val pegassActivityAdapter: PegassActivityAdapter) : MissionService {
     override fun getActivitiesForStructure(user: PegassUser, start: LocalDateTime, end: LocalDateTime, structure: String): List<Mission> {
         val session = PegassSession(user.username, user.password)
         val structureId = UlReferentiel.getUlIdFromLabel(structure)

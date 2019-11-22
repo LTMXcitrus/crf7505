@@ -4,8 +4,12 @@ import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
+import com.lemonfactory.crf7505.mails.action75.ActionMailPreparator
+import com.lemonfactory.crf7505.mails.recap.RecapMailParameters
+import com.lemonfactory.crf7505.mails.recap.RecapMailPreparator
 
-class MailHandler(private val mailPreparator: MailPreparator,
+class MailHandler(private val mailPreparator: RecapMailPreparator,
+                  private val actionMailPreparator: ActionMailPreparator,
                   private val volunteerRepositoryImpl: VolunteerRepository,
                   private val missionFilter: MissionFilter) {
 
@@ -19,12 +23,13 @@ class MailHandler(private val mailPreparator: MailPreparator,
         val localMissionsForVolunteer = missionFilter.filter(activities.localActivities, volunteer, activities.localStructure)
         val activitiesForVolunteer = Activities(localMissionsForVolunteer, externalMissionsForVolunteer, activities.localStructure)
         return mailPreparator.generateMail(
-                volunteer,
-                activitiesForVolunteer,
-                subject,
-                header,
-                footer,
-                respMission
+                RecapMailParameters(volunteer,
+                        activitiesForVolunteer,
+                        subject,
+                        header,
+                        footer,
+                        respMission
+                )
         )
     }
 

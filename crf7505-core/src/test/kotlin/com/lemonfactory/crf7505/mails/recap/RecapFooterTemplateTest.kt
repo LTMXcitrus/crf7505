@@ -1,11 +1,11 @@
-package com.lemonfactory.crf7505.mails
+package com.lemonfactory.crf7505.mails.recap
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
-class FooterTemplateTest {
+class RecapFooterTemplateTest {
 
-    val footerTemplate = FooterTemplate()
+    val footerTemplate = RecapFooterTemplate()
 
     @Test
     fun generateFooterTest() {

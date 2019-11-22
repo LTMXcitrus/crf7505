@@ -1,8 +1,9 @@
-package com.lemonfactory.crf7505.mails
+package com.lemonfactory.crf7505.mails.recap
 
 import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.mission.Mission
 import com.lemonfactory.crf7505.domain.model.mission.Role
+import com.lemonfactory.crf7505.mails.interfaces.BodyTemplate
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 import java.time.LocalDate
@@ -14,21 +15,21 @@ import java.util.*
 private const val DATE_FORMAT = "EEEE dd MMMM"
 private const val DATE_TIME_FORMAT = "HH'h'mm"
 
-class BodyTemplate {
+class RecapBodyTemplate: BodyTemplate<Activities> {
 
-    fun generateBody(activities: Activities): String {
+    override fun generateBody(bodyContent: Activities): String {
         return createHTML().div {
             h3 { +"Les missions locales" }
-            displayAllMissions(activities.localActivities, "Pas de missions locales", activities.localStructure)
+            displayAllMissions(bodyContent.localActivities, "Pas de missions locales", bodyContent.localStructure)
 
             h3 { +"Les missions extérieures" }
-            if (activities.externalActivities.isNotEmpty()) {
+            if (bodyContent.externalActivities.isNotEmpty()) {
                 p {
                     style = "color: red;text-decoration: underline"
                     +"Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass."
                 }
             }
-            displayAllMissions(activities.externalActivities, "Pas de missions extérieures")
+            displayAllMissions(bodyContent.externalActivities, "Pas de missions extérieures")
         }
     }
 

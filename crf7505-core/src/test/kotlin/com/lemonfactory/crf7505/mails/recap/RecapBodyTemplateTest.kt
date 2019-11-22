@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.mails
+package com.lemonfactory.crf7505.mails.recap
 
 import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.utils.Missions
@@ -6,9 +6,9 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import java.time.LocalDate
 
-class BodyTemplateTest {
+class RecapBodyTemplateTest {
 
-    private val bodyTemplate = BodyTemplate()
+    private val bodyTemplate = RecapBodyTemplate()
 
     @Test
     fun bodyTemplateTest() {

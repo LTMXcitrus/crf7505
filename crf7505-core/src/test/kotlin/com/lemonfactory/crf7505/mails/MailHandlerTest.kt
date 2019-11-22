@@ -3,10 +3,12 @@ package com.lemonfactory.crf7505.mails
 import com.lemonfactory.crf7505.domain.model.Activities
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
+import com.lemonfactory.crf7505.mails.recap.RecapMailParameters
+import com.lemonfactory.crf7505.mails.recap.RecapMailPreparator
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
-import com.lemonfactory.crf7505.utils.argumentCaptorTriple
 import com.lemonfactory.crf7505.utils.mock
+import com.nhaarman.mockito_kotlin.argumentCaptor
 import com.nhaarman.mockito_kotlin.times
 import com.nhaarman.mockito_kotlin.verify
 import org.assertj.core.api.Assertions.assertThat
@@ -15,7 +17,7 @@ import org.mockito.Mockito.`when`
 
 class MailHandlerTest {
 
-    private val mailPreparator: MailPreparator = mock()
+    private val mailPreparator: RecapMailPreparator = mock()
     private val volunteerRepository: VolunteerRepository = mock()
     private val missionFilter: MissionFilter = mock()
 
@@ -36,11 +38,14 @@ class MailHandlerTest {
         mailHandler.genMails("subject", "header", activities, "footer", "respMission")
 
         // Then
-        argumentCaptorTriple<Volunteer, Activities, String>().let { (volunteer, activities, string) ->
-            verify(mailPreparator).generateMail(volunteer.capture(), activities.capture(), string.capture(), string.capture(), string.capture(), string.capture())
-            assertThat(Volunteer()).isEqualTo(volunteer.firstValue)
-            assertThat(activities.firstValue).isEqualTo(Activities(emptyList(), emptyList(), "V"))
-            assertThat(string.allValues).containsExactly("subject", "header", "footer", "respMission")
+        argumentCaptor<RecapMailParameters>().apply {
+            verify(mailPreparator).generateMail(capture())
+            assertThat(Volunteer()).isEqualTo(firstValue.volunteer)
+            assertThat(firstValue.activities).isEqualTo(Activities(emptyList(), emptyList(), "V"))
+            assertThat(firstValue.subject).isEqualTo("subject")
+            assertThat(firstValue.header).isEqualTo("header")
+            assertThat(firstValue.footer).isEqualTo("footer")
+            assertThat(firstValue.respMission).isEqualTo("respMission")
         }
 
     }
@@ -61,7 +66,7 @@ class MailHandlerTest {
 
         // Then
 
-        verify(mailPreparator, times(2)).generateMail(any(), any(), any(), any(), any(), any())
+        verify(mailPreparator, times(2)).generateMail(any())
 
     }
 
