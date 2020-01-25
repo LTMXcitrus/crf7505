@@ -9,4 +9,5 @@ data class PegassInscription(val debut: LocalDateTime,
                              val role: String,
                              val statut: String,
                              val type: String?,
-                             val commentaire: String? = null)
+                             val commentaire: String? = null,
+                             val utilisateur: PegassUtilisateur)

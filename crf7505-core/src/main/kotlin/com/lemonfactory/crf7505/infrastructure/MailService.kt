@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.infrastructure
 
-import com.lemonfactory.crf7505.domain.model.CrfMail
+import com.lemonfactory.crf7505.model.CrfMail
 
 interface MailService {
 

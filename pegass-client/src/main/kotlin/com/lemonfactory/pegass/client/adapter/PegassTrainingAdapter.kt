@@ -1,7 +1,7 @@
 package com.lemonfactory.pegass.client.adapter
 
-import com.lemonfactory.crf7505.domain.model.Training
-import com.lemonfactory.crf7505.domain.model.VolunteerTraining
+import com.lemonfactory.crf7505.model.Training
+import com.lemonfactory.crf7505.model.VolunteerTraining
 import com.lemonfactory.pegass.client.api.PegassVolunteer
 import com.lemonfactory.pegass.client.api.format.PegassVolunteerTraining
 import java.time.LocalDate.now

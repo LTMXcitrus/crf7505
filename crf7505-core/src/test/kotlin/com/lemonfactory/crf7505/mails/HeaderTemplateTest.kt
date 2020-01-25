@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Volunteer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 

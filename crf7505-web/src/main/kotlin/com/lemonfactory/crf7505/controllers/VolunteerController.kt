@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.controllers
 
-import com.lemonfactory.crf7505.domain.model.PegassUser
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.PegassUser
+import com.lemonfactory.crf7505.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.TrainingService
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
 import com.lemonfactory.crf7505.jackson.mapper

@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Activities
+import com.lemonfactory.crf7505.model.Activities
 import com.lemonfactory.crf7505.utils.Missions
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test

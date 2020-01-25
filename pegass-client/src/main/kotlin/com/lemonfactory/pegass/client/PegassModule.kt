@@ -1,9 +1,11 @@
 package com.lemonfactory.pegass.client
 
+import com.lemonfactory.crf7505.infrastructure.StatsService
 import com.lemonfactory.pegass.client.adapter.PegassActivityAdapter
 import com.lemonfactory.pegass.client.adapter.PegassInscriptionAdapter
 import com.lemonfactory.pegass.client.adapter.PegassRoleAdapter
 import com.lemonfactory.pegass.client.adapter.PegassTrainingAdapter
+import com.lemonfactory.pegass.client.stats.PegassStatsService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -43,6 +45,11 @@ open class PegassModule {
     @Bean
     open fun pegassRoleAdapter(): PegassRoleAdapter {
         return PegassRoleAdapter()
+    }
+
+    @Bean
+    open fun statsService(): StatsService {
+        return PegassStatsService(pegassClient(), pegassActivityAdapter())
     }
 
 }

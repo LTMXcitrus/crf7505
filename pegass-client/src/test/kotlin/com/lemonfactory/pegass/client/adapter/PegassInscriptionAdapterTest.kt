@@ -1,7 +1,7 @@
 package com.lemonfactory.pegass.client.adapter
 
 
-import com.lemonfactory.crf7505.domain.model.mission.RoleType
+import com.lemonfactory.crf7505.model.mission.RoleType
 import com.lemonfactory.pegass.client.testutils.aPegassActivity
 import com.lemonfactory.pegass.client.testutils.aPegassInscription
 import com.lemonfactory.pegass.client.testutils.anActivitySeance

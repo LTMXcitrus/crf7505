@@ -1,8 +1,9 @@
 package com.lemonfactory.appenginemailclient
 
 import com.lemonfactory.appenginemailclient.adapter.SendGridAdapter
-import com.lemonfactory.crf7505.domain.model.CrfMail
 import com.lemonfactory.crf7505.infrastructure.MailService
+import com.lemonfactory.crf7505.model.CrfMail
+
 
 class MailServiceImpl(
         private val sender: MailSender,

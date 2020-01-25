@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.domain.model.mission
+package com.lemonfactory.crf7505.model.mission
 
 enum class ActivityGroup {
 

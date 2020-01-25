@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.CrfMail
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.CrfMail
+import com.lemonfactory.crf7505.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
 
 class MailHandler(private val mailPreparator: MailPreparator,

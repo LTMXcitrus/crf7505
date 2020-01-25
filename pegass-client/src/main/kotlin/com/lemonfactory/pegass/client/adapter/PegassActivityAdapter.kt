@@ -1,6 +1,6 @@
 package com.lemonfactory.pegass.client.adapter
 
-import com.lemonfactory.crf7505.domain.model.mission.*
+import com.lemonfactory.crf7505.model.mission.*
 import com.lemonfactory.pegass.client.api.activity.ActivitySeance
 import com.lemonfactory.pegass.client.api.activity.PegassActivity
 import com.lemonfactory.pegass.client.referentiel.UlReferentiel

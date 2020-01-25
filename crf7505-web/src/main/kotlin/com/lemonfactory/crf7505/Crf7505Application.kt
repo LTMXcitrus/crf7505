@@ -10,8 +10,9 @@ import com.googlecode.objectify.ObjectifyFilter
 import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.appenginemailclient.MailClientModule
 import com.lemonfactory.crf7505.config.ConfigValue
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
+import com.lemonfactory.crf7505.model.stats.bdd.DbVolunteerStats
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.security.ConnectedUserResolverImpl
 import com.lemonfactory.pegass.client.PegassModule
@@ -31,6 +32,7 @@ class Crf7505Application : SpringBootServletInitializer() {
         ObjectifyService.register(ApplicationUser::class.java)
         ObjectifyService.register(Volunteer::class.java)
         ObjectifyService.register(ConfigValue::class.java)
+        ObjectifyService.register(DbVolunteerStats::class.java)
     }
 
     @Bean

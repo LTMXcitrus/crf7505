@@ -1,7 +1,7 @@
 package com.lemonfactory.pegass.client.adapter
 
-import com.lemonfactory.crf7505.domain.model.mission.Inscription
-import com.lemonfactory.crf7505.domain.model.mission.roleTypeFrom
+import com.lemonfactory.crf7505.model.mission.Inscription
+import com.lemonfactory.crf7505.model.mission.roleTypeFrom
 import com.lemonfactory.pegass.client.api.activity.ActivitySeance
 import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
 
@@ -19,7 +19,8 @@ class PegassInscriptionAdapter {
                 pegassInscription.fin,
                 roleType,
                 pegassInscription.commentaire?.isNotBlank() ?: false,
-                hasModifiedHours(pegassInscription, seance)
+                hasModifiedHours(pegassInscription, seance),
+                pegassInscription.utilisateur.id
         )
     }
 

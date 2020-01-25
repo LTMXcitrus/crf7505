@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.infrastructure
 
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Volunteer
 
 interface VolunteerRepository {
 

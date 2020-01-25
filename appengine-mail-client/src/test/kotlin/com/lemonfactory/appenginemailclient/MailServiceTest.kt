@@ -1,10 +1,11 @@
 package com.lemonfactory.appenginemailclient
 
 import com.lemonfactory.appenginemailclient.adapter.SendGridAdapter
-import com.lemonfactory.crf7505.domain.model.CrfMail
+import com.lemonfactory.crf7505.model.CrfMail
 import com.nhaarman.mockito_kotlin.verify
 import org.junit.Test
 import org.mockito.Mockito
+
 
 class MailServiceTest {
 

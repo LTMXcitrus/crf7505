@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.*
-import com.lemonfactory.crf7505.domain.model.mission.RoleType.*
+import com.lemonfactory.crf7505.model.Volunteer
+import com.lemonfactory.crf7505.model.mission.Mission
+import com.lemonfactory.crf7505.model.mission.RoleType.*
 
 class MissionFilter {
 

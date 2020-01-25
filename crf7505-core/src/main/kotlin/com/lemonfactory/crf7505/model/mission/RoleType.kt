@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.domain.model.mission
+package com.lemonfactory.crf7505.model.mission
 
 enum class RoleType(val codes: List<String>, val types: List<String>, val baseContactRoleId: String = "", val toString: String = "") {
 

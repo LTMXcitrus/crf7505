@@ -1,8 +1,8 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.mission.Mission
-import com.lemonfactory.crf7505.domain.model.mission.Role
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.mission.Mission
+import com.lemonfactory.crf7505.model.mission.Role
 import kotlinx.html.*
 import kotlinx.html.stream.createHTML
 import java.time.LocalDate

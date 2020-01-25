@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.utils
 
-import com.lemonfactory.crf7505.domain.model.mission.*
+import com.lemonfactory.crf7505.model.mission.*
 import java.time.LocalDate
 import java.time.LocalDate.now
 import java.time.LocalDateTime

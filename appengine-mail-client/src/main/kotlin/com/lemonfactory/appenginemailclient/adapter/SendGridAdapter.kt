@@ -1,6 +1,7 @@
 package com.lemonfactory.appenginemailclient.adapter
 
-import com.lemonfactory.crf7505.domain.model.CrfMail
+
+import com.lemonfactory.crf7505.model.CrfMail
 import com.sendgrid.Content
 import com.sendgrid.Email
 import com.sendgrid.Mail

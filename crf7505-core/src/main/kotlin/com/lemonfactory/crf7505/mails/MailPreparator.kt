@@ -2,10 +2,10 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.config.ConfigKeys
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.CrfMail
-import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.Mission
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.CrfMail
+import com.lemonfactory.crf7505.model.Volunteer
+import com.lemonfactory.crf7505.model.mission.Mission
 
 class MailPreparator(private val bodyTemplate: BodyTemplate,
                      private val headerTemplate: HeaderTemplate,
@@ -22,7 +22,7 @@ class MailPreparator(private val bodyTemplate: BodyTemplate,
                 config.getEnvRequired(ConfigKeys.RECAP_SENDER),
                 volunteer.emailAddress,
                 subject,
-                headerTemplate.generateHeader(volunteer, header, respMission) + "\n"+
+                headerTemplate.generateHeader(volunteer, header, respMission) + "\n" +
                         bodyTemplate.generateBody(activities) +
                         footerTemplate.generateFooter(footer)
         )

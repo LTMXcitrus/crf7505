@@ -1,6 +1,6 @@
 package com.lemonfactory.pegass.client.adapter
 
-import com.lemonfactory.crf7505.domain.model.mission.RoleType
+import com.lemonfactory.crf7505.model.mission.RoleType
 import com.lemonfactory.pegass.client.testutils.anActivityRole
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test

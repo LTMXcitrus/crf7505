@@ -3,6 +3,7 @@ package com.lemonfactory.pegass.client.testutils
 import com.lemonfactory.pegass.client.api.PegassVolunteer
 import com.lemonfactory.pegass.client.api.activity.*
 import com.lemonfactory.pegass.client.api.activity.inscription.PegassInscription
+import com.lemonfactory.pegass.client.api.activity.inscription.PegassUtilisateur
 import java.time.LocalDateTime
 
 fun aPegassActivity(): PegassActivity {
@@ -100,6 +101,8 @@ fun aPegassInscription(): PegassInscription {
             false,
             "167",
             "statut",
-            "FORM"
+            "FORM",
+            null,
+            PegassUtilisateur(true, "id", false)
     )
 }

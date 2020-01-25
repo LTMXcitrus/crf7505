@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.infrastructure
 
-import com.lemonfactory.crf7505.domain.model.PegassUser
-import com.lemonfactory.crf7505.domain.model.mission.Mission
+import com.lemonfactory.crf7505.model.PegassUser
+import com.lemonfactory.crf7505.model.mission.Mission
 import java.time.LocalDateTime
 
 interface MissionService {

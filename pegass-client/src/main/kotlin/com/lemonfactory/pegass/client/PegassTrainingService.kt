@@ -1,6 +1,6 @@
 package com.lemonfactory.pegass.client
 
-import com.lemonfactory.crf7505.domain.model.VolunteerTraining
+import com.lemonfactory.crf7505.model.VolunteerTraining
 import com.lemonfactory.crf7505.infrastructure.TrainingService
 import com.lemonfactory.pegass.client.adapter.PegassTrainingAdapter
 import com.lemonfactory.pegass.client.api.PegassVolunteer

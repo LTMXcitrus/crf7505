@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.domain.model
+package com.lemonfactory.crf7505.model
 
 data class VolunteerTraining(val id: String,
                              val firstname: String,

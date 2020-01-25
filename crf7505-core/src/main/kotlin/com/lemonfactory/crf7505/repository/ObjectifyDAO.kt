@@ -2,7 +2,7 @@ package com.lemonfactory.crf7505.repository
 
 import com.googlecode.objectify.Key
 import com.googlecode.objectify.ObjectifyService
-import com.lemonfactory.crf7505.domain.model.ObjectifyElement
+import com.lemonfactory.crf7505.model.ObjectifyElement
 
 class ObjectifyDAO<T : ObjectifyElement> {
 

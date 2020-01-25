@@ -1,7 +1,7 @@
 package com.lemonfactory.pegass.client
 
-import com.lemonfactory.crf7505.domain.model.PegassUser
-import com.lemonfactory.crf7505.domain.model.mission.Mission
+import com.lemonfactory.crf7505.model.PegassUser
+import com.lemonfactory.crf7505.model.mission.Mission
 import com.lemonfactory.crf7505.infrastructure.MissionService
 import com.lemonfactory.pegass.client.adapter.PegassActivityAdapter
 import com.lemonfactory.pegass.client.api.activity.PegassActivity

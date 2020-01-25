@@ -1,4 +1,4 @@
-package com.lemonfactory.crf7505.domain.model.mission
+package com.lemonfactory.crf7505.model.mission
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
@@ -10,7 +10,7 @@ class RoleTypeTest {
         // Given
 
         // When
-        val role = roleTypeFrom( "FORM", "171")
+        val role = roleTypeFrom("FORM", "171")
 
         // Then
         assertThat(role).isEqualTo(RoleType.PSC1)

@@ -2,9 +2,9 @@ package com.lemonfactory.crf7505.mails
 
 import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.config.ConfigKeys
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.RoleType
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.Volunteer
+import com.lemonfactory.crf7505.model.mission.RoleType
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
 import org.assertj.core.api.Assertions.assertThat

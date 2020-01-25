@@ -1,6 +1,6 @@
 package com.lemonfactory.crf7505.repository
 
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
 
 class VolunteerRepositoryImpl(private val volunteerDao: ObjectifyDAO<Volunteer>) : VolunteerRepository {

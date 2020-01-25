@@ -1,9 +1,9 @@
 package com.lemonfactory.crf7505.controllers
 
 import com.lemonfactory.crf7505.api.GenerateMailBody
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.CrfMail
-import com.lemonfactory.crf7505.domain.model.PegassUser
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.CrfMail
+import com.lemonfactory.crf7505.model.PegassUser
 import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionRepository
 import com.lemonfactory.crf7505.mails.MailHandler

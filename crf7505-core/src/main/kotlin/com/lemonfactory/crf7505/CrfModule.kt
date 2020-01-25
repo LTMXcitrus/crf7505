@@ -2,11 +2,14 @@ package com.lemonfactory.crf7505
 
 import com.lemonfactory.crf7505.config.Config
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
+import com.lemonfactory.crf7505.infrastructure.MailService
 import com.lemonfactory.crf7505.infrastructure.MissionService
+import com.lemonfactory.crf7505.infrastructure.StatsService
 import com.lemonfactory.crf7505.mails.*
 import com.lemonfactory.crf7505.repository.MissionRepositoryImpl
 import com.lemonfactory.crf7505.repository.ObjectifyDAO
 import com.lemonfactory.crf7505.repository.VolunteerRepositoryImpl
+import com.lemonfactory.crf7505.stats.StatsRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -35,6 +38,22 @@ open class CrfModule {
                 HeaderTemplate(),
                 FooterTemplate(),
                 config()
+        )
+    }
+
+    @Bean
+    open fun statsRepository(
+            statsService: StatsService,
+            mailService: MailService,
+            connectedUserResolver: ConnectedUserResolver
+    ): StatsRepository {
+        return StatsRepository(
+                statsService,
+                ObjectifyDAO(),
+                volunteerRepository(),
+                mailService,
+                config(),
+                connectedUserResolver
         )
     }
 

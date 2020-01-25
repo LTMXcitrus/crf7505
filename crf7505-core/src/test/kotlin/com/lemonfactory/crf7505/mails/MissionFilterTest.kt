@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Volunteer
-import com.lemonfactory.crf7505.domain.model.mission.RoleType.*
+import com.lemonfactory.crf7505.model.Volunteer
+import com.lemonfactory.crf7505.model.mission.RoleType.*
 import com.lemonfactory.crf7505.utils.Missions.aLocalReunion
 import com.lemonfactory.crf7505.utils.Missions.aMission
 import com.lemonfactory.crf7505.utils.Missions.aMissionsWithMissingRolesFor

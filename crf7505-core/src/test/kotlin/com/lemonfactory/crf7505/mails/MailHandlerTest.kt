@@ -1,7 +1,7 @@
 package com.lemonfactory.crf7505.mails
 
-import com.lemonfactory.crf7505.domain.model.Activities
-import com.lemonfactory.crf7505.domain.model.Volunteer
+import com.lemonfactory.crf7505.model.Activities
+import com.lemonfactory.crf7505.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.VolunteerRepository
 import com.lemonfactory.crf7505.utils.Missions
 import com.lemonfactory.crf7505.utils.any
