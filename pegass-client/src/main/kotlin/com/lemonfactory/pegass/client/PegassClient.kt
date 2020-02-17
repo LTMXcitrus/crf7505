@@ -75,4 +75,8 @@ class PegassClient {
         return mapper.readValue(pegassSession.getPage(url))
     }
 
+    fun getResponseForUrl(pegassSession: PegassSession, url: String): Any {
+        val pegassResponse = pegassSession.getPage("https://pegass.croix-rouge.fr/crf/rest/$url")
+        return mapper.readValue(pegassResponse)
+    }
 }

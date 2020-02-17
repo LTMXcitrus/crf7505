@@ -31,6 +31,11 @@ open class PegassModule {
     }
 
     @Bean
+    open fun pegassApiService(): PegassApiService {
+        return PegassApiService(pegassClient())
+    }
+
+    @Bean
     open fun pegassActivityAdapter(): PegassActivityAdapter {
         return PegassActivityAdapter(pegassInscriptionAdapter(), pegassRoleAdapter())
     }
