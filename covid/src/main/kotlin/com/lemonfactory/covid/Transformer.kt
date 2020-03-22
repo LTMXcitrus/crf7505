@@ -2,6 +2,7 @@ package com.lemonfactory.covid
 
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.util.*
 
 class Transformer {
 
@@ -45,12 +46,12 @@ class Transformer {
 
     private fun Creneau.transform(): String {
         if(start.hour == 0 && end.hour == 0) {
-            return start.format(DateTimeFormatter.ofPattern("eeee dd"))
+            return start.format(DateTimeFormatter.ofPattern("eeee dd", Locale.FRANCE))
         }
         if(end.hour == 0){
-            return "${start.format(DateTimeFormatter.ofPattern("eeee dd HH'h'mm"))}-23h59"
+            return "${start.format(DateTimeFormatter.ofPattern("eeee dd HH'h'mm", Locale.FRANCE))}-23h59"
         }
-        return "${start.format(DateTimeFormatter.ofPattern("eeee dd HH'h'mm"))}-${end.format(DateTimeFormatter.ofPattern("HH'h'mm"))}"
+        return "${start.format(DateTimeFormatter.ofPattern("eeee dd HH'h'mm", Locale.FRANCE))}-${end.format(DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRANCE))}"
     }
 
     private fun buildCreneaux(csv: ModelFromCSV): List<Creneau> {
@@ -82,7 +83,7 @@ class Transformer {
         if (date.trim().isEmpty()) {
             return null
         }
-        val localDate = LocalDate.parse("$date Mars 2020".toLowerCase(), DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy"))
+        val localDate = LocalDate.parse("$date Mars 2020".toLowerCase(), DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.FRANCE))
         val endHour = if (startHour + 2 < 24) startHour + 2 else 0
         val endTime = if(endHour == 0) localDate.atTime(endHour, 0).plusDays(1) else localDate.atTime(endHour, 0)
         return Creneau(
