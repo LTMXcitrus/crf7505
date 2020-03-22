@@ -7,6 +7,7 @@
         <module>crf7505-core</module>
         <module>crf7505-web</module>
         <module>appengine-mail-client</module>
+        <module>covid</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

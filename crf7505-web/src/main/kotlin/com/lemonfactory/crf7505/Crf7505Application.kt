@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import com.googlecode.objectify.ObjectifyFilter
 import com.googlecode.objectify.ObjectifyService
 import com.lemonfactory.appenginemailclient.MailClientModule
+import com.lemonfactory.covid.CovidModule
 import com.lemonfactory.crf7505.config.ConfigValue
 import com.lemonfactory.crf7505.domain.model.Volunteer
 import com.lemonfactory.crf7505.infrastructure.ConnectedUserResolver
@@ -23,7 +24,8 @@ import org.springframework.context.annotation.PropertySource
 @SpringBootApplication
 @Import(CrfModule::class,
         PegassModule::class,
-        MailClientModule::class)
+        MailClientModule::class,
+        CovidModule::class)
 @PropertySource("classpath:application.properties")
 class Crf7505Application : SpringBootServletInitializer() {
     init {
