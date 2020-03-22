@@ -82,7 +82,7 @@ class Transformer {
         if (date.trim().isEmpty()) {
             return null
         }
-        val localDate = LocalDate.parse("$date Mars 2020".toLowerCase(), DateTimeFormatter.ofPattern("eeee dd MMMM yyyy"))
+        val localDate = LocalDate.parse("$date Mars 2020".toLowerCase(), DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy"))
         val endHour = if (startHour + 2 < 24) startHour + 2 else 0
         val endTime = if(endHour == 0) localDate.atTime(endHour, 0).plusDays(1) else localDate.atTime(endHour, 0)
         return Creneau(
