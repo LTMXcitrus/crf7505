@@ -14,7 +14,7 @@ import java.util.*
 private const val DATE_FORMAT = "EEEE dd MMMM"
 private const val DATE_TIME_FORMAT = "HH'h'mm"
 
-class BodyTemplate {
+open class BodyTemplate {
 
     fun generateBody(activities: Activities): String {
         return createHTML().div {
