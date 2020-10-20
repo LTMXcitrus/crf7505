@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 
 data class PegassInscription(val debut: LocalDateTime,
                              val fin: LocalDateTime,
-                             val id: String,
+                             val id: String?,
                              val isMultiple: Boolean,
                              val role: String,
                              val statut: String,
