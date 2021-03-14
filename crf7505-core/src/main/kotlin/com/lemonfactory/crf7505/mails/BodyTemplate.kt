@@ -22,12 +22,6 @@ open class BodyTemplate {
             displayAllMissions(activities.localActivities, "Pas de missions locales", activities.localStructure)
 
             h3 { +"Les missions extérieures" }
-            if (activities.externalActivities.isNotEmpty()) {
-                p {
-                    style = "color: red;text-decoration: underline"
-                    +"Comme d'habitude, merci de prévenir le responsable missions avant toute inscription sur Pegass."
-                }
-            }
             displayAllMissions(activities.externalActivities, "Pas de missions extérieures")
         }
     }
